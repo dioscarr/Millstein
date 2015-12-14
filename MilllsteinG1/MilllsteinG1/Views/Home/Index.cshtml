@@ -1,0 +1,183 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+   
+}
+
+
+<section class="body-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 logo_home">
+                <img src="~/Images/logo.png" />
+            </div>
+        </div>
+    </div>
+    <div class="text_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-6">
+                    <h2>
+                        “The Treasure Department’s restructuring   team, led by Jim Millstein, earns an A for its work on the American International Group”<br>
+                    </h2>
+                    <span class="pull-right">— New York Times, Dealbook</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-content carousel-caption text_header_news">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 right_border">
+                    <h2 class="news_content pull-left">
+                        Millstein & Co. is a financial services firm that brings a unique combination of professional skills to its advisory and asset management businesses.  Drawing upon the diverse backgrounds of our finance, economics, law and policy professionals, we assess situations from multiple perspectives to develop artful solutions for our clients and innovative opportunities for investment. 
+                    </h2>
+                </div>
+                <div class="col-xs-6">
+                    @*<div class="news_name pull-left">
+                        <h1 class="pull-left">
+                            info
+                        </h1>
+                    </div>*@
+                    <div class="news_date pull-left">
+                        @*<p>Jim Millstein Bio</p><br>*@
+                        <p>555 Madison Avenue New York, NY</p>
+                        <p>(212) 416-5814</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-content carousel-caption">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 copyright">
+                    <span class="icon_copyright">© 2015 Millstein & Co., L.P.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="image_millstein" style="height: 300px;">
+    </div>
+
+    <div class="visible-sm visible-xs">
+
+        <div class="row small_appeal">
+            <div class="col-xs-12">
+                <h2>
+                    “The Treasure Department’s restructuring   team, led by Jim Millstein, earns an A for its work on the American International Group”<br>
+                </h2>
+                <span class="pull-right">— New York Times, Dealbook</span>
+            </div>
+        </div>
+        <div class="row text_header_news">
+            <div class="col-sm-8 col-xs-12">
+                <h2 class="news_content pull-left">
+                    Millstein & Co. is a financial services firm that brings a unique combination of professional skills to its advisory and asset management businesses.  Drawing upon the diverse backgrounds of our finance, economics, law and policy professionals, we assess situations from multiple perspectives to develop artful solutions for our clients and innovative opportunities for investment. 
+                </h2>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                @*<div class="news_name pull-left">
+                    <h1 class="pull-left">
+                        info
+                    </h1>
+                </div>*@
+                <div class="news_date pull-left">
+                    @*<p>Jim Millstein Bio</p><br>*@
+                    <p>555 Madison Avenue New York, NY</p>
+                    <p>(212) 416-5814</p>
+                </div>
+            </div>
+        </div>
+        <span class="sm_copyright">© 2015 Millstein & Co., L.P.</span>
+    </div>
+
+
+</section>
+
+
+@section scripts{
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+<script src="~/Scripts/jquery.backstretch.min.js"></script>
+
+<script type="text/javascript">
+
+      /* fix vertical when not overflow
+        call fullscreenFix() if .fullscreen content changes */
+        function fullscreenFix() {
+            var h = $('body').height();
+            // set .fullscreen height
+            if ($(".body-content").innerHeight() <= h) {
+              $(".body-content").addClass("not-overflow");
+        }
+  }
+  $(window).resize(fullscreenFix);
+  fullscreenFix();
+
+  /* resize background images */
+  function backgroundResize() {
+      var windowH = $(window).height();
+      $(".background").each(function (i) {
+        var path = $(this);
+                // variables
+                var contW = path.width();
+                var contH = path.height();
+                var imgW = path.attr("data-img-width");
+                var imgH = path.attr("data-img-height");
+                var ratio = imgW / imgH;
+                // overflowing difference
+                var diff = parseFloat(path.attr("data-diff"));
+                diff = diff ? diff : 0;
+                // remaining height to have fullscreen image only on parallax
+                var remainingH = 0;
+                if (path.hasClass("parallax")) {
+                      var maxH = contH > windowH ? contH : windowH;
+                      remainingH = windowH - contH;
+                }
+                // set img values depending on cont
+                imgH = contH + remainingH + diff;
+                imgW = imgH * ratio;
+                // fix when too large
+                if (contW > imgW) {
+                      imgW = contW;
+                      imgH = imgW / ratio;
+                }
+                //
+                path.data("resized-imgW", imgW);
+                path.data("resized-imgH", imgH);
+                path.css("background-size", imgW + "px " + imgH + "px");
+          });
+}
+$(window).resize(backgroundResize);
+$(window).focus(backgroundResize);
+backgroundResize();
+
+//$(window).resize(function () {
+    if (document.documentElement.clientWidth < 994) {
+        $("#image_millstein").backstretch([
+        "../../Images/home1.jpg"
+        , "../../Images/home2.jpg"
+        , "../../Images/home3.jpg"
+        ], { duration: 6000, fade: 750 });
+    }
+    else {
+        console.log("check");
+        $.backstretch([
+        "../../Images/home1.jpg"
+        , "../../Images/home2.jpg"
+        , "../../Images/home3.jpg"
+        ], { duration: 6000, fade: 750 });
+    }
+
+//});
+       
+</script>
+
+}

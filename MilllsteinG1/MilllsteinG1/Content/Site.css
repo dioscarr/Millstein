@@ -1,0 +1,474 @@
+﻿/*@font-face {
+	font-family:'';
+	src:url('../fonts/.eot');
+	src:url('../fonts/.eot?#iefix') format("embedded-opentype"),url('../fonts/.woff2') format("woff2"),url('../fonts/.woff') format("woff"),url('fonts/.ttf') format("truetype"),url('fonts/.svg#robotolight') format("svg");
+	font-weight:400;
+	font-style:normal;
+}
+*/
+/*
+Open Sans
+https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
+*/
+html{
+	width: 100%;
+    height: 100%;
+}
+.overflow_none {
+    overflow-x: initial;
+}
+body,html {
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+	font-family: 'Merriweather';
+}
+/*scroll*/
+body {
+	background-color: white;
+    min-height: 100%;
+    height: auto;
+}
+body::-webkit-scrollbar {
+	width:10px
+}
+body::-webkit-scrollbar * {
+	background:transparent
+}
+body::-webkit-scrollbar-thumb {
+	background:#1e1e1e!important
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+h1,h2,h3{
+	line-height:1;
+	margin-top:0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    resize: vertical;
+}
+a:focus,a:hover {
+	text-decoration:none;
+	outline:0
+}
+p {
+	margin-bottom:0
+}
+img {
+	max-width:100%;
+	height:auto;
+}
+.hidden {
+    display: none !important;
+}
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+.invisible {
+    visibility: hidden;
+}
+
+/*mail styles*/
+.header {
+    background-image: url('../images/slider-img.png');
+}
+.header_menu {
+    background-color: #8d0013;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    margin: 0;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: inherit;
+    color: white;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: inherit;
+}
+.navbar-collapse>.nav_link>li>a, .navbar-header>.navbar-brand {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+}
+.navbar-collapse>.nav_link>li>a:hover {
+    color: grey;
+}
+.navbar-header>.navbar-brand:hover {
+    color: white;
+}
+.navbar-header>.navbar-brand>i {
+    word-spacing: 5px;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    width: 100%;
+    height: 100vh;
+    -webkit-filter: grayscale(1);
+    /*-webkit-filter: sepia(0.55);*/
+}
+.backstretch {
+    /*-webkit-filter: grayscale(1);*/
+}
+.logo_home {
+    position: absolute;
+    top: 10%;
+    z-index: 99;
+    padding: 0;
+}
+.text_header{
+    position: absolute;
+    top: 55%;
+    color: #8d0013;
+    z-index: 100;
+    width: 100%;
+}
+.text_header h2 {
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 700;
+}
+.text_header span {
+    color: #ffffff;
+}
+.text_header_news {
+    color: #333333;
+    background-color: #f4f5f5;
+    opacity: .97;
+    margin: 1% 0;
+}
+.text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
+    font-size: 1em;
+    padding: 2% 0%;
+    margin: 0;
+    text-align: left;
+    color: black;
+    line-height: 1.5;
+    text-shadow: none;
+}
+.right_border {
+    border-right: 1px solid grey;
+}
+.text_header_news .news_name {   
+    padding: 2.5% 1% 5%;
+}
+.text_header_news .news_name h1 {
+    font-size: 1em;
+    font-weight: 700;
+    color: #8d0013;
+    text-transform: uppercase;
+}
+.carousel-caption {
+    left: 0;
+    right: 0;
+}
+.copyright {
+    text-align: left;
+    position: absolute;
+    bottom: -15px;
+}
+.copyright_secondary {
+    position: relative;
+}
+.icon_copyright {
+    color: white;
+    font-size: 0.8em;
+}
+.copyright>.icon_secondary_copyright {
+    color: #8d0013;
+}
+.carousel-indicators {
+    bottom: 0;
+}
+.navbar-default {
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    text-align: center; 
+ } 
+.body-content {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border-top:1px solid #8d0013;
+    /*margin: 0 2%;
+    padding: 2%;*/
+}
+/*main styles end*/
+
+/*================== Our Firm Page ======================*/
+.firm_title {
+    padding: 3% 0;
+}
+.firm_sidebar {
+    border-bottom: 1px solid #8d0013;
+}
+.firm_sidebar>.firm_sidebar_ul {
+    float: right;
+}
+.firm_sidebar>.firm_sidebar_ul a {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #8d0013;
+    font-weight: 600;
+}
+.firm_image>img{
+    -webkit-filter: grayscale(1);
+}
+.firm_content_descriprion {
+    font-size: 1.5em;
+}
+.image_desc {
+    background-color: #8d0013;
+    padding: 4% 5%;
+}
+.image_desc>p {
+    font-size: 2em;
+    color: white;
+    text-align: center
+}
+
+
+
+
+
+
+
+
+
+
+/*.full-screen {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      }*/
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 1280px) {
+    .text_header {
+        top: 40%;
+    }
+}
+
+
+@media only screen and (max-width: 994px) {
+    .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+        height: auto;
+    }
+    .header_menu {
+        position: relative;
+    }
+    .carousel-content, .text_header, .nav_menu>.left_nav, .icon_copyright {
+        display: none;
+    }
+    .carousel-caption {
+        position: relative;
+    }
+    .icon_copyright {
+        color: black;
+    }
+    .small_appeal {
+        padding: 5%;
+        color: #8d0013;
+    }
+    .small_appeal h2 {
+        font-size: 1.5em;
+        line-height: 1.6;
+        font-weight: 700;
+    }
+    .small_appeal span {
+        color: #000;
+    }
+    .text_header_news {
+        margin: 3% 0 5% 0;
+        padding: 0;
+    }
+    .news_name {
+        padding: 3% 1% 5%;
+    }
+    .sm_copyright {
+        padding: 5%;
+    }
+    .text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
+        padding: 2% 5% 5% 0;
+    }
+    .news_name>h1 {
+        margin: 1% 0;
+    }
+    .logo_home {
+        /*position: relative;*/
+        padding: 5% 15px;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    .text_header_news {
+
+    }
+    .text_header_news .news_content {
+        border-right: none;
+        border-bottom: 1px solid rgb(128, 128, 128);
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+    .small_appeal h2 {
+        font-size: 1.1em;
+    }    
+    .navbar-header>.navbar-brand {
+        padding: 5% 2%;
+        font-size: 0.9em;
+    }
+    .text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
+        font-size: 0.9em;
+    }
+    
+}
+
+
+@media only screen and (max-width: 320px) {
+    .small_appeal h2 {
+        font-size: 0.9em;
+    }    
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+   @media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+        http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+     a[href^="#"]:after,
+     a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+     thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
