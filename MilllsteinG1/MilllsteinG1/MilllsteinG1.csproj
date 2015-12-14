@@ -213,6 +213,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvisoryController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FirmController.cs" />
     <Compile Include="Controllers\HomeController.cs">
       <SubType>
@@ -324,6 +325,7 @@
     <Content Include="Views\Firm\Index.cshtml" />
     <Content Include="Views\Shared\_Secomdary_Layout.cshtml" />
     <Content Include="Views\Advisory\Info.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
