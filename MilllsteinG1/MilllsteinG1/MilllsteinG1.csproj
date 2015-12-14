@@ -237,8 +237,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\adv-info.jpg" />
-    <Content Include="Images\adv.jpg" />
+    <Content Include="Images\advisory-info.jpg" />
+    <Content Include="Images\advisory.jpg" />
     <Content Include="Images\firm-1.jpg" />
     <Content Include="Images\firm-2.jpg" />
     <Content Include="Images\home1.jpg" />
@@ -323,6 +323,7 @@
     <Content Include="Views\Firm\Ceo.cshtml" />
     <Content Include="Views\Firm\Index.cshtml" />
     <Content Include="Views\Shared\_Secomdary_Layout.cshtml" />
+    <Content Include="Views\Advisory\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
