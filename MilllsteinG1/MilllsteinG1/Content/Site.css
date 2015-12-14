@@ -1,9 +1,9 @@
 ﻿/*@font-face {
-	font-family:'';
-	src:url('../fonts/.eot');
-	src:url('../fonts/.eot?#iefix') format("embedded-opentype"),url('../fonts/.woff2') format("woff2"),url('../fonts/.woff') format("woff"),url('fonts/.ttf') format("truetype"),url('fonts/.svg#robotolight') format("svg");
-	font-weight:400;
-	font-style:normal;
+    font-family:'';
+    src:url('../fonts/.eot');
+    src:url('../fonts/.eot?#iefix') format("embedded-opentype"),url('../fonts/.woff2') format("woff2"),url('../fonts/.woff') format("woff"),url('fonts/.ttf') format("truetype"),url('fonts/.svg#robotolight') format("svg");
+    font-weight:400;
+    font-style:normal;
 }
 */
 /*
@@ -11,32 +11,32 @@ Open Sans
 https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
 */
 html{
-	width: 100%;
+    width: 100%;
     height: 100%;
 }
 .overflow_none {
     overflow-x: initial;
 }
 body,html {
-	margin:0;
-	padding:0;
-	overflow-x: hidden;
-	font-family: 'Merriweather';
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    font-family: 'Merriweather';
 }
 /*scroll*/
 body {
-	background-color: white;
+    background-color: white;
     min-height: 100%;
     height: auto;
 }
 body::-webkit-scrollbar {
-	width:10px
+    width:10px
 }
 body::-webkit-scrollbar * {
-	background:transparent
+    background:transparent
 }
 body::-webkit-scrollbar-thumb {
-	background:#1e1e1e!important
+    background:#1e1e1e!important
 }
 hr {
     display: block;
@@ -48,8 +48,8 @@ hr {
 }
 
 h1,h2,h3{
-	line-height:1;
-	margin-top:0;
+    line-height:1;
+    margin-top:0;
 }
 audio,
 canvas,
@@ -68,15 +68,15 @@ textarea {
     resize: vertical;
 }
 a:focus,a:hover {
-	text-decoration:none;
-	outline:0
+    text-decoration:none;
+    outline:0
 }
 p {
-	margin-bottom:0
+    margin-bottom:0
 }
 img {
-	max-width:100%;
-	height:auto;
+    max-width:100%;
+    height:auto;
 }
 .hidden {
     display: none !important;
@@ -119,19 +119,31 @@ img {
     background-color: inherit;
     color: white;
 }
-.nav>li>a:focus, .nav>li>a:hover {
-    background-color: inherit;
+.collapse  {
+    padding: 0;
 }
 .navbar-collapse>.nav_link>li>a, .navbar-header>.navbar-brand {
     color: white;
     font-weight: 700;
     font-size: 1em;
 }
+.navbar-collapse>.nav_link>li>a {
+    margin: 15px;
+    padding: 0;
+}
+.navbar-collapse>.nav_link>li>a:hover>ul>li>a:hover {
+    background-color: inherit !important;
+    background-image: none !important;
+    color: white;
+}
 .navbar-collapse>.nav_link>li>a:hover {
-    color: grey;
+    border-top: 5px solid rgb(255, 255, 255);
+    margin: 0 15px 15px;
+    padding: 10px 0 0;
+    color: white;
 }
 .navbar-header>.navbar-brand:hover {
-    color: white;
+    /*color: white;*/
 }
 .navbar-header>.navbar-brand>i {
     word-spacing: 5px;
@@ -162,6 +174,8 @@ img {
     font-size: 1.5em;
     line-height: 1.6;
     font-weight: 700;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 30px, rgb(0, 0, 0) 0px 2px 30px, rgba(0, 0, 0, 0.80) 0px 2px 50px;
 }
 .text_header span {
     color: #ffffff;
@@ -204,6 +218,8 @@ img {
 }
 .copyright_secondary {
     position: relative;
+    bottom: 0;
+    padding: 0.5% 0;
 }
 .icon_copyright {
     color: white;
@@ -230,17 +246,24 @@ img {
 .body-content {
     min-height: 100%;
     height: auto;
-    margin: 0 auto -60px;
-    padding: 0 0 60px;
+    /*margin: 0 auto -35px;
+    padding: 0 0 35px;*/
 }
 .footer {
-    position: absolute;
+    /*position: absolute;*/
+    position: relative;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 35px;
     border-top:1px solid #8d0013;
     /*margin: 0 2%;
     padding: 2%;*/
+}
+.footer_no_abs {
+    position: relative;
+}
+.footer_abs {
+    position: absolute;
 }
 /*main styles end*/
 
@@ -253,9 +276,10 @@ img {
 }
 .firm_sidebar>.firm_sidebar_ul {
     float: right;
+    margin: 0;
 }
 .firm_sidebar>.firm_sidebar_ul a {
-    font-size: 2.5em;
+    font-size: 2em;
     text-transform: uppercase;
     color: #8d0013;
     font-weight: 600;
@@ -273,11 +297,107 @@ img {
 .image_desc>p {
     font-size: 2em;
     color: white;
-    text-align: center
+    text-align: center;
+}
+/*================== Ceo ======================*/
+.ceo_name {
+    font-size: 2em;
+    color: #8d0013;
+}
+.ceo_name_description {
+    font-size: 1em;
+    color: #3e3e3e;
+    text-transform: uppercase;
+    margin: 0 0 5%;
+}
+.ceo_content_descriprion {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.image_desc_ceo {
+    padding: 5%;
+    overflow: hidden;
+}
+.image_desc_ceo>p {
+    font-size: 1.4em;
+    text-align: left;
+}
+.image_desc_ceo>span {
+    color: white;
+}
+.ceo_company {
+    padding: 5%;
+    font-size: 1.3em;
+}
+
+/*================== Investment ======================*/
+.inv_content {
+    font-weight: 600;
+}
+.investment_title {
+    color: #9e0b0f;
+    text-transform: uppercase;
+}
+.inv_content_descriprion {
+    font-size: 1.1em;
+}
+.image_desc_inv {
+    padding: 7%;
+}
+.image_desc_inv>p {
+    font-size: 1.39em;
+    text-align: left;
+}
+.inv_company_desc {
+    font-size: 1.3em;
 }
 
 
+/*================== Advisory ======================*/
 
+.adv_content {
+    background-color: #ebebeb;
+    padding: 4%;
+    color: #9e0b0f;
+}
+.advisory_company {
+    padding: 4%;
+}
+.left_bar_advisory {
+    list-style: none;
+    float: right;
+}
+.left_bar_advisory>li>a {
+    color: #707070;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 2;
+}
+.left_bar_advisory>li>.adv_active {
+    color: #9e0b0f;
+}
+.adv_info {
+    overflow: hidden;
+    position: relative;
+    margin: 3% 0;
+}
+.advisory_img, .advisory_info {
+    width: 48%;
+}
+.advisory_info {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+}
+.adv_info_title {
+    font-size: 1.1em;
+}
+.adv_info_content {
+    overflow: hidden;
+}
+.adv_info_content>span {
+    text-align: right;
+}
 
 
 

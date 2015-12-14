@@ -34,7 +34,7 @@
                           <span class="icon-bar"></spcaan>
                           <span class="icon-bar"></span>
                     </button> -->
-                    <a class="navbar-brand" href=""><i>Full site launching January 2016</i></a>
+                    @*<a class="navbar-brand" href=""><i>Full site launching January 2016</i></a>*@
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,12 +42,26 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left nav_link">
-                        <li role="presentation"><a href="~/">HOME</a></li>
-                        <li @*class="@ViewBag.activefirmindex"*@ role="presentation"><a href="~/firm">OUR FIRM</a></li>
+                        <li role="presentation"><a href="~/home">HOME</a></li>
+                        <!-- <li role="presentation"><a href="out-firm.html">OUR FIRM</a></li> -->
+
+                        <li role="presentation" class="dropdown">
+                            <a href="~/firm" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OUR FIRM<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/firm">OUR FIRM</a></li>
+                                <li><a href="~/firm/ceo">CEO</a></li>
+                            </ul>
+                        </li>
+                        <li role="presentation"><a href="~/advisory">ADVISORY</a></li>
+                        <li role="presentation"><a href="~/investment">INVESTMENT</a></li>
+                        <li role="presentation"><a href="~/news">NEWS</a></li>
+                        <li role="presentation"><a href="~/contact">CONTACT</a></li>
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right nav_link">
-                        <li  role="presentation"><a href="#">NEW YORK</a></li>
+                        <li role="presentation"><a href="#">NEW YORK</a></li>
                         <li role="presentation"><a href="#">WASHINGTON, DC</a></li>
+                        <li role="presentation"><a href="#">CAREERS</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
 
