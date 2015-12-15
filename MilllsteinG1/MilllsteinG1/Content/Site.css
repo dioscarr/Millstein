@@ -149,6 +149,7 @@ img {
     background-image: none !important;
     color: white;
 }
+
 .navbar-collapse>.nav_link>li>a:hover, .navbar-collapse>.nav_link>li>.menu_top_border { 
     border-top: 5px solid rgb(255, 255, 255);
     margin: 0 15px 10px; 
@@ -157,10 +158,10 @@ img {
     background-color: inherit;
     background-image: none;
 }
-body .navbar-header .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: white;
     background-color: rgb(141, 0, 19) !important;
-    background-image: none
+    background-image: none;
 }
 .dropdown-menu {
     background-color: rgb(141, 0, 19);
