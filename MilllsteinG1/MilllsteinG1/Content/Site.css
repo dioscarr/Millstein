@@ -126,15 +126,24 @@ img {
 .collapse  {
     padding: 0;
 }
+.navbar {
+    min-height: 40px;
+}
 .navbar-collapse>.nav_link>li>a, .navbar-header>.navbar-brand {
     color: white;
     font-weight: 700;
     font-size: 1em;
 }
 .navbar-collapse>.nav_link>li>a {
-    margin: 15px;
+    margin: 10px 15px;
     padding: 0;
 }
+/*.navbar-collapse>.nav_link>li:first-child>a, .navbar-collapse>.nav_link>li:first-child>a:hover {
+    margin-left: 0;
+}
+.navbar-collapse>.nav_link>li:last-child>a, .navbar-collapse>.nav_link>li:last-child>a:hover {
+    margin-right: 0;
+}*/
 .navbar-collapse>.nav_link>li>a:hover>ul>li>a:hover {
     background-color: inherit !important;
     background-image: none !important;
@@ -142,8 +151,14 @@ img {
 }
 .navbar-collapse>.nav_link>li>a:hover {
     border-top: 5px solid rgb(255, 255, 255);
-    margin: 0 15px 15px;
-    padding: 10px 0 0;
+    margin: 0 15px 10px;
+    padding: 5px 0 0;
+    color: white;
+}
+.dropdown-menu {
+    background-color: rgb(141, 0, 19);
+}
+.dropdown-menu > li > a {
     color: white;
 }
 .navbar-header>.navbar-brand:hover {
@@ -162,10 +177,8 @@ img {
     /*-webkit-filter: grayscale(1);*/
 }
 .logo_home {
-    position: absolute;
-    top: 10%;
     z-index: 99;
-    padding: 0;
+    padding: 4% 15px 0;
 }
 .text_header{
     position: absolute;
@@ -173,13 +186,13 @@ img {
     color: #8d0013;
     z-index: 100;
     width: 100%;
+    text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 30px, rgb(0, 0, 0) 0px 2px 30px, rgba(0, 0, 0, 0.80) 0px 2px 50px;
 }
 .text_header h2 {
     font-size: 1.5em;
     line-height: 1.6;
     font-weight: 700;
     color: white;
-    text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 30px, rgb(0, 0, 0) 0px 2px 30px, rgba(0, 0, 0, 0.80) 0px 2px 50px;
 }
 .text_header span {
     color: #ffffff;
@@ -211,10 +224,6 @@ img {
     color: #8d0013;
     text-transform: uppercase;
 }
-.carousel-caption {
-    left: 0;
-    right: 0;
-}
 .copyright {
     text-align: left;
     position: absolute;
@@ -244,8 +253,10 @@ img {
     position: absolute;
     bottom: 20px;
     z-index: 10;
-    padding-top: 20px;
+    padding: 20px;
     text-align: center; 
+    left: 0;
+    right: 0;
  } 
 .body-content {
     min-height: 100%;
