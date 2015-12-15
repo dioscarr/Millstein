@@ -155,6 +155,7 @@ img {
     padding: 5px 0 0;
     color: white;
 }
+
 .dropdown-menu {
     background-color: rgb(141, 0, 19);
 }
@@ -656,4 +657,12 @@ img {
     h3 {
         page-break-after: avoid;
     }
+}
+
+   
+.menu_top_border {
+     border-top: 5px solid rgb(255, 255, 255);
+    margin: 0 15px 10px; 
+    padding: 5px 0 0;
+    color: white;
 }

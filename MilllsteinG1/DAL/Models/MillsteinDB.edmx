@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MillsteinDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Advisory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quote" Type="nvarchar(max)" />
+          <Property Name="Picture" Type="nvarchar(max)" />
+          <Property Name="ContentTitle1" Type="nvarchar(max)" />
+          <Property Name="Content1" Type="nvarchar(max)" />
+          <Property Name="ContentTitle2" Type="nvarchar(max)" />
+          <Property Name="Content2" Type="nvarchar(max)" />
+          <Property Name="ContentTitle3" Type="nvarchar(max)" />
+          <Property Name="Content3" Type="nchar" MaxLength="10" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CEO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Picture" Type="nvarchar(max)" />
+          <Property Name="pictureQuote" Type="nvarchar(max)" />
+          <Property Name="pictureQuoteSource" Type="nvarchar(max)" />
+          <Property Name="PictureQuoteDate" Type="datetime2" Precision="7" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContentHeader" Type="nvarchar(max)" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="15" />
+          <Property Name="CareersHeader" Type="nvarchar(max)" />
+          <Property Name="CareersEmail" Type="nvarchar(max)" />
+          <Property Name="isDeleted" Type="bit" />
+          <Property Name="Created" Type="datetime2" Precision="7" />
+          <Property Name="Modified" Type="datetime2" Precision="7" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Firm">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Created" />
+            <PropertyRef Name="Modified" />
+            <PropertyRef Name="isDeleted" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="FirmTitle" Type="nvarchar(max)" />
+          <Property Name="picture" Type="nvarchar(max)" />
+          <Property Name="FirmQuote" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Investment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HeaderContent" Type="nvarchar(max)" />
+          <Property Name="ContentTitle1" Type="nvarchar(max)" />
+          <Property Name="Content1" Type="nvarchar(max)" />
+          <Property Name="ContentTitle2" Type="nvarchar(max)" />
+          <Property Name="Content2" Type="nvarchar(max)" />
+          <Property Name="Picture" Type="nvarchar(max)" />
+          <Property Name="PictureContent" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Modified" Type="datetime" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address1" Type="nvarchar(max)" />
+          <Property Name="Address2" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="ZipCode" Type="nvarchar(max)" />
+          <Property Name="LocationName" Type="nvarchar(max)" />
+          <Property Name="NewsId" Type="int" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsId" />
+          </Key>
+          <Property Name="NewsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NewsTitle" Type="nvarchar(max)" />
+          <Property Name="NewsContent" Type="nvarchar(max)" />
+          <Property Name="NewsAboutContent" Type="nvarchar(max)" />
+          <Property Name="NewsDate" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" />
+          <Property Name="Modified" Type="datetime2" Precision="7" />
+          <Property Name="Created" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Pages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Order" Type="int" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quote" Type="nvarchar(max)" />
+          <Property Name="picture" Type="nvarchar(max)" />
+          <Property Name="QuoteLocation" Type="nvarchar(max)" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="HomeId" Type="int" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="nvarchar(max)" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="NoteWriter" Type="nvarchar(max)" />
+          <Property Name="NoteWriterTitle" Type="nvarchar(max)" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Created" Type="datetime2" Precision="7" />
+          <Property Name="Modified" Type="datetime2" Precision="7" />
+          <Property Name="isDeleted" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Locations_Contact">
+          <End Role="Contact" Type="Self.Contact" Multiplicity="0..1" />
+          <End Role="Locations" Type="Self.Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="NewsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Slider_Pages">
+          <End Role="Pages" Type="Self.Pages" Multiplicity="1" />
+          <End Role="Slider" Type="Self.Slider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pages">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Slider">
+              <PropertyRef Name="HomeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MillsteinDBModelStoreContainer">
+          <EntitySet Name="Advisory" EntityType="Self.Advisory" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="CEO" EntityType="Self.CEO" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Investment" EntityType="Self.Investment" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Team" EntityType="Self.Team" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Firm" EntityType="Self.Firm" store:Type="Tables" store:Schema="dioscar">
+            <DefiningQuery>SELECT 
+    [Firm].[id] AS [id], 
+    [Firm].[Content] AS [Content], 
+    [Firm].[FirmTitle] AS [FirmTitle], 
+    [Firm].[picture] AS [picture], 
+    [Firm].[FirmQuote] AS [FirmQuote], 
+    [Firm].[Created] AS [Created], 
+    [Firm].[Modified] AS [Modified], 
+    [Firm].[isDeleted] AS [isDeleted]
+    FROM [dioscar].[Firm] AS [Firm]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Locations_Contact" Association="Self.FK_Locations_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Slider_Pages" Association="Self.FK_Slider_Pages">
+            <End Role="Pages" EntitySet="Pages" />
+            <End Role="Slider" EntitySet="Slider" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MillsteinDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MillsteinDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Advisory" EntityType="MillsteinDBModel.Advisory" />
+          <EntitySet Name="CEO" EntityType="MillsteinDBModel.CEO" />
+          <EntitySet Name="Contact" EntityType="MillsteinDBModel.Contact" />
+          <EntitySet Name="Investment" EntityType="MillsteinDBModel.Investment" />
+          <EntitySet Name="News" EntityType="MillsteinDBModel.News" />
+          <EntitySet Name="Team" EntityType="MillsteinDBModel.Team" />
+          <EntitySet Name="Firm" EntityType="MillsteinDBModel.Firm" />
+          <EntitySet Name="Pages" EntityType="MillsteinDBModel.Pages" />
+          <EntitySet Name="Slider" EntityType="MillsteinDBModel.Slider" />
+          <AssociationSet Name="FK_Slider_Pages" Association="MillsteinDBModel.FK_Slider_Pages">
+            <End Role="Pages" EntitySet="Pages" />
+            <End Role="Slider" EntitySet="Slider" />
+          </AssociationSet>
+          <EntitySet Name="Locations" EntityType="MillsteinDBModel.Locations" />
+          <AssociationSet Name="FK_Locations_Contact" Association="MillsteinDBModel.FK_Locations_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="Locations" EntitySet="Locations" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Advisory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Quote" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Picture" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ContentTitle1" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Content1" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ContentTitle2" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Content2" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ContentTitle3" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Content3" MaxLength="10" FixedLength="true" Unicode="true" Type="String" />
+          <Property Name="Created" Nullable="false" Precision="7" Type="DateTime" />
+          <Property Name="Modified" Nullable="false" Precision="7" Type="DateTime" />
+          <Property Name="isDeleted" Nullable="false" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="CEO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Picture" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="pictureQuote" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="pictureQuoteSource" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="PictureQuoteDate" Precision="7" Type="DateTime" />
+          <Property Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="FirstName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="LastName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Title" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Created" Nullable="false" Precision="7" Type="DateTime" />
+          <Property Name="Modified" Nullable="false" Precision="7" Type="DateTime" />
+          <Property Name="isDeleted" Nullable="false" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="ContentHeader" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="FirstName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="LastName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Email" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Tel" MaxLength="15" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CareersHeader" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CareersEmail" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="isDeleted" Type="Boolean" />
+          <Property Name="Created" Precision="7" Type="DateTime" />
+          <Property Name="Modified" Precision="7" Type="DateTime" />
+          <NavigationProperty Name="Locations" Relationship="MillsteinDBModel.FK_Locations_Contact" FromRole="Contact" ToRole="Locations" />
+        </EntityType>
+        <EntityType Name="Investment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="HeaderContent" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ContentTitle1" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Content1" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ContentTitle2" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Content2" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Picture" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="PictureContent" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Created" Nullable="false" Precision="3" Type="DateTime" />
+          <Property Name="Modified" Nullable="false" Precision="3" Type="DateTime" />
+          <Property Name="isDeleted" Nullable="false" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="News">
+          <Key>
+            <PropertyRef Name="NewsId" />
+          </Key>
+          <Property Name="NewsId" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="NewsTitle" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="NewsContent" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="NewsAboutContent" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="NewsDate" Nullable="false" Precision="7" Type="DateTime" />
+          <Property Name="isDeleted" Type="Boolean" />
+          <Property Name="Modified" Precision="7" Type="DateTime" />
+          <Property Name="Created" Precision="7" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Image" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="FirstName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="LastName" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Title" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Note" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="NoteWriter" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="NoteWriterTitle" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Created" Precision="7" Type="DateTime" />
+          <Property Name="Modified" Precision="7" Type="DateTime" />
+          <Property Name="isDeleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Firm">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="Created" />
+            <PropertyRef Name="Modified" />
+            <PropertyRef Name="isDeleted" />
+          </Key>
+          <Property Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Content" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="FirmTitle" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="picture" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="FirmQuote" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="Created" Nullable="false" Precision="7" Type="DateTime" />
+          <Property Name="Modified" Nullable="false" Precision="7" Type="DateTime" />
+          <Property Name="isDeleted" Nullable="false" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Pages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Slider" Relationship="MillsteinDBModel.FK_Slider_Pages" FromRole="Pages" ToRole="Slider" />
+        </EntityType>
+        <EntityType Name="Slider">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="picture" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="QuoteLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="HomeId" Type="Int32" Nullable="false" />
+          <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Pages" Relationship="MillsteinDBModel.FK_Slider_Pages" FromRole="Slider" ToRole="Pages" />
+        </EntityType>
+        <Association Name="FK_Slider_Pages">
+          <End Type="MillsteinDBModel.Pages" Role="Pages" Multiplicity="1" />
+          <End Type="MillsteinDBModel.Slider" Role="Slider" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pages">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Slider">
+              <PropertyRef Name="HomeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Locations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ZipCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LocationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NewsId" Type="Int32" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Contact" Relationship="MillsteinDBModel.FK_Locations_Contact" FromRole="Locations" ToRole="Contact" />
+        </EntityType>
+        <Association Name="FK_Locations_Contact">
+          <End Type="MillsteinDBModel.Contact" Role="Contact" Multiplicity="0..1" />
+          <End Type="MillsteinDBModel.Locations" Role="Locations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Locations">
+              <PropertyRef Name="NewsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MillsteinDBModelStoreContainer" CdmEntityContainer="MillsteinDBEntities">
+          <EntitySetMapping Name="Advisory">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Advisory">
+              <MappingFragment StoreEntitySet="Advisory">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Content3" ColumnName="Content3" />
+                <ScalarProperty Name="ContentTitle3" ColumnName="ContentTitle3" />
+                <ScalarProperty Name="Content2" ColumnName="Content2" />
+                <ScalarProperty Name="ContentTitle2" ColumnName="ContentTitle2" />
+                <ScalarProperty Name="Content1" ColumnName="Content1" />
+                <ScalarProperty Name="ContentTitle1" ColumnName="ContentTitle1" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Quote" ColumnName="Quote" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CEO">
+            <EntityTypeMapping TypeName="MillsteinDBModel.CEO">
+              <MappingFragment StoreEntitySet="CEO">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PictureQuoteDate" ColumnName="PictureQuoteDate" />
+                <ScalarProperty Name="pictureQuoteSource" ColumnName="pictureQuoteSource" />
+                <ScalarProperty Name="pictureQuote" ColumnName="pictureQuote" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contact">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="CareersEmail" ColumnName="CareersEmail" />
+                <ScalarProperty Name="CareersHeader" ColumnName="CareersHeader" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ContentHeader" ColumnName="ContentHeader" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Investment">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Investment">
+              <MappingFragment StoreEntitySet="Investment">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="PictureContent" ColumnName="PictureContent" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Content2" ColumnName="Content2" />
+                <ScalarProperty Name="ContentTitle2" ColumnName="ContentTitle2" />
+                <ScalarProperty Name="Content1" ColumnName="Content1" />
+                <ScalarProperty Name="ContentTitle1" ColumnName="ContentTitle1" />
+                <ScalarProperty Name="HeaderContent" ColumnName="HeaderContent" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="News">
+            <EntityTypeMapping TypeName="MillsteinDBModel.News">
+              <MappingFragment StoreEntitySet="News">
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="NewsDate" ColumnName="NewsDate" />
+                <ScalarProperty Name="NewsAboutContent" ColumnName="NewsAboutContent" />
+                <ScalarProperty Name="NewsContent" ColumnName="NewsContent" />
+                <ScalarProperty Name="NewsTitle" ColumnName="NewsTitle" />
+                <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Team">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Team">
+              <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="NoteWriterTitle" ColumnName="NoteWriterTitle" />
+                <ScalarProperty Name="NoteWriter" ColumnName="NoteWriter" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Firm">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Firm">
+              <MappingFragment StoreEntitySet="Firm">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="FirmQuote" ColumnName="FirmQuote" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="FirmTitle" ColumnName="FirmTitle" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pages">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Pages">
+              <MappingFragment StoreEntitySet="Pages">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Slider">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Slider">
+              <MappingFragment StoreEntitySet="Slider">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="HomeId" ColumnName="HomeId" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="QuoteLocation" ColumnName="QuoteLocation" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+                <ScalarProperty Name="Quote" ColumnName="Quote" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Locations">
+              <MappingFragment StoreEntitySet="Locations">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="NewsId" ColumnName="NewsId" />
+                <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+                <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
