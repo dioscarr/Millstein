@@ -149,7 +149,7 @@ img {
     background-image: none !important;
     color: white;
 }
-.navbar-collapse>.nav_link>li>a:hover {
+.navbar-collapse>.nav_link>li>a:hover { 
     border-top: 5px solid rgb(255, 255, 255);
     margin: 0 15px 10px; 
     padding: 5px 0 0;
