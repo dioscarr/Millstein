@@ -149,7 +149,6 @@ img {
     background-image: none !important;
     color: white;
 }
-
 .navbar-collapse>.nav_link>li>a:hover, .navbar-collapse>.nav_link>li>.menu_top_border { 
     border-top: 5px solid rgb(255, 255, 255);
     margin: 0 15px 10px; 
@@ -309,7 +308,7 @@ img {
     font-weight: 600;
 }
 .firm_image>img{
-    -webkit-filter: grayscale(1);
+    /*-webkit-filter: grayscale(1);*/
 }
 .firm_content_descriprion {
     font-size: 1.5em;
