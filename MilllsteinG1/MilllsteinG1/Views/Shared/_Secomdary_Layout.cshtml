@@ -9,6 +9,22 @@
     <div class="container body-content">
         @RenderBody()
     </div>
+    
+@if (ViewBag.Firmfooter == "on")
+{
+    <footer class="footer_abs footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 copyright copyright_secondary">
+                    <span class="icon_copyright icon_secondary_copyright">© 2015 Millstein & Co., L.P. 123</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+}
+else
+{
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -18,5 +34,8 @@
             </div>
         </div>
     </footer>
+}
+
+
 
 
