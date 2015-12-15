@@ -149,13 +149,16 @@ img {
     background-image: none !important;
     color: white;
 }
-.navbar-collapse>.nav_link>li>a:hover { 
+.navbar-collapse>.nav_link>li>a:hover, .navbar-collapse>.nav_link>li>.menu_top_border { 
     border-top: 5px solid rgb(255, 255, 255);
     margin: 0 15px 10px; 
     padding: 5px 0 0;
     color: white;
 }
-
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: white;
+    background-color: rgb(141, 0, 19) !important;
+}
 .dropdown-menu {
     background-color: rgb(141, 0, 19);
 }
@@ -660,9 +663,3 @@ img {
 }
 
    
-.menu_top_border {
-     border-top: 5px solid rgb(255, 255, 255);
-    margin: 0 15px 10px; 
-    padding: 5px 0 0;
-    color: white;
-}

@@ -46,16 +46,16 @@
                         <!-- <li role="presentation"><a href="out-firm.html">OUR FIRM</a></li> -->
 
                         <li role="presentation" class="dropdown">
-                            <a href="~/firm" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OUR FIRM<span class="caret"></span></a>
+                            <a href="~/firm" class="@ViewBag.FirmActive dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OUR FIRM<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="~/firm">OUR FIRM</a></li>
                                 <li><a href="~/firm/ceo">CEO</a></li>
                             </ul>
                         </li>
-                        <li role="presentation"><a href="~/advisory">ADVISORY</a></li>
-                        <li role="presentation"><a href="~/investment">INVESTMENT</a></li>
-                        <li role="presentation"><a href="~/news">NEWS</a></li>
-                        <li role="presentation"><a href="~/contact">CONTACT</a></li>
+                        <li role="presentation"><a class="@ViewBag.AdvisoryActive" href="~/advisory">ADVISORY</a></li>
+                        <li role="presentation"><a class="@ViewBag.InvestmentActive" href="~/investment">INVESTMENT</a></li>
+                        <li role="presentation"><a class="@ViewBag.NewsActive" href="~/news">NEWS</a></li>
+                        <li role="presentation"><a class="@ViewBag.ContactActive" href="~/contact">CONTACT</a></li>
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right nav_link">
