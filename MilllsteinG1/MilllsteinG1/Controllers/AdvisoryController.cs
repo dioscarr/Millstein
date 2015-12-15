@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MilllsteinG1.Models;
+
 
 namespace Millstein.Controllers
 {
@@ -11,11 +13,22 @@ namespace Millstein.Controllers
         // GET: Advisory
         public ActionResult Index()
         {
-            return View();
+            TeamModel TM = new TeamModel();
+            return View(TM);
         }
-        public ActionResult Info()
+        public ActionResult Info(int id)
         {
-            return View();
+            TeamModel TM = new TeamModel();
+            TM.Load(id);
+            
+            return View(TM);
+        }
+
+        public ActionResult LoadTeamMember(int id)
+        {
+            TeamModel TM = new TeamModel();
+            TM.Load(id);
+            return PartialView(TM);
         }
     }
 }

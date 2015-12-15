@@ -1,4 +1,4 @@
-﻿
+﻿@model MilllsteinG1.Models.TeamModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
@@ -23,24 +23,33 @@
 <div class="row firm_content inv_content">
     <div class="col-xs-9 inv_content_descriprion">
         <div class="adv_content">
-            <p class="inv_company_desc"><i>The financial, legal and policy professionals at Millstein & Co. have decades of experience advising on a broad spectrum of complicated high profile corporate and government situations, with noted expertise in restructuring, sovereigns and financial institutions. President of the Republic of Korea</i></p>
+            <p class="inv_company_desc"><i> @Model.advisory.Quote </i></p>
         </div>
         <div class="advisory_company ">
             <img src="~/Images/advisory.jpg" />
             <br><br>
-            <h4 class="investment_title">Restructuring</h4>
-            <p>At Millstein & Co., we are seasoned financial restructuring professionals.  In situations rife with uncertainty, we draw upon our diverse group of investment bankers, economists, policy professionals and lawyers to bring a multidisciplinary approach to the task of restructuring governments and corporations facing financial distress.  Our distinctive approach to daunting, uncertain situations has resulted in a record of inventive problem solving and successful outcomes for our clients.</p>
+            <h4 class="investment_title">@Model.advisory.ContentTitle1</h4>
+            <p>  @Html.Raw(@Model.advisory.Content1)  </p>
             <br />
-            <h4 class="investment_title">Sovereign</h4>
-            <p>Millstein & Co.’s sovereign advisory professionals have expertly counseled clients with respect to transactions involving sovereign financing strategies and liability management, financial sector restructuring and recapitalization of banks, exploitation of natural resources, infrastructure finance, and state-owned enterprises and privatizations.  We also advise countries in financial crises, helping negotiate with private and official creditors and assisting in negotiating arrangements with institutions such as the IMF and the ECB.</p>
+            <h4 class="investment_title">@Model.advisory.ContentTitle2</h4>
+            <p> @Html.Raw(@Model.advisory.Content2)  </p>
             <br>
-            <h4 class="investment_title">Financial Institutions</h4>
-            <p>To public and private sector clients, Millstein and Co’s financial services advisory professionals provide exceptional independent strategic advice on transactions, valuation, and distressed financial company restructuring and resolution.  Our experience advising on matters involving the restructuring or resolution of some of world’s largest financial institutions makes us uniquely qualified to bridge situations where public policy and private sector objectives meet and demand creative solutions. </p>
-        </div>
+            <h4 class="investment_title">@Model.advisory.ContentTitle3</h4>
+            <p>
+                @Html.Raw(@Model.advisory.Content3)
+            </p>
+            </div>
     </div>
     <div class="col-xs-3">
         <ul class="left_bar_advisory">
-            <li><a href="~/advisory/info">Brendan Hayes</a></li>
+            @foreach (var member in @Model.teamList)
+            {
+                
+                <li><a href="~/advisory/info/@member.Id">@member.FirstName @member.LastName</a></li>
+            }
+
+
+            @*<li><a href="~/advisory/info">Brendan Hayes</a></li>
             <li><a href="~/advisory/info">Elizabeth Abrams</a></li>
             <li><a href="~/advisory/info">Mark Hootnick</a></li>
             <li><a href="~/advisory/info">Jane Vris</a></li>
@@ -48,7 +57,7 @@
             <li><a href="~/advisory/info">Ashley Winston, PhD</a></li>
             <li><a href="~/advisory/info">Jill Dauchy</a></li>
             <li><a href="~/advisory/info">Jim Wigand</a></li>
-            <li><a href="~/advisory/info">Jenni Main</a></li>
+            <li><a href="~/advisory/info">Jenni Main</a></li>*@
         </ul>
     </div>
 </div>

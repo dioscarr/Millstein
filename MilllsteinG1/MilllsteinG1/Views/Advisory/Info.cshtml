@@ -1,4 +1,4 @@
-﻿
+﻿@model MilllsteinG1.Models.TeamModel
 @{
     ViewBag.Title = "Info";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
@@ -6,56 +6,25 @@
     ViewBag.AdvisoryActive = "menu_top_border";
 }
 
-<div class="row firm_title">
-    <div class="col-xs-9 logo">
-        <img src="~/Images/logo-all.png" />
-    </div>
-    <div class="col-xs-3 firm_sidebar">
-        <ul class="list-inline firm_sidebar_ul">
-            <li><a href="#">Advisory</a></li>
-        </ul>
-    </div>
-</div>
-<div class="row firm_content inv_content">
-    <div class="col-xs-9 inv_content_descriprion">
-        <div class="adv_info">
-            <div class="advisory_img pull-left">
-                <img src="~/Images/advisory-info.jpg" />
-            </div>
-            <div class="advisory_info pull-right">
-                <h2 class="ceo_name">Mark Walker</h2>
-                <p class="ceo_name_description">sovereign</p>
-                <p class="adv_info_title">Mark Walker is a Managing Director and head of sovereign advisory at Millstein & Co.</p>
-            </div>
-        </div>
-        <div class="adv_content adv_info_content">
-            <p class="inv_company_desc"><i>“Mr. Walker has rendered distinguished service in enhancing Korea's international credibility by playing a crucial advisory role during the debt negotiations.”</i></p>
-            <br>
-            <span class="pull-right">-Kim Young Sam,<br>President of the Republic of Korea</span>
-        </div>
-        <div class="advisory_company">
-            <p>Mr. Walker was a Managing Director and head of sovereign advisory at Rothschild London from August 2012 to October 2014 and a senior advisor at Lazard Paris from June 2011 to July 2012.   Mr. Walker led the Rothschild team that advised Cyprus during its financial crisis in 2013 and co-led the Lazard team that advised Greece in 2011 and 2012 on the first sovereign debt restructuring of a Eurozone country and the largest sovereign debt restructuring ever.  In addition to leading the negotiations with creditors, Mr. Walker advised the governmental authorities of Greece and Cyprus in their negotiations with the IMF, the European Commission and the European Central Bank.</p>
-            <br />
-            <p>Mr. Walker was a partner at Cleary Gottlieb Steen and Hamilton LLP from 1975 to 2011 and the firm’s Global Managing Partner from 2005 to 2011.  Mr. Walker was a leader and co-founder of that firm’s premier sovereign practice and developed much of the documentation that set the standard for sovereign debt restructurings during the 1980s and 1990s.  </p>
-            <br>
-            <p>Mr. Walker advised Mexico, Peru, Colombia, Yugoslavia, South Korea, Indonesia, the Philippines, the Ivory Coast and numerous other countries in Latin American, Asia, Europe and Africa on liability management (including sovereign debt restructurings), infrastructure finance and a wide variety of financial matters.  Other selected engagements included acting as the principal advisor to Petroleos Mexicanos (Pemex) on international financings for over 30 years, advising the Mexican government on the negotiation of a treaty with the United States relating to trans-boundary hydrocarbon reservoirs, advising Pertamina and PLN on the renegotiation of 26 independent power projects in the aftermath of the Asian financial crisis, advising the Mexican government on the development of a framework for the first long-term integrated service contracts in the oil industry (before amendment of the constitution ending Pemex’s monopoly position), advising Mexico on the privatization of Telmex and the steel industry, advising the project sponsors on the first independent power project in Mexico and representing Slovenia in connection with its separation from Yugoslavia.  During the 2008 financial crisis, Mr. Walker advised the Federal Reserve and the US Government with respect to the bankruptcy of Lehman Brothers and a number of programs developed to mediate the crisis. Mr. Walker has worked with the IMF and other official bodies in seeking to improve the practices followed by debtors and creditors in dealing with liquidity and solvency problems of heavily indebted states.</p>
-            <br>
-            <p>Mr. Walker has also advised private sector debtors and creditors in Asia and Latin America on large cross-border restructurings, including the Daewoo and SK Global groups.</p>
-            <p>Mr. Walker is Chairman of the Board of Trustees of the Population Council, an international, nonprofit, non-governmental organization that conducts biomedical, social science, and public health research and helps build research capacities in developing countries. </p>
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <ul class="left_bar_advisory">
-            <li><a href="adv-info.html">Brendan Hayes</a></li>
-            <li><a href="adv-info.html">Elizabeth Abrams</a></li>
-            <li><a href="adv-info.html">Mark Hootnick</a></li>
-            <li><a href="adv-info.html">Jane Vris</a></li>
-            <li><a class="adv_active" href="adv-info.html">Mark Walker</a></li>
-            <li><a href="adv-info.html">Ashley Winston, PhD</a></li>
-            <li><a href="adv-info.html">Jill Dauchy</a></li>
-            <li><a href="adv-info.html">Jim Wigand</a></li>
-            <li><a href="adv-info.html">Jenni Main</a></li>
-        </ul>
-    </div>
+<div id="returndata">
+    @Html.Partial("LoadTeamMember")
 </div>
 
+@section scripts{
+    <script>
+        $(function () {
+            
+            $('.members').click( function (event) {
+            $.ajax({
+                type:"Get",
+                url: "/advisory/LoadTeamMember/" + $(this).attr("id"),
+                success: function (data) {
+                    $('#returndata').html(data);
+                }   
+            });
+            event.preventDefault();
+
+            });
+        });
+    </script>
+    }

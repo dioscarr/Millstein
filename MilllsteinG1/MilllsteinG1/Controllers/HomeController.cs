@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MilllsteinG1.Models;
 
 namespace Millstein.Controllers
 {
@@ -10,6 +11,8 @@ namespace Millstein.Controllers
     {
         public ActionResult Index()
         {
+            HomeModel HM =  new HomeModel();  
+           
             return View();
         }
 

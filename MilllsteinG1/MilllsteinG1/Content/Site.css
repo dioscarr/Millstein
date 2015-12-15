@@ -389,6 +389,10 @@ body .navbar-header .navbar-default .navbar-nav > .open > a, .navbar-default .na
 .advisory_company {
     padding: 4%;
 }
+
+    .advisory_company > p {
+    margin-bottom:20px;
+    }
 .left_bar_advisory {
     list-style: none;
     float: right;

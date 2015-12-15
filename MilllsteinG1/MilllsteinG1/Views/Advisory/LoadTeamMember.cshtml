@@ -1,0 +1,54 @@
+﻿@model MilllsteinG1.Models.TeamModel
+
+
+
+<div class="row firm_title">
+    <div class="col-xs-9 logo">
+        <img src="~/Images/logo-all.png" />
+    </div>
+    <div class="col-xs-3 firm_sidebar">
+        <ul class="list-inline firm_sidebar_ul">
+            <li><a href="#">Advisory</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row firm_content inv_content">
+    <div class="col-xs-9 inv_content_descriprion">
+        <div class="adv_info">
+            <div class="advisory_img pull-left">
+                <img src="~/Images/advisory-info.jpg" />
+            </div>
+            <div class="advisory_info pull-right">
+                <h2 class="ceo_name">@Model.team.FirstName @Model.team.LastName</h2>
+                <p class="ceo_name_description">@Model.team.Title</p>
+                <p class="adv_info_title">@Model.team.Description</p>
+            </div>
+        </div>
+        <div class="adv_content adv_info_content">
+            <p class="inv_company_desc">
+                <i>
+                    @Model.team.Note
+                </i>
+            </p>
+            <br>
+            <span class="pull-right">@Model.team.NoteWriter,<br>@Model.team.NoteWriterTitle</span>
+        </div>
+        <div class="advisory_company">
+
+            @Html.Raw(@Model.team.Content)
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <ul class="left_bar_advisory">
+            @foreach (var member in @Model.teamList)
+            {
+
+                <li><a class="members" id="@member.Id" href="">@member.FirstName @member.LastName</a></li>
+            }
+
+        </ul>
+    </div>
+</div>
+
+
+
