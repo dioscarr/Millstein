@@ -151,7 +151,7 @@ img {
 }
 .navbar-collapse>.nav_link>li>a:hover {
     border-top: 5px solid rgb(255, 255, 255);
-    margin: 0 15px 10px;
+    margin: 0 15px 10px; 
     padding: 5px 0 0;
     color: white;
 }
