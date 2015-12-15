@@ -2,7 +2,37 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
+
+    ViewBag.Firmfooter = "on";
 }
 
-<h2>Index</h2>
 
+
+<div class="row firm_title">
+    <div class="col-xs-9 logo">
+        <img src="~/Images/logo-all.png" />
+    </div>
+    <div class="col-xs-3 firm_sidebar">
+        <ul class="list-inline firm_sidebar_ul">
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row contact_content">
+    <div class="col-xs-9">
+        <div class="contact_information">
+            <h3>For Press</h3>
+            <span>Jenni Main</span><br />
+            <span>jmain@millsteinandco.com</span><br />
+            <span>202-800-2866</span><br /><br />
+            <h3>For Careers</h3>
+            <span>careers@millsteinandco.com</span>
+        </div>
+    </div>
+    <div class="col-xs-3">
+        <ul class="left_bar_advisory">
+            <li><a href="~/Contact/NyCity">New York</a></li>
+            <li><a href="~/Contact/NyCity">Washington, D.C.</a></li>
+        </ul>
+    </div>
+</div>

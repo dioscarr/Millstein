@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace MilllsteinG1.Controllers
 {
-    public class ContactController : Controller
+    public class InvestmentController : Controller
     {
-        // GET: Contact
+        // GET: Investment
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult NyCity()
         {
             return View();
         }

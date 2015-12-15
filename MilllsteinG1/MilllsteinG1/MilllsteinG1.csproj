@@ -219,6 +219,7 @@
       <SubType>
       </SubType>
     </Compile>
+    <Compile Include="Controllers\InvestmentController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -326,6 +327,8 @@
     <Content Include="Views\Shared\_Secomdary_Layout.cshtml" />
     <Content Include="Views\Advisory\Info.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Investment\Index.cshtml" />
+    <Content Include="Views\Contact\NyCity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

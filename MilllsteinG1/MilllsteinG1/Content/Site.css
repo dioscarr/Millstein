@@ -377,7 +377,7 @@ img {
     font-weight: 600;
     line-height: 2;
 }
-.left_bar_advisory>li>.adv_active {
+.left_bar_advisory>li>.adv_active, .left_bar_advisory>.adv_active {
     color: #9e0b0f;
 }
 .adv_info {
@@ -402,6 +402,23 @@ img {
 .adv_info_content>span {
     text-align: right;
 }
+
+/*================== Contact ======================*/
+
+.contact_content {
+    padding: 0 3%;
+}
+.contact_information>h3 {
+    color: #9e0b0f;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.contact_information>span {
+    font-weight: 600;
+}
+
+
+
 
 
 
