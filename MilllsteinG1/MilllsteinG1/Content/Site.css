@@ -505,10 +505,17 @@ img {
     .text_header {
         top: 40%;
     }
+    
 }
 
 
 @media only screen and (max-width: 994px) {
+    .footer_abs {
+        position: relative;
+    }
+    .footer_abs .icon_copyright {
+        display: block;
+    }
     .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
         height: auto;
     }
@@ -553,7 +560,7 @@ img {
         margin: 1% 0;
     }
     .logo_home {
-        /*position: relative;*/
+        position: absolute;
         padding: 5% 15px;
     }
 
