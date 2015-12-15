@@ -438,7 +438,7 @@ img {
     padding: 1% 3%;
     font-weight: 600;
 }
-.news_detail>h3>a {
+.news_detail>h3>a { 
     font-size: 0.8em;
     color: #9e0b0f !important;
 }
