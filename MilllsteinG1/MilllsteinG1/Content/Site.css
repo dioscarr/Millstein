@@ -265,14 +265,14 @@ img {
     right: 0;
  } 
 .body-content {
+    position: relative;
     min-height: 100%;
     height: auto;
     /*margin: 0 auto -35px;
     padding: 0 0 35px;*/
 }
 .footer {
-    /*position: absolute;*/
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 35px;
@@ -280,12 +280,7 @@ img {
     /*margin: 0 2%;
     padding: 2%;*/
 }
-.footer_no_abs {
-    position: relative;
-}
-.footer_abs {
-    position: absolute;
-}
+
 /*main styles end*/
 
 /*================== Our Firm Page ======================*/
@@ -482,11 +477,11 @@ img {
     font-size: 1.4em;
 }
     .news_detail > span > a {
-    color:black; 
+    color:black !important; 
     }
 
     .news_detail > p {
-    margin-bottom:20px;
+    margin-bottom:20px !important;
     }
 
 .news_archive {
@@ -548,9 +543,9 @@ img {
     .copyright>.icon_secondary_copyright {
         color: white;        
     }
-    .footer_abs .icon_copyright {
+    /*.footer_abs .icon_copyright {
         display: block;
-    }
+    }*/
     .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
         height: auto;
     }
