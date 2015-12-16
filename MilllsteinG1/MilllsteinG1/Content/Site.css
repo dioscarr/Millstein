@@ -527,7 +527,7 @@ img {
 
 
 @media only screen and (max-width: 994px) {
-    .footer_abs {
+    .footer {
         position: fixed; 
         background-color: rgb(141, 0, 19);
     }
@@ -535,6 +535,7 @@ img {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        text-align: center;
     }
     .copyright>.icon_secondary_copyright {
         color: white;        
@@ -619,7 +620,21 @@ img {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: white;
     }
-
+    .firm_sidebar>.firm_sidebar_ul {
+        margin: 4% 0;
+    }
+    .firm_sidebar>.firm_sidebar_ul a {
+        font-size: 1.5em;
+    }
+    .firm_content_descriprion {
+        padding: 0 0 3% 15px;
+    }
+    .firm_content_descriprion {
+        font-size: 1.15em;
+    }
+    .image_desc>p {
+        font-size: 1.2em;
+    }
 }
 
 
