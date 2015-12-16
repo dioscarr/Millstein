@@ -107,7 +107,6 @@ img {
 .invisible {
     visibility: hidden;
 }
-
 /*mail styles*/
 .header {
     background-image: url('../images/slider-img.png');
@@ -579,7 +578,21 @@ img {
         border-right: none;
         border-bottom: 1px solid rgb(128, 128, 128);
     }
-
+    .navbar-collapse {
+        overflow: hidden;
+    }
+    .navbar-collapse>.nav_link>li>a, .navbar-collapse>.nav_link>li>a:hover, .navbar-collapse>.nav_link>li>.menu_top_border {
+        width: 50%;
+        text-align: center;
+        margin: 0 auto 0;
+        padding: 1.5% 1%;
+    }
+    .navbar-collapse>.nav_link>.first_nav_li:first-child>a {
+        margin-top:-5px;
+    }
+    .navbar-collapse>.nav_link>li>a:hover {
+        margin-top:-5px;
+    }
 }
 
 
