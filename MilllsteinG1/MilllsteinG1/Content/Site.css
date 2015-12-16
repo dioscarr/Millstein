@@ -388,8 +388,7 @@ img {
 .advisory_company {
     padding: 4%;
 }
-
-    .advisory_company > p {
+.advisory_company > p {
     margin-bottom:20px;
     }
 .left_bar_advisory {
@@ -492,6 +491,11 @@ img {
 
 
 
+
+
+
+
+
 /*.full-screen {
       background-size: cover;
       background-position: center;
@@ -508,7 +512,6 @@ img {
     .text_header {
         top: 40%;
     }
-    
 }
 
 
@@ -525,7 +528,7 @@ img {
     .header_menu {
         position: relative;
     }
-    .carousel-content, .text_header, .nav_menu>.left_nav, .icon_copyright {
+    .carousel-content, .text_header, .nav_menu>.left_nav{
         display: none;
     }
     .carousel-caption {
@@ -571,9 +574,6 @@ img {
 
 
 @media only screen and (max-width: 768px) {
-    .text_header_news {
-
-    }
     .text_header_news .news_content {
         border-right: none;
         border-bottom: 1px solid rgb(128, 128, 128);
@@ -582,16 +582,14 @@ img {
         overflow: hidden; 
     }
     .navbar-collapse>.nav_link>li>a, .navbar-collapse>.nav_link>li>a:hover, .navbar-collapse>.nav_link>li>.menu_top_border {
-        width: 50%;
+        width: 100%;
         text-align: center;
         margin: 0 auto 0;
         padding: 1.5% 1%;
-    }
-    .navbar-collapse>.nav_link>li>.menu_top_border  {
-        margin-top:-5px;
+        border-top:0;
     }
     .navbar-collapse>.nav_link>li>a:hover {
-        margin-top:-5px;
+        color: grey;
     }
     .navbar-nav .open .dropdown-menu {
         text-align: center;
@@ -599,6 +597,7 @@ img {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: white;
     }
+
 }
 
 

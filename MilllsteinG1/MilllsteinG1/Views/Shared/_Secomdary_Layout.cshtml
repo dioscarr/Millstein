@@ -6,6 +6,7 @@
 
 
 
+
     <div class="container body-content">
         @RenderBody()
     </div>
@@ -15,7 +16,7 @@
     <footer class="footer_abs footer">
         <div class="container">
             <div class="row">
-                <div class="col-xs-3 copyright copyright_secondary">
+                <div class="col-sm-3 col-xs-12 copyright copyright_secondary">
                     <span class="icon_copyright icon_secondary_copyright">© 2015 Millstein & Co., L.P. 123</span>
                 </div>
             </div>
@@ -28,7 +29,7 @@ else
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-xs-3 copyright copyright_secondary">
+                <div class="col-sm-3 col-xs-12 copyright copyright_secondary">
                     <span class="icon_copyright icon_secondary_copyright">© 2015 Millstein & Co., L.P.</span>
                 </div>
             </div>
@@ -37,8 +38,6 @@ else
 }
 
 
-
-
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
+@*@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")*@
 @RenderSection("scripts", required: false)
