@@ -21,11 +21,9 @@ namespace DAL.Models
         public string State { get; set; }
         public string ZipCode { get; set; }
         public string LocationName { get; set; }
-        public Nullable<int> NewsId { get; set; }
+        public string Phone { get; set; }
         public System.DateTime Created { get; set; }
         public System.DateTime Modified { get; set; }
         public bool isDeleted { get; set; }
-    
-        public virtual Contact Contact { get; set; }
     }
 }

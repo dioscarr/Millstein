@@ -14,12 +14,6 @@ namespace DAL.Models
     
     public partial class Contact
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Contact()
-        {
-            this.Locations = new HashSet<Locations>();
-        }
-    
         public int Id { get; set; }
         public string ContentHeader { get; set; }
         public string FirstName { get; set; }
@@ -31,8 +25,5 @@ namespace DAL.Models
         public Nullable<bool> isDeleted { get; set; }
         public Nullable<System.DateTime> Created { get; set; }
         public Nullable<System.DateTime> Modified { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Locations> Locations { get; set; }
     }
 }

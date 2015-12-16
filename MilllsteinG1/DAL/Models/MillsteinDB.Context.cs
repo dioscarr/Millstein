@@ -29,11 +29,11 @@ namespace DAL.Models
         public virtual DbSet<CEO> CEO { get; set; }
         public virtual DbSet<Contact> Contact { get; set; }
         public virtual DbSet<Investment> Investment { get; set; }
+        public virtual DbSet<Locations> Locations { get; set; }
         public virtual DbSet<News> News { get; set; }
-        public virtual DbSet<Team> Team { get; set; }
-        public virtual DbSet<Firm> Firm { get; set; }
         public virtual DbSet<Pages> Pages { get; set; }
         public virtual DbSet<Slider> Slider { get; set; }
-        public virtual DbSet<Locations> Locations { get; set; }
+        public virtual DbSet<Team> Team { get; set; }
+        public virtual DbSet<Firm> Firm { get; set; }
     }
 }
