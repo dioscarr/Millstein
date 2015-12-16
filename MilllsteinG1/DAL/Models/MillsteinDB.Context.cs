@@ -35,5 +35,6 @@ namespace DAL.Models
         public virtual DbSet<Slider> Slider { get; set; }
         public virtual DbSet<Team> Team { get; set; }
         public virtual DbSet<Firm> Firm { get; set; }
+        public virtual DbSet<Person_> Person_ { get; set; }
     }
 }

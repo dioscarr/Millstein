@@ -14,6 +14,12 @@ namespace DAL.Models
     
     public partial class News
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public News()
+        {
+            this.Person_ = new HashSet<Person_>();
+        }
+    
         public int NewsId { get; set; }
         public string NewsTitle { get; set; }
         public string NewsContent { get; set; }
@@ -22,5 +28,8 @@ namespace DAL.Models
         public Nullable<bool> isDeleted { get; set; }
         public Nullable<System.DateTime> Modified { get; set; }
         public Nullable<System.DateTime> Created { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Person_> Person_ { get; set; }
     }
 }

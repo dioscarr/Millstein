@@ -130,6 +130,26 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
           <Property Name="Order" Type="int" />
           <Property Name="isDeleted" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="Person_">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" />
+          <Property Name="LastName" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Address1" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="Zipcode" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Title" Type="nvarchar(max)" />
+          <Property Name="FKkey" Type="int" />
+          <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="isDeleted" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Slider">
           <Key>
             <PropertyRef Name="Id" />
@@ -163,6 +183,18 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
           <Property Name="Modified" Type="datetime2" Precision="7" />
           <Property Name="isDeleted" Type="bit" />
         </EntityType>
+        <Association Name="FK_Person__News">
+          <End Role="News" Type="Self.News" Multiplicity="0..1" />
+          <End Role="Person_" Type="Self.Person_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="News">
+              <PropertyRef Name="NewsId" />
+            </Principal>
+            <Dependent Role="Person_">
+              <PropertyRef Name="FKkey" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Slider_Pages">
           <End Role="Pages" Type="Self.Pages" Multiplicity="1" />
           <End Role="Slider" Type="Self.Slider" Multiplicity="*" />
@@ -183,6 +215,7 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
           <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dioscar" store:Type="Tables" />
           <EntitySet Name="News" EntityType="Self.News" Schema="dioscar" store:Type="Tables" />
           <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Person_" EntityType="Self.Person_" Schema="dioscar" Table="Person." store:Type="Tables" />
           <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dioscar" store:Type="Tables" />
           <EntitySet Name="Team" EntityType="Self.Team" Schema="dioscar" store:Type="Tables" />
           <EntitySet Name="Firm" EntityType="Self.Firm" store:Type="Tables" store:Schema="dioscar">
@@ -197,6 +230,10 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
     [Firm].[isDeleted] AS [isDeleted]
     FROM [dioscar].[Firm] AS [Firm]</DefiningQuery>
           </EntitySet>
+          <AssociationSet Name="FK_Person__News" Association="Self.FK_Person__News">
+            <End Role="News" EntitySet="News" />
+            <End Role="Person_" EntitySet="Person_" />
+          </AssociationSet>
           <AssociationSet Name="FK_Slider_Pages" Association="Self.FK_Slider_Pages">
             <End Role="Pages" EntitySet="Pages" />
             <End Role="Slider" EntitySet="Slider" />
@@ -220,6 +257,11 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
           <AssociationSet Name="FK_Slider_Pages" Association="MillsteinDBModel.FK_Slider_Pages">
             <End Role="Pages" EntitySet="Pages" />
             <End Role="Slider" EntitySet="Slider" />
+          </AssociationSet>
+          <EntitySet Name="Person_" EntityType="MillsteinDBModel.Person_" />
+          <AssociationSet Name="FK_Person__News" Association="MillsteinDBModel.FK_Person__News">
+            <End Role="News" EntitySet="News" />
+            <End Role="Person_" EntitySet="Person_" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Advisory">
@@ -317,6 +359,7 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
           <Property Name="isDeleted" Type="Boolean" />
           <Property Name="Modified" Type="DateTime" Precision="7" />
           <Property Name="Created" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Person_" Relationship="MillsteinDBModel.FK_Person__News" FromRole="News" ToRole="Person_" />
         </EntityType>
         <EntityType Name="Pages">
           <Key>
@@ -389,6 +432,39 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
             </Principal>
             <Dependent Role="Slider">
               <PropertyRef Name="HomeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Person_">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Zipcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FKkey" Type="Int32" />
+          <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="isDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="News" Relationship="MillsteinDBModel.FK_Person__News" FromRole="Person_" ToRole="News" />
+        </EntityType>
+        <Association Name="FK_Person__News">
+          <End Type="MillsteinDBModel.News" Role="News" Multiplicity="0..1" />
+          <End Type="MillsteinDBModel.Person_" Role="Person_" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="News">
+              <PropertyRef Name="NewsId" />
+            </Principal>
+            <Dependent Role="Person_">
+              <PropertyRef Name="FKkey" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -558,6 +634,27 @@ warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary 
                 <ScalarProperty Name="FirmTitle" ColumnName="FirmTitle" />
                 <ScalarProperty Name="Content" ColumnName="Content" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Person_">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Person_">
+              <MappingFragment StoreEntitySet="Person_">
+                <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
+                <ScalarProperty Name="Modified" ColumnName="Modified" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="FKkey" ColumnName="FKkey" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Zipcode" ColumnName="Zipcode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

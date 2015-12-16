@@ -16,6 +16,8 @@
         <EntityTypeShape EntityType="MillsteinDBModel.Team" Width="1.5" PointX="8.75" PointY="4.75" />
         <EntityTypeShape EntityType="MillsteinDBModel.Firm" Width="1.5" PointX="4.75" PointY="8.75" />
         <AssociationConnector Association="MillsteinDBModel.FK_Slider_Pages" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Person_" Width="1.5" PointX="10" PointY="10" />
+        <AssociationConnector Association="MillsteinDBModel.FK_Person__News" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

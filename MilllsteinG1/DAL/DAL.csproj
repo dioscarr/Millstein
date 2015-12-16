@@ -115,6 +115,9 @@
     <Compile Include="Models\Pages.cs">
       <DependentUpon>MillsteinDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Person_.cs">
+      <DependentUpon>MillsteinDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Slider.cs">
       <DependentUpon>MillsteinDB.tt</DependentUpon>
     </Compile>
@@ -124,6 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AdvisoryRepository.cs" />
     <Compile Include="Repositories\CEORepository.cs" />
+    <Compile Include="Repositories\PersonRepository.cs" />
     <Compile Include="Repositories\TeamRepository.cs" />
     <Compile Include="Repositories\FirmRepository.cs" />
     <Compile Include="Repositories\LocationsRepository.cs" />
