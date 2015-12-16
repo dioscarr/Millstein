@@ -388,8 +388,7 @@ img {
 .advisory_company {
     padding: 4%;
 }
-
-    .advisory_company > p {
+.advisory_company > p {
     margin-bottom:20px;
     }
 .left_bar_advisory {
@@ -427,7 +426,18 @@ img {
 .adv_info_content>span {
     text-align: right;
 }
-
+.show_buttom_advisory {
+    text-align: center;
+}
+.advisory_button {
+    margin: 0 auto;
+    margin: 2%;
+}
+.mobile_left_bar_advisory {
+        display: none;
+        float: none;
+        padding: 0;
+}
 /*================== Contact ======================*/
 
 .contact_content {
@@ -500,6 +510,11 @@ img {
 
 
 
+
+
+
+
+
 /*.full-screen {
       background-size: cover;
       background-position: center;
@@ -516,13 +531,22 @@ img {
     .text_header {
         top: 40%;
     }
-    
 }
 
 
 @media only screen and (max-width: 994px) {
-    .footer_abs {
-        position: relative;
+    .footer {
+        position: fixed; 
+        background-color: rgb(141, 0, 19);
+    }
+    .copyright {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    .copyright>.icon_secondary_copyright {
+        color: white;        
     }
     .footer_abs .icon_copyright {
         display: block;
@@ -533,7 +557,7 @@ img {
     .header_menu {
         position: relative;
     }
-    .carousel-content, .text_header, .nav_menu>.left_nav, .icon_copyright {
+    .carousel-content, .text_header, .nav_menu>.left_nav{
         display: none;
     }
     .carousel-caption {
@@ -574,14 +598,13 @@ img {
         position: absolute;
         padding: 5% 15px;
     }
-
+    .advisory_leftbar_title {
+        display: none;
+    }
 }
 
 
 @media only screen and (max-width: 768px) {
-    .text_header_news {
-
-    }
     .text_header_news .news_content {
         border-right: none;
         border-bottom: 1px solid rgb(128, 128, 128);
@@ -590,22 +613,35 @@ img {
         overflow: hidden; 
     }
     .navbar-collapse>.nav_link>li>a, .navbar-collapse>.nav_link>li>a:hover, .navbar-collapse>.nav_link>li>.menu_top_border {
-        width: 50%;
+        width: 100%;
         text-align: center;
         margin: 0 auto 0;
         padding: 1.5% 1%;
-    }
-    .navbar-collapse>.nav_link>li>.menu_top_border  {
-        margin-top:-5px;
+        border-top:0;
     }
     .navbar-collapse>.nav_link>li>a:hover {
-        margin-top:-5px;
+        color: grey;
     }
     .navbar-nav .open .dropdown-menu {
         text-align: center;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: white;
+    }
+    .firm_sidebar>.firm_sidebar_ul {
+        margin: 4% 0;
+    }
+    .firm_sidebar>.firm_sidebar_ul a {
+        font-size: 1.5em;
+    }
+    .firm_content_descriprion {
+        padding: 0 0 3% 15px;
+    }
+    .firm_content_descriprion {
+        font-size: 1.15em;
+    }
+    .image_desc>p {
+        font-size: 1.2em;
     }
 }
 

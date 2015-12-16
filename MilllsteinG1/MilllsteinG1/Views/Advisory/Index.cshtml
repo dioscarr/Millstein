@@ -8,20 +8,28 @@
 }
 
 
-
-
 <div class="row firm_title">
     <div class="col-xs-9 logo">
         <img src="~/Images/logo-all.png" />
     </div>
-    <div class="col-xs-3 firm_sidebar">
+    <div class="col-xs-3 firm_sidebar advisory_leftbar_title">
         <ul class="list-inline firm_sidebar_ul">
             <li><a href="#">Advisory</a></li>
         </ul>
     </div>
 </div>
 <div class="row firm_content inv_content">
-    <div class="col-xs-9 inv_content_descriprion">
+    <div class="col-md-9 col-xs-12 inv_content_descriprion">
+        <div class="show_buttom_advisory visible-xs visible-sm">
+            <button class="btn btn-default advisory_button">View all Advisers</button>
+            <ul class="left_bar_advisory mobile_left_bar_advisory">
+                @foreach (var member in @Model.teamList)
+                {
+
+                    <li><a href="~/advisory/info/@member.Id">@member.FirstName @member.LastName</a></li>
+                }
+            </ul>
+        </div>
         <div class="adv_content">
             <p class="inv_company_desc"><i> @Model.advisory.Quote </i></p>
         </div>
@@ -40,7 +48,7 @@
             </p>
             </div>
     </div>
-    <div class="col-xs-3">
+    <div class="col-xs-3 visible-lg visible-md">
         <ul class="left_bar_advisory">
             @foreach (var member in @Model.teamList)
             {
@@ -63,3 +71,13 @@
 </div>
 
 
+@section scripts{
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".advisory_button").click(function () {
+                $(".mobile_left_bar_advisory").slideToggle("slow");
+            });
+        });
+    </script>
+}
