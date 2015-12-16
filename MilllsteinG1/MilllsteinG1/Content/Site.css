@@ -528,7 +528,7 @@ img {
 
 @media only screen and (max-width: 994px) {
     .footer_abs {
-        position: fixed;
+        position: fixed; 
         background-color: rgb(141, 0, 19);
     }
     .copyright {
