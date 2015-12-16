@@ -48,6 +48,7 @@
     <Compile Include="ManageLocations.cs" />
     <Compile Include="ManageAdvisory.cs" />
     <Compile Include="ManageFirm.cs" />
+    <Compile Include="ManagePerson.cs" />
     <Compile Include="ManageTeam.cs" />
     <Compile Include="ManageSlider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

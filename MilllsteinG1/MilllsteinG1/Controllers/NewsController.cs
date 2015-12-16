@@ -3,26 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MilllsteinG1.Models;
 
 namespace MilllsteinG1.Controllers
 {
     public class NewsController : Controller
     {
         // GET: News
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            return View();
+             NewsModel NM1 = new NewsModel();
+            if (id != null)
+            { 
+                NewsModel NM = new NewsModel((int)id);               
+                return View(NM);
+            }
+
+            return View(NM1);
         }
-        [HttpPost]
-        public ActionResult Index(string year)
-        {
+        //[HttpPost]
+        //public ActionResult Index(int year)
+        //{
              
-            return View();
-        }
-       
-        public ActionResult Article()
+        //    return View();
+        //}
+       [HttpGet]
+        public ActionResult Article(int id)
         {
-            return View();
+            NewsModel NM = new NewsModel();
+            NM.setArticle(id);
+            NM.setPersonContact(id);
+
+            return View(NM);
         }
     }
 }

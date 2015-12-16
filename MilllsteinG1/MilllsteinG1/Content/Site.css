@@ -481,6 +481,14 @@ img {
     color: #9e0b0f;
     font-size: 1.4em;
 }
+    .news_detail > span > a {
+    color:black;
+    }
+
+    .news_detail > p {
+    margin-bottom:20px;
+    }
+
 .news_archive {
     list-style: none;
 }
