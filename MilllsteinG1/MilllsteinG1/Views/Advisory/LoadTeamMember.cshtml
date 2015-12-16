@@ -4,7 +4,7 @@
 
 <div class="row firm_title">
     <div class="col-xs-9 logo">
-        <img src="~/Images/logo-all.png" />
+        <a href="~/home"><img src="~/Images/logo-all.png" /></a>
     </div>
     <div class="col-xs-3 firm_sidebar advisory_leftbar_title">
         <ul class="list-inline firm_sidebar_ul">
@@ -25,10 +25,10 @@
             </ul>
         </div>
         <div class="adv_info">
-            <div class="advisory_img pull-left">
+            <div class="col-sm-6 col-xs-12 advisory_img">
                 <img src="~/Images/advisory-info.jpg" />
             </div>
-            <div class="advisory_info pull-right">
+            <div class="col-sm-6 col-xs-12 advisory_info">
                 <h2 class="ceo_name">@Model.team.FirstName @Model.team.LastName</h2>
                 <p class="ceo_name_description">@Model.team.Title</p>
                 <p class="adv_info_title">@Model.team.Description</p>

@@ -265,7 +265,7 @@ img {
     right: 0;
  } 
 .body-content {
-    position: relative;
+    /*position: relative;*/
     min-height: 100%;
     height: auto;
     /*margin: 0 auto -35px;
@@ -403,9 +403,6 @@ img {
     overflow: hidden;
     position: relative;
     margin: 3% 0;
-}
-.advisory_img, .advisory_info {
-    width: 48%;
 }
 .advisory_info {
     position: absolute;
@@ -637,6 +634,11 @@ img {
     }
     .image_desc>p {
         font-size: 1.2em;
+    }
+    .advisory_info {
+        position: relative;
+        bottom: 0;
+        padding: 2% 15px;
     }
 }
 

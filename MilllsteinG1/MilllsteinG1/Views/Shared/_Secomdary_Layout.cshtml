@@ -38,6 +38,13 @@ else
 }
 
 
+@section scripts{
+    <script type="text/javascript">
+        $(".body-content").css("position", "relative");
+    </script>
+}
+
+
 @*@Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/bootstrap")*@
 @RenderSection("scripts", required: false)
