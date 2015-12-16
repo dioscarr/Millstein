@@ -24,7 +24,6 @@ html{
 body,html {
     margin:0;
     padding:0;
-    overflow-x: hidden;
     font-family: 'Merriweather';
 }
 /*scroll*/
@@ -32,6 +31,7 @@ body {
     background-color: white;
     min-height: 100%;
     height: auto;
+    overflow-x: hidden;
 }
 body::-webkit-scrollbar {
     width:10px
@@ -587,11 +587,17 @@ img {
         margin: 0 auto 0;
         padding: 1.5% 1%;
     }
-    .navbar-collapse>.nav_link>.first_nav_li:first-child>a {
+    .navbar-collapse>.nav_link>li>.menu_top_border  {
         margin-top:-5px;
     }
     .navbar-collapse>.nav_link>li>a:hover {
         margin-top:-5px;
+    }
+    .navbar-nav .open .dropdown-menu {
+        text-align: center;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
     }
 }
 
