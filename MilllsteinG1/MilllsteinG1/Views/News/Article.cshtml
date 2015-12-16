@@ -1,10 +1,11 @@
 ﻿
 @{
-    ViewBag.Title = "Archive";
+    ViewBag.Title = "Article";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
 
     ViewBag.NewsActive = "menu_top_border";
 }
+
 
 <div class="row firm_title">
     <div class="col-xs-9 logo">
@@ -42,15 +43,15 @@
             <li><a href="~/News">Recemt News</a></li>
             <li><a href="~/News/Archive">Press</a></li>
             <li>
-                <a class="adv_active" href="~/News/Archive">
+                <a href="~/News/Index?year=2015">
                     Archive
                     <ul class="news_archive">
-                        <li><a class="adv_active" href="~/News/Archive">2015</a></li>
-                        <li><a href="~/News/Archive">2014</a></li>
-                        <li><a href="~/News/Archive">2013</a></li>
-                        <li><a href="~/News/Archive">2012</a></li>
-                        <li><a href="~/News/Archive">2011</a></li>
-                        <li><a href="~/News/Archive">2010</a></li>
+                        <li><a href="~/News/Index?year=2015">2015</a></li>
+                        <li><a href="~/News/Index?year=2014">2014</a></li>
+                        <li><a href="~/News/Index?year=2013">2013</a></li>
+                        <li><a href="~/News/Index?year=2012">2012</a></li>
+                        <li><a href="~/News/Index?year=2011">2011</a></li>
+                        <li><a href="~/News/Index?year=2010">2010</a></li>
                     </ul>
                 </a>
             </li>

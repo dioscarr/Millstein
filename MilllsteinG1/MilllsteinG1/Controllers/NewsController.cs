@@ -13,7 +13,14 @@ namespace MilllsteinG1.Controllers
         {
             return View();
         }
-        public ActionResult Archive()
+        [HttpPost]
+        public ActionResult Index(string year)
+        {
+             
+            return View();
+        }
+       
+        public ActionResult Article()
         {
             return View();
         }
