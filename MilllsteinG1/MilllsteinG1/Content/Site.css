@@ -237,7 +237,7 @@ img {
 } 
 .copyright_secondary {
     position: relative;
-    bottom: 0;
+    bottom: 0em;
     padding: 0.5% 0;
 }
 .icon_copyright, .icon_copyright>a {
@@ -275,7 +275,7 @@ img {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 35px;
+    height: 30px;
     border-top:1px solid #8d0013;
     /*margin: 0 2%;
     padding: 2%;*/
@@ -549,7 +549,11 @@ margin-bottom:20px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        text-align: center;
+        padding-left:15px;
+        /*text-align: center;*/
+    }
+    .copyright_secondary {
+
     }
     .copyright>.icon_copyright,.copyright>.icon_copyright>a {
         color: white;        
