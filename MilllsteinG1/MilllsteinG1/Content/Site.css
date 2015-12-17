@@ -677,7 +677,7 @@ margin-bottom:20px;
     .visible-xs .left_bar_advisory {
         float: none;
     }
-    .visible-xs .left_bar_advisory>li {
+    .contact_content .left_bar_advisory>li {
         display: inline-block;
         padding: 1%;
     }
