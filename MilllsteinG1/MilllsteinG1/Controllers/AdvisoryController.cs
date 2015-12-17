@@ -26,6 +26,8 @@ namespace Millstein.Controllers
 
         public ActionResult LoadTeamMember(int id)
         {
+          
+
             TeamModel TM = new TeamModel();
             TM.Load(id);
             return PartialView(TM);

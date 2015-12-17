@@ -14,7 +14,8 @@ namespace MilllsteinG1.Controllers
         {
              NewsModel NM1 = new NewsModel();
             if (id != null)
-            { 
+            {
+                ViewBag.CurrentYear = id;
                 NewsModel NM = new NewsModel((int)id);               
                 return View(NM);
             }
