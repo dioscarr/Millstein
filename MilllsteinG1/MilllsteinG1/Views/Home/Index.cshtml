@@ -1,4 +1,5 @@
-﻿@{
+﻿@model MilllsteinG1.Models.HomeModel
+@{
     ViewBag.Title = "Home Page";
     
     ViewBag.HomeActive = "menu_top_border";
@@ -70,16 +71,16 @@
         <div class="row small_appeal">
             <div class="col-xs-12">
                 <h2>
-                    “The Treasure Department’s restructuring   team, led by Jim Millstein, earns an A for its work on the American International Group”<br>
+                    @Model.SliderList[0].Quote<br>
                 </h2>
-                <span class="pull-right">— New York Times, Dealbook</span>
+                <span class="pull-right">@Model.SliderList[0].QuoteLocation</span>
             </div>
         </div>
         <div class="row text_header_news">
             <div class="col-sm-8 col-xs-12">
                 <h2 class="news_content pull-left">
-                    Millstein & Co. develops solutions for complex corporate and public finance issues. Drawing upon the financial, economic and policy backgrounds of our professionals, we assess situations from multiple perspectives to develop artful solutions. 
-                </h2>
+                    @Html.Raw(@Model.Home.Content)
+                  </h2>
             </div>
             <div class="col-sm-4 col-xs-12">
                 @*<div class="news_name pull-left">

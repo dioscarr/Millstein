@@ -1,4 +1,4 @@
-﻿
+﻿@model MilllsteinG1.Models.ContactModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
@@ -22,18 +22,22 @@
 <div class="row contact_content">
     <div class="col-xs-9">
         <div class="contact_information">
-            <h3>For Press</h3>
-            <span>Jenni Main</span><br />
-            <span><a class="news_archive_link" href="#">jmain@millsteinandco.com</a></span><br />
-            <span>202-800-2866</span><br /><br />
-            <h3>For Careers</h3>
-            <span><a class="news_archive_link" href="#">careers@millsteinandco.com</a></span>
+            <h3>@Model.ContactDetail.ContentHeader</h3>
+            <span>@Model.ContactDetail.FirstName @Model.ContactDetail.LastName Main</span><br />
+            <span><a class="news_archive_link" href="#">@Model.ContactDetail.Email</a></span><br />
+            <span>@Model.ContactDetail.Tel</span><br /><br />
+            <h3>@Model.ContactDetail.CareersHeader</h3>
+            <span><a class="news_archive_link" href="#">@Model.ContactDetail.CareersEmail</a></span>
         </div>
     </div>
     <div class="col-xs-3">
         <ul class="left_bar_advisory">
-            <li><a href="~/Contact/NyCity">New York</a></li>
-            <li><a href="~/Contact/NyCity">Washington, D.C.</a></li>
+          
+                <li><a href="~/Contact/NyCity/@Model.Locations[0].Id">@Model.Locations[0].LocationName</a></li>
+            <li><a href="~/Contact/WashingtonDCCity/@Model.Locations[1].Id">@Model.Locations[1].LocationName</a></li>
+                
+           
+            
         </ul>
     </div>
 </div>

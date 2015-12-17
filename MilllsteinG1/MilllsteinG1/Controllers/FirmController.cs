@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using MilllsteinG1.Models;
 namespace Millstein.Controllers
 {
     public class FirmController : Controller
@@ -11,11 +11,15 @@ namespace Millstein.Controllers
         // GET: Firm
         public ActionResult Index()
         {
-            return View();
+            FirmModel FM = new FirmModel();
+
+            return View(FM);
         }
         public ActionResult Ceo()
         {
-            return View();
+            CEOModel CM = new CEOModel();
+
+            return View(CM);
         }
     }
 }

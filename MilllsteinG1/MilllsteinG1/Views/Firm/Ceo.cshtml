@@ -1,4 +1,4 @@
-﻿
+﻿@model MilllsteinG1.Models.CEOModel
 @{
     ViewBag.Title = "Ceo";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
@@ -20,24 +20,16 @@
     <div class="col-xs-6 firm_image">
         <img src="~/Images/jim_millstein.jpg" />
         <div class="image_desc image_desc_ceo">
-            <p><i>Millstein “advised the United Auto Workers union on historic contract negotiations with Detroit's three auto makers”</i></p>
-            <span class="pull-right">— Wall Street Journal, 2/15/12</span>
+            <p><i>@Model.CEODetail.pictureQuote”</i></p>
+            <span class="pull-right">@Model.CEODetail.pictureQuoteSource, @String.Format("{0:MM dd, yyyy}", @Model.CEODetail.PictureQuoteDate)</span>
         </div>
         <div class="ceo_company">
-            <p>Jim Millstein is the Founder and Chief Executive Officer of Millstein & Co., a financial advisory firm with 30 professionals in offices in Washington, D.C. and New York City. Representative engagements include advice to the Commonwealth of Puerto Rico in connection with the managemttent of its $75 billion of institutional indebtedness; to US Airways in connection with its acquisition of American Airlines out of Chapter 11; and to holders of $26 billion of secured claims against the merchant power subsidiary of TXU operating in Chapter 11.</p>
-        </div>
+        @Html.Raw(@Model.CEODetail.Description)   
+           </div>
     </div>
     <div class="col-xs-6 ceo_content_descriprion">
-        <h2 class="ceo_name">Jim Millstein</h2>
-        <p class="ceo_name_description">founder</p>
-        <p>From 2009 to March 2011, Mr. Millstein was the Chief Restructuring Officer at the U.S. Department of the Treasury. In that role, he was responsible for oversight and management of the Department's largest investments in the financial sector and was the principal architect of AIG’s restructuring and recapitalization. </p>
-        <br />
-        <p>Prior to joining the Treasury, Mr. Millstein served as Managing Director and Global Co-Head of Corporate Restructuring at Lazard from 2000 to 2008. Selected engagements at Lazard include representation of the United Auto Workers in connection with the restructuring of their contractual relationships with GM, Ford and Chrysler from 2005 to 2007; Charter Communications in connection with its pre-packaged plan of reorganization under Chapter 11; the Republic of Argentina in connection with the exchange offer for its international bond indebtedness;  WorldCom in connection with its Chapter 11 reorganization; United Pan-European Communications in connection with its pre-arranged plan of arrangement in the Netherlands and Delaware; and, Marconi in connection with its scheme of arrangement in the United Kingdom. </p>
-        <br>
-        <p>Before joining Lazard, Mr. Millstein was Partner and Head of the Corporate Restructuring practice at Cleary, Gottlieb, Steen & Hamilton. Significant engagements included representation of Daewoo Corporation in connection with its financial restructuring in Korea; the Disney Corporation in connection with the financial restructuring of EuroDisney in France; representation of the Pension Benefit Guaranty Corporation in LTV’s Chapter 11 proceedings; representation of Pan-American Airlines in connection with its Chapter 11 reorganization; and, the Zell-Chilmark Fund in its acquisition of various troubled companies in and out of Chapter 11. </p>
-        <br>
-        <p>Mr. Millstein is an adjunct professor of law at Georgetown University Law Center, where he teaches Federal Regulation of Financial Institutions; and a Commissioner on the American Bankruptcy Institute’s Commission to Study Reform of Chapter 11. </p>
-        <br>
-        <p>Mr. Millstein received a J.D. from Columbia Law School, where he was a Harlan Fiske Stone Scholar. He holds an M.A. in Political Science summa cum laude from the University of California, Berkeley.  Mr. Millstein graduated summa cum laude with a B.A. in Politics from Princeton University.</p>
-    </div>
+        <h2 class="ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
+        <div class="ceo_name_description">@Model.CEODetail.Title</div>
+   @Html.Raw(@Model.CEODetail.Content)   
+     </div>
 </div>

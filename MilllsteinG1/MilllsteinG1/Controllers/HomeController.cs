@@ -13,7 +13,7 @@ namespace Millstein.Controllers
         {
             HomeModel HM =  new HomeModel();  
            
-            return View();
+            return View(HM);
         }
 
         public ActionResult About()

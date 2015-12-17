@@ -15,7 +15,7 @@ namespace BLL
         [DataObjectMethod(DataObjectMethodType.Select)]
        public static IList<Pages> GetAllPages()
         {
-            return Manage<Pages, PagesRepository>.GetAll().Where(n => n.isDeleted == false).OrderByDescending(n => n.Created).ToList();
+            return Manage<Pages, PagesRepository>.GetAll().ToList();
         }
         public static Pages GetById(int id)
         {

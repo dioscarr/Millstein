@@ -309,6 +309,10 @@ img {
 .firm_image>img{
     /*-webkit-filter: grayscale(1);*/
 }
+
+.firm_content_descriprion  p  {
+margin-bottom:20px;
+}
 .firm_content_descriprion {
     font-size: 1.5em;
 }
@@ -337,6 +341,10 @@ img {
     font-size: 1.1em;
     font-weight: 600;
 }
+
+    .ceo_content_descriprion > P {
+    margin-bottom:20px;
+    }
 .image_desc_ceo {
     padding: 5%;
     overflow: hidden;
@@ -357,6 +365,12 @@ img {
 .inv_content {
     font-weight: 600;
 }
+
+    .inv_content_descriprion > p {
+    margin-bottom:20px!important;
+    }
+
+                 
 .investment_title {
     color: #9e0b0f;
     text-transform: uppercase;

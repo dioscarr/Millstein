@@ -1,4 +1,4 @@
-﻿
+﻿@model MilllsteinG1.Models.FirmModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
@@ -22,14 +22,12 @@
     </div>
     <div class="row firm_content">
         <div class="col-xs-6 firm_content_descriprion">
-            <p>At Millstein & Co. we take a multi-disciplinary approach to problem solving and value creation.  Our professionals bring extensive experience in finance, law, economics and public policy to assess a client’s situation and develop creative, innovative solutions.  We define ourselves as problem solvers in circumstances where easy answers won’t suffice.</p>
-            <br />
-            <p>We value the pedigree of our diverse team of professionals, but more importantly, we believe that the best ideas emerge from collaboration and teamwork.   As a result, our deal teams are small. Everyone is accountable and responsible for our work, and we count on the engagement and commitment of each team member to the highest ethical and intellectual standards.</p>
-        </div>
+            @Html.Raw(@Model.FirmDetail.Content)
+           </div>
         <div class="col-xs-6 firm_image">
             <img src="~/Images/firm-1.jpg" />
             <div class="image_desc">
-                <p><i>The best ideas emerge from collaboration and teamwork.</i></p>
+                <p><i>@Html.Raw(@Model.FirmDetail.FirmQuote)</i></p>
             </div>
         </div>
     </div>

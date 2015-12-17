@@ -1,4 +1,4 @@
-﻿
+﻿@model MilllsteinG1.Models.InvestmentModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
@@ -19,23 +19,21 @@
 </div>
 <div class="row firm_content inv_content">
     <div class="col-xs-9 inv_content_descriprion">
-        <p class="inv_company_desc">
+        <div class="inv_company_desc">
             <i>
-                Millstein & Co. is also a merchant bank, willing to raise capital for our clients and to invest our own capital when requested and appropriate.  In our merchant banking effort, we are focused primarily in two areas: middle market private equity where fresh capital and strategic perspective can generate compelling outcomes, and special situations where changing government policy creates new market opportunities.
-                President of the Republic of Korea
+               @Model.InvestmentDetail.HeaderContent
             </i>
-        </p>
+        </div>
         <br />
-        <h4 class="investment_title">Middle Market Private Equity</h4>
-        <p>Millstein & Co.’s principal investment arm deploys capital across the capital structure on behalf of and alongside clients and investors in situations where the firm’s unique position in the market can produce attractive risk-adjusted returns.  Our middle-market buyout strategy focuses on control-oriented investments in the areas of financial services, technology, industrial, consumer and technology-enabled business services in North America.  Millstein & Co. works with exceptional operating executives who help us identify, validate and manage our investments, allowing us to leverage our investment professionals’ operating and transaction experience and provide strategic and operational guidance.</p>
-        <br />
-        <h4 class="investment_title">Special Situations</h4>
-        <p>Millstein & Co.’s Special Situations group invests in both liquid and illiquid opportunities where public policy plays a significant role.  Our  primary focus is financial institutions, services and markets, which are experiencing tectonic shifts due to policy responses to recent crises. The team brings a multidisciplinary approach to bear in assisting target companies overcome existing and potential challenges.  Our holistic solutions rely on in-house expertise in investment management, corporate and public finance, economics and law.  Millstein & Co. considers investments in this area across the capital structure and throughout the spectrum of business development stages, from greenfield to mature platforms.</p>
+        <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle1</h4>
+       @Html.Raw(@Model.InvestmentDetail.Content1)
+        <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle2</h4>
+        @Html.Raw(@Model.InvestmentDetail.Content2) 
     </div>
     <div class="col-xs-3 firm_image">
         <img src="~/Images/firm-2.jpg" />
         <div class="image_desc image_desc_inv">
-            <p><i>We raise capital for our clients and to invest our own capital when requested  and appropriate.</i></p>
+            <p><i>@Model.InvestmentDetail.PictureContent</i></p>
         </div>
     </div>
 </div>

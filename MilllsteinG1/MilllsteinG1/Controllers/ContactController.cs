@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MilllsteinG1.Models;
 
 namespace MilllsteinG1.Controllers
 {
@@ -11,11 +12,21 @@ namespace MilllsteinG1.Controllers
         // GET: Contact
         public ActionResult Index()
         {
-            return View();
+            ContactModel CM = new ContactModel();
+            return View(CM);
         }
-        public ActionResult NyCity()
+        public ActionResult NyCity(int id)
         {
-            return View();
+            ContactModel CM = new ContactModel();
+            CM.setLocation(id);
+            return View(CM);
+        }
+
+        public ActionResult WashingtonDCCity(int id)
+        {
+            ContactModel CM = new ContactModel();
+            CM.setLocation(id);
+            return View(CM);
         }
     }
 }

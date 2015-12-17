@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using MilllsteinG1.Models;
+
 namespace MilllsteinG1.Controllers
 {
     public class InvestmentController : Controller
@@ -11,7 +13,10 @@ namespace MilllsteinG1.Controllers
         // GET: Investment
         public ActionResult Index()
         {
-            return View();
+
+            InvestmentModel IM = new InvestmentModel();
+
+            return View(IM);
         }
     }
 }
