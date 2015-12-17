@@ -21,14 +21,24 @@
         </div>
     </div>
     <div class="row firm_content">
-        <div class="col-xs-6 firm_content_descriprion">
+        <div class="col-xs-6 visible-lg visible-md visible-sm firm_content_descriprion">
             @Html.Raw(@Model.FirmDetail.Content)
-           </div>
-        <div class="col-xs-6 firm_image">
+        </div>
+        <div class="col-xs-6 visible-lg visible-md visible-sm firm_image">
             <img src="~/Images/firm-1.jpg" />
             <div class="image_desc">
                 <p><i>@Html.Raw(@Model.FirmDetail.FirmQuote)</i></p>
             </div>
+        </div>
+        
+        <div class="col-xs-12 visible-xs firm_image">
+            <img src="~/Images/firm-1.jpg" />
+            <div class="image_desc">
+                <p><i>@Html.Raw(@Model.FirmDetail.FirmQuote)</i></p>
+            </div>
+        </div>
+        <div class="col-xs-12 visible-xs firm_content_descriprion">
+            @Html.Raw(@Model.FirmDetail.Content)
         </div>
     </div>
 
