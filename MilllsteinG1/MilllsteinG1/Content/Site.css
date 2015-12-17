@@ -178,7 +178,7 @@ img {
     height: 100vh;
     -webkit-filter: grayscale(1);
     /*-webkit-filter: sepia(0.55);*/
-}
+} 
 .backstretch {
     /*-webkit-filter: grayscale(1);*/
 }
@@ -240,7 +240,7 @@ img {
     bottom: 0;
     padding: 0.5% 0;
 }
-.icon_copyright {
+.icon_copyright, .icon_copyright>a {
     color: white;
     font-size: 0.8em;
 }
@@ -593,6 +593,9 @@ margin-bottom:20px;
     }
     .sm_copyright {
         padding: 5%;
+    }
+    .sm_copyright>a {
+        color: rgb(51, 51, 51);
     }
     .text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
         padding: 2% 5% 5% 0;
