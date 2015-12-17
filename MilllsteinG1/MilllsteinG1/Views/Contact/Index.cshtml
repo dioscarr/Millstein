@@ -10,16 +10,16 @@
 
 
 <div class="row firm_title">
-    <div class="col-xs-9 logo">
+    <div class="col-sm-9 col-xs-12 logo">
         <a href="~/home"><img src="~/Images/logo-all.png" /></a>
     </div>
-    <div class="col-xs-3 firm_sidebar">
+    <div class="col-sm-3 col-xs-12 firm_sidebar">
         <ul class="list-inline firm_sidebar_ul">
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
 </div>
-<div class="row contact_content">
+<div class="visible-lg visible-md visible-sm row contact_content">
     <div class="col-xs-9">
         <div class="contact_information">
             <h3>@Model.ContactDetail.ContentHeader</h3>
@@ -32,12 +32,28 @@
     </div>
     <div class="col-xs-3">
         <ul class="left_bar_advisory">
-          
-                <li><a href="~/Contact/NyCity/@Model.Locations[0].Id">@Model.Locations[0].LocationName</a></li>
+            <li><a href="~/Contact/NyCity/@Model.Locations[0].Id">@Model.Locations[0].LocationName</a></li>
             <li><a href="~/Contact/WashingtonDCCity/@Model.Locations[1].Id">@Model.Locations[1].LocationName</a></li>
-                
-           
-            
         </ul>
+    </div>
+</div>
+
+
+<div class="visible-xs row contact_content">
+    <div class="col-xs-12">
+        <ul class="left_bar_advisory">
+            <li><a href="~/Contact/NyCity/@Model.Locations[0].Id">@Model.Locations[0].LocationName</a></li>
+            <li><a href="~/Contact/WashingtonDCCity/@Model.Locations[1].Id">@Model.Locations[1].LocationName</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-12">
+        <div class="contact_information">
+            <h3>@Model.ContactDetail.ContentHeader</h3>
+            <span>@Model.ContactDetail.FirstName @Model.ContactDetail.LastName Main</span><br />
+            <span><a class="news_archive_link" href="#">@Model.ContactDetail.Email</a></span><br />
+            <span>@Model.ContactDetail.Tel</span><br /><br />
+            <h3>@Model.ContactDetail.CareersHeader</h3>
+            <span><a class="news_archive_link" href="#">@Model.ContactDetail.CareersEmail</a></span>
+        </div>
     </div>
 </div>
