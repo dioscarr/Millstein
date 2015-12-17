@@ -225,6 +225,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AboutController.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\CEOModel.cs" />
@@ -342,6 +343,7 @@
     <Content Include="Views\Advisory\LoadTeamMember.cshtml" />
     <Content Include="Views\News\Article.cshtml" />
     <Content Include="Views\Contact\WashingtonDCCity.cshtml" />
+    <Content Include="Views\About\TermsAndConditions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
