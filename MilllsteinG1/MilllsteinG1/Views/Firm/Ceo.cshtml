@@ -17,7 +17,9 @@
     </div> 
 </div>
 <div class="row firm_title">
-    <div class="col-xs-12 firm_image">
+    <div class="col-sm-6 col-xs-12 firm_image">
+        <h2 class="visible-xs ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
+        <div class="visible-xs ceo_name_description">@Model.CEODetail.Title</div>
         <img src="~/Images/jim_millstein.jpg" />
         <div class="image_desc image_desc_ceo">
             <p><i>@Model.CEODetail.pictureQuote”</i></p>
@@ -27,9 +29,9 @@
         @Html.Raw(@Model.CEODetail.Description)   
            </div>
     </div>
-    <div class="col-xs-6 ceo_content_descriprion">
-        <h2 class="ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
-        <div class="ceo_name_description">@Model.CEODetail.Title</div>
-   @Html.Raw(@Model.CEODetail.Content)   
-     </div>
+    <div class="col-sm-6 col-xs-12 ceo_content_descriprion">
+        <h2 class="visible-lg visible-md visible-sm ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
+        <div class="visible-lg visible-md visible-sm ceo_name_description">@Model.CEODetail.Title</div>
+        @Html.Raw(@Model.CEODetail.Content)
+    </div>
 </div>
