@@ -305,6 +305,9 @@ img {
     /*-webkit-filter: grayscale(1);*/
 }
 
+firm_content {
+    /*padding-bottom: 2em;*/
+}
 .firm_content_descriprion  p  {
 margin-bottom:20px;
 }
@@ -359,6 +362,7 @@ margin-bottom:20px;
 /*================== Investment ======================*/
 .inv_content {
     font-weight: 600;
+    padding-bottom: 2em;
 }
 
     .inv_content_descriprion > p {

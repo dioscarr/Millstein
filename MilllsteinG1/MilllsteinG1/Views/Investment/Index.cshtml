@@ -8,27 +8,27 @@
 }
 
 <div class="row firm_title">
-    <div class="col-xs-9 logo">
+    <div class="col-sm-9 col-xs-12 logo">
         <a href="~/home"><img src="~/Images/logo-all.png" /></a>
     </div>
-    <div class="col-xs-3 firm_sidebar">
+    <div class="col-sm-3 col-xs-12 firm_sidebar">
         <ul class="list-inline firm_sidebar_ul">
             <li><a href="#">Investment</a></li>
         </ul>
     </div>
 </div>
-<div class="row firm_content inv_content">
+<div class="visible-lg visible-md visible-sm row firm_content inv_content">
     <div class="col-xs-9 inv_content_descriprion">
         <div class="inv_company_desc">
             <i>
-               @Model.InvestmentDetail.HeaderContent
+                @Model.InvestmentDetail.HeaderContent
             </i>
         </div>
         <br />
         <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle1</h4>
-       @Html.Raw(@Model.InvestmentDetail.Content1)
+        @Html.Raw(@Model.InvestmentDetail.Content1)
         <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle2</h4>
-        @Html.Raw(@Model.InvestmentDetail.Content2) 
+        @Html.Raw(@Model.InvestmentDetail.Content2)
     </div>
     <div class="col-xs-3 firm_image">
         <img src="~/Images/firm-2.jpg" />
@@ -38,3 +38,23 @@
     </div>
 </div>
 
+<div class="visible-xs row firm_content inv_content">
+    <div class="col-sm-3 col-xs-12 firm_image">
+        <img src="~/Images/firm-2.jpg" />
+        <div class="image_desc image_desc_inv">
+            <p><i>@Model.InvestmentDetail.PictureContent</i></p>
+        </div>
+    </div>
+    <div class="col-sm-9 col-xs-12 inv_content_descriprion">
+        <div class="inv_company_desc">
+            <i>
+                @Model.InvestmentDetail.HeaderContent
+            </i>
+        </div>
+        <br />
+        <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle1</h4>
+        @Html.Raw(@Model.InvestmentDetail.Content1)
+        <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle2</h4>
+        @Html.Raw(@Model.InvestmentDetail.Content2)
+    </div>
+</div>
