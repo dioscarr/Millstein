@@ -5,7 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using MilllsteinG1.Models;
+using MilllsteinG1.Areas.Admin.Models;
 
 namespace MilllsteinG1
 {

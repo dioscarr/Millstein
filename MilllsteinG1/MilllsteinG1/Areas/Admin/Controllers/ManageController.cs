@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using MilllsteinG1.Models;
+using MilllsteinG1.Areas.Admin.Models;
 
 namespace MilllsteinG1.Areas.Admin.Controllers
 {
