@@ -6,20 +6,9 @@
     font-style:normal;
 }
 */
-/*
-Open Sans
-https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
-*/
- 
-.outline {
-outline:1px solid red;
-}
 html{
     width: 100%;
     height: 100%;
-}
-.overflow_none {
-    overflow-x: initial;
 }
 body,html {
     margin:0;
@@ -42,43 +31,19 @@ body::-webkit-scrollbar * {
 body::-webkit-scrollbar-thumb {
     background:#1e1e1e!important
 }
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
 h1,h2,h3{
     line-height:1;
     margin-top:0;
-}
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-textarea {
-    resize: vertical;
 }
 a:focus,a:hover {
     text-decoration:none;
     outline:0
 }
 p {
-    margin-bottom:0
+    margin-bottom:0;
 }
 img {
+    vertical-align: middle;
     max-width:100%;
     height:auto;
 }
@@ -137,12 +102,6 @@ img {
     margin: 10px 15px;
     padding: 0;
 }
-/*.navbar-collapse>.nav_link>li:first-child>a, .navbar-collapse>.nav_link>li:first-child>a:hover {
-    margin-left: 0;
-}
-.navbar-collapse>.nav_link>li:last-child>a, .navbar-collapse>.nav_link>li:last-child>a:hover {
-    margin-right: 0;
-}*/
 .navbar-collapse>.nav_link>li>a:hover>ul>li>a:hover {
     background-color: inherit !important;
     background-image: none !important;
@@ -166,9 +125,6 @@ img {
 }
 .dropdown-menu > li > a {
     color: white;
-}
-.navbar-header>.navbar-brand:hover {
-    /*color: white;*/
 }
 .navbar-header>.navbar-brand>i {
     word-spacing: 5px;
@@ -265,11 +221,8 @@ img {
     right: 0;
  } 
 .body-content {
-    /*position: relative;*/
     min-height: 100%;
     height: auto;
-    /*margin: 0 auto -35px;
-    padding: 0 0 35px;*/
 }
 .footer {
     position: absolute;
@@ -277,17 +230,12 @@ img {
     width: 100%;
     height: 30px;
     border-top:1px solid #8d0013;
-    /*margin: 0 2%;
-    padding: 2%;*/
 }
-
 /*main styles end*/
-
 /*================== Our Firm Page ======================*/
 .firm_title {
     padding: 3% 0;
 }
-
 .firm_sidebar>.firm_sidebar_ul {
     float: right;
     margin: 0;
@@ -304,7 +252,6 @@ img {
 .firm_image>img{
     /*-webkit-filter: grayscale(1);*/
 }
-
 .firm_content {
     padding-bottom: 2em;
 }
@@ -319,7 +266,7 @@ margin-bottom:20px;
     padding: 4% 5%;
 }
 .image_desc>p {
-    font-size: 2em;
+    font-size: 1.4em;
     color: white;
     text-align: center;
 }
@@ -337,12 +284,10 @@ margin-bottom:20px;
 }
 .ceo_content_descriprion {
     font-size: 1.1em;
-    /*font-weight: 600;*/
 }
-
-    .ceo_content_descriprion > P {
+.ceo_content_descriprion > P {
     margin-bottom:20px;
-    }
+}
 .image_desc_ceo {
     padding: 5%;
     overflow: hidden;
@@ -358,18 +303,15 @@ margin-bottom:20px;
     padding: 5%;
     font-size: 1.5em;
 }
-
 /*================== Investment ======================*/
 .inv_content {
     font-weight: 600;
     padding-bottom: 2em;
 }
-
-    .inv_content_descriprion > p {
+.inv_content_descriprion > p {
     margin-bottom:20px!important;
-    }
-
-                 
+    font-weight: 400;
+}
 .investment_title {
     color: #9e0b0f;
     text-transform: uppercase;
@@ -379,20 +321,14 @@ margin-bottom:20px;
 .inv_content_descriprion {
     font-size: 1.1em;
 }
-.image_desc_inv {
-    /*padding: 7%;*/
-}
 .image_desc_inv>p {
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-align: left;
 }
 .inv_company_desc {
     font-size: 1.4em;
 }
-
-
 /*================== Advisory ======================*/
- 
 .adv_content {
     background-color: #ebebeb;
     padding: 4%;
@@ -451,12 +387,11 @@ margin-bottom:20px;
     width: 100%;
 }
 .mobile_left_bar_advisory {
-        display: none;
-        float: none;
-        padding: 0;
+    display: none;
+    float: none;
+    padding: 0;
 }
 /*================== Contact ======================*/
-
 .contact_content {
     padding: 0 3%;
 }
@@ -468,7 +403,6 @@ margin-bottom:20px;
 .contact_information>span {
     font-weight: 600;
 }
-
 /*================== News ======================*/
 .news_title>h2 {
     color: #9e0b0f;
@@ -498,14 +432,12 @@ margin-bottom:20px;
     color: #9e0b0f;
     font-size: 1.4em;
 }
-    .news_detail > span > a {
+.news_detail > span > a {
     color:black !important; 
-    }
-
-    .news_detail > p {
+}
+.news_detail > p {
     margin-bottom:20px !important;
-    }
-
+}
 .news_archive {
     list-style: none;
 }
@@ -524,33 +456,11 @@ margin-bottom:20px;
 
 
 
-
-
-
-
-
-
-
-
-/*.full-screen {
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      }*/
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
 @media only screen and (max-width: 1280px) {
     .text_header {
         top: 40%;
     }
 }
- 
-
 @media only screen and (max-width: 994px) {
     .footer {
         position: fixed; 
@@ -561,7 +471,6 @@ margin-bottom:20px;
         top: 50%;
         transform: translateY(-50%);
         padding-left:15px;
-        /*text-align: center;*/
     }
     .copyright_secondary {
 
@@ -569,9 +478,6 @@ margin-bottom:20px;
     .copyright>.icon_copyright,.copyright>.icon_copyright>a {
         color: white;        
     }
-    /*.footer_abs .icon_copyright {
-        display: block;
-    }*/
     .carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
         height: auto;
     }
@@ -626,8 +532,6 @@ margin-bottom:20px;
         display: none;
     }
 }
-
-
 @media only screen and (max-width: 768px) {
     .text_header_news .news_content {
         border-right: none;
@@ -671,7 +575,7 @@ margin-bottom:20px;
         font-size: 1.2em;
         padding: 0 0 1em;
     }
-    .image_desc_inv>p {
+    .image_desc_inv>p, .image_desc>p {
         padding: 0;
     }
     .advisory_info {
@@ -699,8 +603,6 @@ margin-bottom:20px;
         padding: 1%;
     }
 }
-
-
 @media only screen and (max-width: 400px) {
     .small_appeal h2 {
         font-size: 1.1em;
@@ -714,14 +616,11 @@ margin-bottom:20px;
     }
     
 }
-
-
 @media only screen and (max-width: 320px) {
     .small_appeal h2 {
         font-size: 0.9em;
     }    
 }
-
 @media print,
 (-webkit-min-device-pixel-ratio: 1.25),
 (min-resolution: 1.25dppx),
@@ -734,99 +633,76 @@ margin-bottom:20px;
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
-   @media print {
+@media print {
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-        http://www.sanbeiji.com/archives/953 */
+        color: #000 !important; /* Black prints faster: http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
-
     a,
     a:visited {
         text-decoration: underline;
     }
-
     a[href]:after {
         content: " (" attr(href) ")";
     }
-
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
      a[href^="#"]:after,
      a[href^="javascript:"]:after {
         content: "";
     }
-
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
      thead {
         display: table-header-group;
     }
-
     tr,
     img {
         page-break-inside: avoid;
     }
-
     img {
         max-width: 100% !important;
     }
-
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
-
     h2,
     h3 {
         page-break-after: avoid;
     }
 }
-
-
 .termsandConditions p {
-margin-bottom:18px;
-
-
+    margin-bottom:18px;
 }
-
 .termsandConditions_contactinfo p {
-
     margin-bottom:0px;
-padding-bottom:0px;
+    padding-bottom:0px;
 }
-
 .termsandConditions_contactinfo {
-
     margin-bottom:30px;
-padding-bottom:20px;
+    padding-bottom:20px;
 }
-
 .panel-primary {
-  border-color: #8d0013 !important;
+    border-color: #8d0013 !important;
 }
 .panel-primary > .panel-heading {
   color: #fff;
@@ -843,7 +719,6 @@ padding-bottom:20px;
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #8d0013 !important;
 }
-
 .panel-primary > .panel-heading {
   background-image: -webkit-linear-gradient(top, #337ab7 0%, #8d0013 100%);
   background-image:      -o-linear-gradient(top, #337ab7 0%, #8d0013 100%);
