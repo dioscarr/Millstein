@@ -599,7 +599,7 @@ margin-bottom:20px;
         text-align:center
     }
     .contact_content .left_bar_advisory>li {
-        display: inline-block;
+        /*display: inline-block;*/
         padding: 1%;
     }
 }
