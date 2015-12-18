@@ -35,17 +35,14 @@
         </div>
         <div class="advisory_company ">
             <img src="~/Images/advisory.jpg" />
-            <br><br>
             <h4 class="investment_title">@Model.advisory.ContentTitle1</h4>
-            <p>  @Html.Raw(@Model.advisory.Content1)  </p>
-            <br />
+             @Html.Raw(@Model.advisory.Content1)  
             <h4 class="investment_title">@Model.advisory.ContentTitle2</h4>
-            <p> @Html.Raw(@Model.advisory.Content2)  </p>
-            <br>
+             @Html.Raw(@Model.advisory.Content2)  
             <h4 class="investment_title">@Model.advisory.ContentTitle3</h4>
-            <p>
+
                 @Html.Raw(@Model.advisory.Content3)
-            </p>
+
             </div>
     </div>
     <div class="col-xs-3 visible-lg visible-md">
