@@ -1,26 +1,27 @@
 ﻿@using MilllsteinG1.Areas.Admin.Models
 @model LoginViewModel
-@{
-    ViewBag.Title = "Log in";
-
    
+@{
+ ViewBag.Title = "Log in";
+
+ Layout = "~/Areas/Admin/Views/Shared/_Secomdary_Layout.cshtml";
 }
 
 <div class="row outer-Box" style=" margin-top:20px;">
     <div class="col-md-12">
         <div class="panel panel-primary">
-            <div class="panel-heading"> News</div>
+            <div class="panel-heading"> Login</div>
             <div class="panel-body">
                 <div class="form-group">
 
 
                     <div class="row">
-                        <div class="col-md-8">
-                            <section id="loginForm">
+                        <div class="col-md-6 col-lg-offset-3">
+                            <section id="loginForm" class="text-center">
                                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                                 {
                                     @Html.AntiForgeryToken()
-                                    <h4>Use a local account to log in.</h4>
+                                    <h4>MillsteinG1 Administrator Login.</h4>
                                     <hr />
                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                     <div class="form-group">
@@ -50,9 +51,9 @@
                                             <input type="submit" value="Log in" class="btn btn-default" />
                                         </div>
                                     </div>
-                                    <p>
+                                    @*<p>
                                         @Html.ActionLink("Register as a new user", "Register")
-                                    </p>
+                                    </p>*@
                                     @* Enable this once you have account confirmation enabled for password reset functionality
                                         <p>
                                             @Html.ActionLink("Forgot your password?", "ForgotPassword")
@@ -60,11 +61,11 @@
                                 }
                             </section>
                         </div>
-                        <div class="col-md-4">
+                        @*<div class="col-md-4">
                             <section id="socialLoginForm">
                                 @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
                             </section>
-                        </div>
+                        </div>*@
                     </div>
 
 

@@ -10,7 +10,12 @@
 Open Sans
 https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
 */
- 
+
+
+.nopadding {
+    padding:0!important;
+    margin:0px!important;
+}
 .outline {
 outline:1px solid red;
 }

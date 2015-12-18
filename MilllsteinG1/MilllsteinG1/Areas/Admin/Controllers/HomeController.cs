@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace MilllsteinG1.Areas.Admin.Controllers
-{
+
+{[Authorize]
     public class HomeController : Controller
     {
         // GET: Admin/Home
