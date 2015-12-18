@@ -532,7 +532,12 @@ margin-bottom:20px;
         display: none;
     }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 767px) and (max-width: 991px) {
+     .navbar-right { 
+         display: none;
+     }
+}
+@media only screen and (max-width: 767px) {
     .text_header_news .news_content {
         border-right: none;
         border-bottom: 1px solid rgb(128, 128, 128);
