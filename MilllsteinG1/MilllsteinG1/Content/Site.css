@@ -809,3 +809,30 @@ padding-bottom:0px;
 padding-bottom:20px;
 }
 
+.panel-primary {
+  border-color: #8d0013 !important;
+}
+.panel-primary > .panel-heading {
+  color: #fff;
+  background-color: #8d0013 !important;
+  border-color: #8d0013 !important;
+}
+.panel-primary > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #8d0013 !important;
+}
+.panel-primary > .panel-heading .badge {
+  color: #337ab7;
+  background-color: #fff;
+}
+.panel-primary > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #8d0013 !important;
+}
+
+.panel-primary > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #8d0013 100%);
+  background-image:      -o-linear-gradient(top, #337ab7 0%, #8d0013 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#8d0013));
+  background-image:         linear-gradient(to bottom, #8d0013 0%, #8d0013 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8d0013', endColorstr='#8d0013', GradientType=0);
+  background-repeat: repeat-x;
+}
