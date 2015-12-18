@@ -393,7 +393,7 @@ margin-bottom:20px;
 }
 /*================== Contact ======================*/
 .contact_content {
-    padding: 0 3%;
+    padding: 0 3% 3%;
 }
 .contact_information>h3 {
     color: #9e0b0f;
