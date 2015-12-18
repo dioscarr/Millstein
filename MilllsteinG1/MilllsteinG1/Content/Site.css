@@ -530,7 +530,7 @@ margin-bottom:20px;
     }
     .advisory_leftbar_title {
         display: none;
-    }
+    } 
 }
 @media only screen and (min-width: 767px) and (max-width: 991px) {
      .navbar-right { 
