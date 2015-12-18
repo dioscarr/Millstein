@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using MilllsteinG1.Models;
+using MilllsteinG1.Areas.Admin.Models;
 
 namespace MilllsteinG1
 {

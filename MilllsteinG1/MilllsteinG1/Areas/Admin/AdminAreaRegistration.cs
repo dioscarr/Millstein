@@ -14,10 +14,15 @@ namespace MilllsteinG1.Areas.Admin
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+
+            context.MapRoute(
+                  name: "loginoff",
+                  url: "Account/loginOff",
+                  defaults: new { controller = "Account", action = "LoingOff", id = UrlParameter.Optional });
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new {controller="Admin", action = "Index", id = UrlParameter.Optional }
+                new {controller="Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

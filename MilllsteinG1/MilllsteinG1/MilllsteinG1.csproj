@@ -220,8 +220,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
-    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
@@ -238,15 +238,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AboutController.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\CEOModel.cs" />
     <Compile Include="Models\ContactModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\FirmModel.cs" />
     <Compile Include="Models\InvestmentModel.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\NewsModel.cs" />
     <Compile Include="Models\TeamModel.cs" />
@@ -286,30 +283,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_Secomdary_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\Lockout.cshtml" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Areas\Admin\Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Areas\Admin\Views\Manage\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Areas\Admin\Views\Manage\SetPassword.cshtml" />
-    <Content Include="Areas\Admin\Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\Register.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\ResetPassword.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\SendCode.cshtml" />
-    <Content Include="Areas\Admin\Views\Account\VerifyCode.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\Millstein.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -335,6 +311,24 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Areas\Admin\Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\Register.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\ResetPassword.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\SendCode.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\VerifyCode.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Areas\Admin\Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Areas\Admin\Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Areas\Admin\Views\Manage\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Areas\Admin\Views\Manage\SetPassword.cshtml" />
+    <Content Include="Areas\Admin\Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -344,14 +338,14 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Lockout.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Advisory\Index.cshtml" />
     <Content Include="Views\Firm\Ceo.cshtml" />
     <Content Include="Views\Firm\Index.cshtml" />
@@ -365,6 +359,7 @@
     <Content Include="Views\News\Article.cshtml" />
     <Content Include="Views\Contact\WashingtonDCCity.cshtml" />
     <Content Include="Views\About\TermsAndConditions.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\Admin_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

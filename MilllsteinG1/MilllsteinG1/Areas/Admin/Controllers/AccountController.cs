@@ -8,7 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using MilllsteinG1.Models;
+using MilllsteinG1.Areas.Admin.Models;
 
 namespace MilllsteinG1.Areas.Admin.Controllers
 {
@@ -392,7 +392,7 @@ namespace MilllsteinG1.Areas.Admin.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Admin");
+            return RedirectToAction("Login", "Account");
         }
 
         //
@@ -449,7 +449,7 @@ namespace MilllsteinG1.Areas.Admin.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Admin");
+            return RedirectToAction("Index", "Home");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult
