@@ -161,8 +161,36 @@ $(window).resize(backgroundResize);
 $(window).focus(backgroundResize);
 backgroundResize();
 
-//$(window).resize(function () {
-    if (document.documentElement.clientWidth < 994) {
+
+
+
+
+
+if (document.documentElement.clientWidth < 994) {
+    $("#image_millstein").backstretch([
+    "../../Images/home1.jpg"
+    , "../../Images/home2.jpg"
+    , "../../Images/home3.jpg"
+    ], { duration: 6000, fade: 750 });
+}
+else {
+    console.log("check");
+    $.backstretch([
+    "../../Images/home1.jpg"
+    , "../../Images/home2.jpg"
+    , "../../Images/home3.jpg"
+    ], { duration: 6000, fade: 750 }); 
+}
+
+
+$(window).resize(function () {
+if (document.documentElement.clientWidth < 994) {
+//if ( ($(window).width() < 994)  ){
+    console.log("test");
+    //location.reload();
+    //$("div.backstretch").css('display', "none");
+    //$("#image_millstein").css('display', "clock");
+    $('.backstretch').remove();
         $("#image_millstein").backstretch([
         "../../Images/home1.jpg"
         , "../../Images/home2.jpg"
@@ -170,7 +198,10 @@ backgroundResize();
         ], { duration: 6000, fade: 750 });
     }
     else {
-        console.log("check");
+    console.log("check");
+    //$("#image_millstein").css('display', "none");
+    //$("div.backstretch").css('display', "clock");
+    $('.backstretch').remove();
         $.backstretch([
         "../../Images/home1.jpg"
         , "../../Images/home2.jpg"
@@ -178,7 +209,7 @@ backgroundResize();
         ], { duration: 6000, fade: 750 });
     }
 
-//});
+});
        
 </script>
 
