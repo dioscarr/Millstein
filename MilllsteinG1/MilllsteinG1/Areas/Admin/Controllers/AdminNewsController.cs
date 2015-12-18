@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MilllsteinG1.Areas.Admin.Models;
+using DAL;
+using BLL;
+
 
 namespace MilllsteinG1.Areas.Admin.Controllers
 {[Authorize]
@@ -37,5 +40,51 @@ namespace MilllsteinG1.Areas.Admin.Controllers
 
             return View(NM);
         }
+
+
+       [ValidateInput(false)]
+       [HttpPost]
+       public ActionResult Article(NewsModel model)
+       {
+
+           model.Update(model.Article);
+
+           return RedirectToAction("index");
+       }
+
+
+
+       public ActionResult Action()
+       {
+           return View();
+       }
+       [HttpGet]
+       public ActionResult Insert()
+       {
+
+           
+           ViewBag.DropDownListInvestment = InvList;
+
+           NewsModel insertnews = new NewsModel();
+           return View(insertnews.Article);
+       }
+       [ValidateInput(false)]
+       [HttpPost]
+       public ActionResult Insert(News model, string InvestmentId)
+       {
+           model.isDeleted = false;
+           NewsModel insertnews = new NewsModel();
+           insertnews.insert(model);
+           return RedirectToAction("index");
+       }
+
+       public ActionResult delete(int id)
+       {
+           News n = ManageNews.GetById(id);
+           NewsModel NM = new NewsModel();
+           NM.delete(n);
+           return RedirectToAction("");
+       }
+        
     }
 }
