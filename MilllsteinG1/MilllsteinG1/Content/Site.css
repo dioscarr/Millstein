@@ -337,7 +337,7 @@ margin-bottom:20px;
 }
 .ceo_content_descriprion {
     font-size: 1.1em;
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 
     .ceo_content_descriprion > P {
@@ -380,7 +380,7 @@ margin-bottom:20px;
     font-size: 1.1em;
 }
 .image_desc_inv {
-    padding: 7%;
+    /*padding: 7%;*/
 }
 .image_desc_inv>p {
     font-size: 1.3em;
@@ -401,9 +401,13 @@ margin-bottom:20px;
 .advisory_company {
     padding: 1.5em 1em;
 }
+.advisory_company>img {
+    padding: 0 0 1em;
+}
 .advisory_company > p {
     margin-bottom:20px;
-    }
+    font-weight: 400;
+}
 .left_bar_advisory {
     list-style: none;
     float: right;
@@ -413,6 +417,9 @@ margin-bottom:20px;
     font-style: italic;
     font-weight: 600;
     line-height: 2;
+}
+.left_bar_advisory>li>a:hover {
+    color: rgb(141, 0, 19);
 }
 .left_bar_advisory>li>.adv_active, .left_bar_advisory .adv_active {
     color: #9e0b0f;
@@ -440,7 +447,7 @@ margin-bottom:20px;
     text-align: center;
 }
 .advisory_button {
-    margin: 2% 0;
+    margin: 2% 0 3%;
     width: 100%;
 }
 .mobile_left_bar_advisory {
@@ -662,6 +669,10 @@ margin-bottom:20px;
     }
     .image_desc>p {
         font-size: 1.2em;
+        padding: 0 0 1em;
+    }
+    .image_desc_inv>p {
+        padding: 0;
     }
     .advisory_info {
         position: relative;
@@ -670,10 +681,15 @@ margin-bottom:20px;
     }
     .ceo_company { 
         font-size: 1.3em;
+        padding: 5% 0;
     }
     .inv_company_desc {
         font-size: 1.2em;
+        padding: 1em 0;
     } 
+    .inv_content_descriprion>p {
+        font-weight: 400;
+    }
     .visible-xs .left_bar_advisory {
         float: none;
         text-align:center
