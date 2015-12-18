@@ -334,6 +334,7 @@
     <Content Include="Areas\Admin\Views\Shared\_Secomdary_Layout.cshtml" />
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <Content Include="Areas\Admin\Views\AdminNews\Insert.cshtml" />
     <None Include="Properties\PublishProfiles\Millstein.pubxml" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
