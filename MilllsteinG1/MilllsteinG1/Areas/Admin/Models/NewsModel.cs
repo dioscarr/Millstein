@@ -59,6 +59,23 @@ namespace MilllsteinG1.Areas.Admin.Models
         }
 
 
+        //Admin
+        public bool Update(News model)
+        {
+            return ManageNews.UpdateNews(model);
+        }
+
+        public bool insert(News model)
+        {
+            return ManageNews.AddNews(model);
+        }
+
+        public bool delete(News model)
+        {
+            return ManageNews.DeleteNews(model);
+        }
+
+
 
     }
 }
