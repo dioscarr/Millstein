@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MilllsteinG1.Areas.Admin.Models;
-using DAL;
+using DAL.Models;
 using BLL;
 
 
@@ -60,21 +60,16 @@ namespace MilllsteinG1.Areas.Admin.Controllers
        }
        [HttpGet]
        public ActionResult Insert()
-       {
-
-           
-           ViewBag.DropDownListInvestment = InvList;
-
+       {   
            NewsModel insertnews = new NewsModel();
            return View(insertnews.Article);
        }
        [ValidateInput(false)]
        [HttpPost]
-       public ActionResult Insert(News model, string InvestmentId)
+       public ActionResult Insert(NewsModel model, string InvestmentId)
        {
-           model.isDeleted = false;
-           NewsModel insertnews = new NewsModel();
-           insertnews.insert(model);
+           model.Article.isDeleted = false;
+           model.insert(model.Article);
            return RedirectToAction("index");
        }
 
