@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using MilllsteinG1.Models;
 
-namespace Millstein.Controllers
+namespace MillsteinG1.Controllers
 {
     public class HomeController : Controller
     {
