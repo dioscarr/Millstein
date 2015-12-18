@@ -274,6 +274,8 @@
     <Content Include="Images\home1.jpg" />
     <Content Include="Images\home2.jpg" />
     <Content Include="Images\home3.jpg" />
+    <Content Include="Images\investment-mobile.jpg" />
+    <Content Include="Images\investment.jpg" />
     <Content Include="Images\jim_millstein.jpg" />
     <Content Include="Images\logo-all.png" />
     <Content Include="Images\logo.png" />
