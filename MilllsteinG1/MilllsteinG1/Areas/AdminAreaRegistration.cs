@@ -35,7 +35,7 @@ namespace MilllsteinG1.Areas.Admin
             context.MapRoute(
                "AdminNews",
                "Admin/{controller}/{action}/{id}",
-               new { controller = "News", action = "Index", id = UrlParameter.Optional }, new string[] { "MilllsteinG1.Areas.Admin.Controllers" }
+               new { controller = "AdminNews", action = "Index", id = UrlParameter.Optional }, new string[] { "MilllsteinG1.Areas.Admin.Controllers" }
            );
 
            

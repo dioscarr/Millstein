@@ -12,6 +12,8 @@
 
 @section scripts{
 
+<script src="~/Scripts/jquery-2.1.4.js"></script>
+
 
 <link href="~/Content/prettify.css" rel="stylesheet" />
 <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
@@ -19,16 +21,19 @@
 <script src="~/Scripts/bootstrap-datetimepicker.js"></script>
 <script src="~/Scripts/ckeditor/ckeditor.js"></script>
 <script src="~/Scripts/bootstrap-datetimepicker.fr.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <script>
         $(function () {
             
-            $('.members').click( function (event) {
+            $('.members').click(function (event) {
+                var myid = $(this).attr("id");
             $.ajax({
                 type:"Get",
-                url: "/advisory/LoadTeamMember/" + $(this).attr("id"),
+                url: "/Admin/advisors/LoadTeamMember/" + $(this).attr("id"),
                 success: function (data) {
                     $('#returndata').html(data);
+                    window.location.href = "/Admin/advisors/info/" + myid;
+                  
                 }   
             });
             event.preventDefault();
