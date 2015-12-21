@@ -98,7 +98,7 @@ img {
 }
 .navbar {
     min-height: 40px;
-}
+} 
 .navbar-collapse>.nav_link>li>a, .navbar-header>.navbar-brand {
     color: white;
     font-weight: 700;
