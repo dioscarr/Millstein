@@ -200,7 +200,7 @@ img {
 .copyright_secondary {
     position: relative;
     bottom: 0em;
-    padding: 0.5% 0;
+    padding: .5% 1em;
 }
 .icon_copyright, .icon_copyright>a {
     color: white;
@@ -306,7 +306,7 @@ margin-bottom:20px;
     color: white;
 }
 .ceo_company {
-    padding: 5%;
+    padding: 5% 0;
     font-size: 1.5em;
 }
 /*================== Investment ======================*/
@@ -321,7 +321,7 @@ margin-bottom:20px;
 .investment_title {
     color: #9e0b0f;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 3px 0;
     font-weight:600;
 }
 .inv_content_descriprion {
@@ -341,7 +341,7 @@ margin-bottom:20px;
     color: #9e0b0f;
 }
 .advisory_company {
-    padding: 1.5em 1em;
+    padding: 1.5em 0em;
 }
 .advisory_company>img {
     padding: 0 0 1em;
@@ -417,7 +417,7 @@ margin-bottom:20px;
     font-weight:600;
 }
 .news_detail {
-    padding: 1% 3%;
+    padding: 1% 0%;
     font-weight: 600;
 }
 .news_detail>h3>a { 
@@ -611,7 +611,7 @@ margin-bottom:20px;
     }
     .contact_content .left_bar_advisory>li {
         /*display: inline-block;*/
-        padding: 1%;
+        padding: 0 0% 3%;
     }
 }
 @media only screen and (max-width: 400px) {
