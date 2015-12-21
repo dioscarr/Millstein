@@ -62,7 +62,7 @@ namespace MilllsteinG1.Areas.Admin.Controllers
        public ActionResult Insert()
        {   
            NewsModel insertnews = new NewsModel();
-           return View(insertnews.Article);
+           return View(insertnews);
        }
        [ValidateInput(false)]
        [HttpPost]
