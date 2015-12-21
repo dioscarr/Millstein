@@ -34,7 +34,7 @@
             <p class="inv_company_desc"><i> @Model.advisory.Quote </i></p>
         </div>
         <div class="advisory_company ">
-            <img src="~/Images/advisory.jpg" />
+            <img src="~/Images/@Model.advisory.Picture" />
             <h4 class="investment_title">@Model.advisory.ContentTitle1</h4>
              @Html.Raw(@Model.advisory.Content1)  
             <h4 class="investment_title">@Model.advisory.ContentTitle2</h4>
@@ -54,15 +54,7 @@
             }
 
 
-            @*<li><a href="~/advisory/info">Brendan Hayes</a></li>
-            <li><a href="~/advisory/info">Elizabeth Abrams</a></li>
-            <li><a href="~/advisory/info">Mark Hootnick</a></li>
-            <li><a href="~/advisory/info">Jane Vris</a></li>
-            <li><a href="~/advisory/info">Mark Walker</a></li>
-            <li><a href="~/advisory/info">Ashley Winston, PhD</a></li>
-            <li><a href="~/advisory/info">Jill Dauchy</a></li>
-            <li><a href="~/advisory/info">Jim Wigand</a></li>
-            <li><a href="~/advisory/info">Jenni Main</a></li>*@
+         
         </ul>
     </div>
 </div>
