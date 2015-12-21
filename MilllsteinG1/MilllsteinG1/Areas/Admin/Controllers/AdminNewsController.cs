@@ -46,8 +46,9 @@ namespace MilllsteinG1.Areas.Admin.Controllers
        [HttpPost]
        public ActionResult Article(NewsModel model)
        {
-
+           
            model.Update(model.Article);
+           model.UdpdateNewsContact(model.PersontContacts);
 
            return RedirectToAction("index");
        }
@@ -70,6 +71,7 @@ namespace MilllsteinG1.Areas.Admin.Controllers
        {
            model.Article.isDeleted = false;
            model.insert(model.Article);
+           model.InsertnewsContacts(model.PersontContacts);
            return RedirectToAction("index");
        }
 

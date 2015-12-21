@@ -1,4 +1,6 @@
-﻿@{
+﻿@model MilllsteinG1.Areas.Admin.Models.ImageViewModel
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/Admin_Layout.cshtml";
 }
@@ -14,6 +16,30 @@
                     <div class="form-group">
 
                         <h2>Index</h2>
+
+
+                        <form action="" method="post" enctype="multipart/form-data">
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+
+                            <div>
+                                @Html.LabelFor(m => m.Title)
+                                @Html.EditorFor(m => m.Title)
+                            </div>
+                            <div>
+                                @Html.LabelFor(m => m.AltText)
+                                @Html.EditorFor(m => m.AltText)
+                            </div>
+                            <div>
+                                @Html.LabelFor(m => m.Caption)
+                                @Html.EditorFor(m => m.Caption)
+                            </div>
+                            <div>
+                                @Html.LabelFor(m => m.ImageUpload)
+                                @Html.TextBoxFor(m => m.ImageUpload, new { @type="file"})
+                            </div>
+                            <button type="submit">Create</button>
+                        </form>
 
 
                     </div>

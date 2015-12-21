@@ -37,6 +37,8 @@ namespace MilllsteinG1.Areas.Admin
                "Admin/{controller}/{action}/{id}",
                new { controller = "News", action = "Index", id = UrlParameter.Optional }, new string[] { "MilllsteinG1.Areas.Admin.Controllers" }
            );
+
+           
         }
     }
 }

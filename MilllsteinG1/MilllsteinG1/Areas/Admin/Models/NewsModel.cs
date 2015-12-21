@@ -62,12 +62,31 @@ namespace MilllsteinG1.Areas.Admin.Models
         //Admin
         public bool Update(News model)
         {
+          
             return ManageNews.UpdateNews(model);
+        }
+
+
+        internal void UdpdateNewsContact(List<Person_> list)
+        {
+            foreach (var person in list)
+            {
+                ManagePerson.UpdatePerson(person);
+            }
+
         }
 
         public bool insert(News model)
         {
             return ManageNews.AddNews(model);
+        }
+
+        internal void InsertnewsContacts(List<Person_> list)
+        {
+          foreach (var person in list)
+            {
+                ManagePerson.AddPerson(person);
+            }
         }
 
         public bool delete(News model)
@@ -77,5 +96,6 @@ namespace MilllsteinG1.Areas.Admin.Models
 
 
 
+       
     }
 }

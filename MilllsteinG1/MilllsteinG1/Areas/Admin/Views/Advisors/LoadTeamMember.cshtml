@@ -1,4 +1,4 @@
-﻿@model MilllsteinG1.Models.TeamModel
+﻿@model MilllsteinG1.Areas.Admin.Models.TeamModel
 
 
 
@@ -26,7 +26,7 @@
         </div>
         <div class="adv_info">
             <div class="col-sm-6 col-xs-12 advisory_img">
-                <img src="~/Images/advisory/@Model.team.Image" />
+                <img src="~/Images/advisory-info.jpg" />
             </div>
             <div class="col-sm-6 col-xs-12 advisory_info">
                 <h2 class="ceo_name">@Model.team.FirstName @Model.team.LastName</h2>
@@ -40,22 +40,8 @@
                     @Model.team.Note
                 </i>
             </p>
-         
-                @if (Model.team.NoteWriter != null)
-                {
-                    <span class="pull-right">
-                        <br>
-
-                        @Model.team.NoteWriter
-
-
-
-                        <br>@Model.team.NoteWriterTitle
-
-
-                    </span>
-                }
-
+            <br>
+            <span class="pull-right">@Model.team.NoteWriter,<br>@Model.team.NoteWriterTitle</span>
         </div>
         <div class="advisory_company">
 

@@ -220,6 +220,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdvisorsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
@@ -227,8 +228,11 @@
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\BaseModel.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
+    <Compile Include="Areas\Admin\Models\Image.cs" />
+    <Compile Include="Areas\Admin\Models\ImageViewModel.cs" />
     <Compile Include="Areas\Admin\Models\ManageViewModels.cs" />
     <Compile Include="Areas\Admin\Models\NewsModel.cs" />
+    <Compile Include="Areas\Admin\Models\TeamModel.cs" />
     <Compile Include="Controllers\AdvisoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\FirmController.cs" />
@@ -302,6 +306,15 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\advisory-info.jpg" />
     <Content Include="Images\advisory.jpg" />
+    <Content Include="Images\advisory\ashley_winston.jpg" />
+    <Content Include="Images\advisory\brendan_hayes.jpg" />
+    <Content Include="Images\advisory\elizabeth_abrams.jpg" />
+    <Content Include="Images\advisory\jane_vris.jpg" />
+    <Content Include="Images\advisory\jenni_main.jpg" />
+    <Content Include="Images\advisory\jill_dauchy.jpg" />
+    <Content Include="Images\advisory\jim_wigand.jpg" />
+    <Content Include="Images\advisory\mark_hootnick.jpg" />
+    <Content Include="Images\advisory\mark_walker.jpg" />
     <Content Include="Images\firm-1.jpg" />
     <Content Include="Images\firm-2.jpg" />
     <Content Include="Images\home1.jpg" />
@@ -335,6 +348,9 @@
     <Content Include="Content\_bootstrap-datetimepicker.less" />
     <Content Include="Content\bootstrap-datetimepicker-build.less" />
     <Content Include="Areas\Admin\Views\AdminNews\Insert.cshtml" />
+    <Content Include="Areas\Admin\Views\Advisors\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Advisors\Info.cshtml" />
+    <Content Include="Areas\Admin\Views\Advisors\LoadTeamMember.cshtml" />
     <None Include="Properties\PublishProfiles\Millstein.pubxml" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
