@@ -35,7 +35,7 @@
             @foreach (var person in @Model.PersontContacts)
             {
                 <span class="news_archive_link"><a class="news_archive_link" href="#">@person.Title</a></span><br />
-                <span><a class="news_archive_link" href="#">@person.Email</a></span><br />
+                <span><a class="news_archive_link" href="mailto:@person.Email">@person.Email</a></span><br />
                 <span><a class="news_archive_link" href="#">@person.Phone</a></span><br /><br />
             }
            

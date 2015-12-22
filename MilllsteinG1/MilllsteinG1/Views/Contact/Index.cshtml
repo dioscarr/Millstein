@@ -24,10 +24,10 @@
         <div class="contact_information">
             <h3>@Model.ContactDetail.ContentHeader</h3>
             <span>@Model.ContactDetail.FirstName @Model.ContactDetail.LastName Main</span><br />
-            <span><a class="news_archive_link" href="#">@Model.ContactDetail.Email</a></span><br />
+            <span><a class="news_archive_link" href="mailto:@Model.ContactDetail.Email">@Model.ContactDetail.Email</a></span><br />
             <span>@Model.ContactDetail.Tel</span><br /><br />
             <h3>@Model.ContactDetail.CareersHeader</h3>
-            <span><a class="news_archive_link" href="#">@Model.ContactDetail.CareersEmail</a></span>
+            <span><a class="news_archive_link" href="mailto:@Model.ContactDetail.CareersEmail">@Model.ContactDetail.CareersEmail</a></span>
         </div>
     </div>
     <div class="col-xs-3">
