@@ -7,6 +7,15 @@
 }
 */
 
+@font-face{font-family:'Leitura';
+          src:url('~/fonts/2FFA86_2_0.eot');
+          src:url('~/fonts/2FFA86_2_0.eot?#iefix') format("embedded-opentype"),
+              url('~fonts/2FFA86_2_0.woff2') format("woff2"),
+              url('~fonts/2FFA86_2_0.woff') format("woff"),
+              url('~fonts/2FFA86_2_0.ttf') format("truetype");
+          font-weight:300;
+          font-style:normal;}
+
 
 .nopadding {
 padding:0!important;
@@ -19,7 +28,7 @@ html{
 body,html {
     margin:0;
     padding:0;
-    font-family: 'Merriweather';
+    font-family: 'Leitura';
 }
 /*scroll*/
 body {
@@ -429,7 +438,7 @@ margin-bottom:20px;
     font-size: 1.3em;
     color: #9e0b0f;
     font-weight: 600;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 .news_detail>h3 {
     margin: 0;
@@ -749,3 +758,4 @@ margin-bottom:20px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8d0013', endColorstr='#8d0013', GradientType=0);
   background-repeat: repeat-x;
 }
+
