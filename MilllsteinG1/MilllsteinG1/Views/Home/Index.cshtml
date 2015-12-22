@@ -93,19 +93,28 @@
                   </h2>
             </div>
             <div class="col-sm-4 col-xs-12">
-                @*<div class="news_name pull-left">
+                <div class="news_name pull-left">
                     <h1 class="pull-left">
-                        info
+                        NEWS
                     </h1>
-                </div>*@
-                <div class="news_date pull-left">
-                    @*<p>Jim MillsteinG1 Bio</p><br>*@
-                    <p>555 Madison Avenue New York, NY</p>
-                    <p>(212) 416-5814</p>
                 </div>
+                <div class="news_detail pull-right">
+
+
+                    @foreach (var news in @Model.NewslIST)
+                    {
+                        <span><a href="~/News/Article/@news.NewsId">@news.NewsTitle</a></span><br /><br />
+                    }
+
+                </div>
+
             </div>
         </div>
-        <span class="sm_copyright">© 2015 MillsteinG1 & Co., L.P. | <a href="~/About/TermsAndConditions">Terms and Conditions </a> </span>
+        <div class="row sm_copyright">
+            <span class="">© 2015 MillsteinG1 & Co., L.P. | </span>
+            <span class="term_condition"><a href="~/About/TermsAndConditions">Terms and Conditions</a></span>
+        </div>
+        @*<span class="sm_copyright">© 2015 MillsteinG1 & Co., L.P. | <a href="~/About/TermsAndConditions">Terms and Conditions </a> </span>*@
     </div>
 
 

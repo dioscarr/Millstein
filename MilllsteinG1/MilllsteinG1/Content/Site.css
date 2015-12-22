@@ -530,9 +530,9 @@ margin-bottom:20px;
         padding: 3% 1% 5%;
     }
     .sm_copyright {
-        padding: 5%;
+        padding: 5% 10%;
     }
-    .sm_copyright>a {
+    .sm_copyright>a, .term_condition>a {
         color: rgb(51, 51, 51);
     }
     .text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
