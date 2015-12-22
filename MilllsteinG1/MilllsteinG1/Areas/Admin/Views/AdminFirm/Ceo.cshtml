@@ -5,33 +5,96 @@
 }
 
 
-<div class="row firm_title">
-    <div class="col-sm-6 col-xs-12 logo">
-        <a href="~/home"><img src="~/Images/logo-all.png" /></a>
-    </div>
-    <div class="col-sm-6 col-xs-12 firm_sidebar">
-        <ul class="list-inline firm_sidebar_ul">
-            <li><a href="#">ceo</a></li>
-        </ul>
-    </div>
-</div>
-<div class="row firm_title firm_content">
-    <div class="col-sm-6 col-xs-12 firm_image">
-        <h2 class="visible-xs ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
-        <div class="visible-xs ceo_name_description">@Model.CEODetail.Title</div>
-        <img src="~/Images/jim_Millstein.jpg" />
 
-        <div class="image_desc image_desc_ceo">
-            <p><i>@Model.CEODetail.pictureQuote</i></p>
-            <span class="pull-right">@Model.CEODetail.pictureQuoteSource, @String.Format("{0:MM/dd/yyyy}", @Model.CEODetail.PictureQuoteDate)</span>
+
+@using (Html.BeginForm("UpdateFirm", "AdminFirm", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    @Html.HiddenFor(c => c.CEODetail.Id)
+    @Html.HiddenFor(c => c.CEODetail.Created)
+    @Html.HiddenFor(c => c.CEODetail.isDeleted)
+    @Html.HiddenFor(c => c.CEODetail.Modified)
+    
+
+
+
+
+
+
+
+
+    <div class="row outer-Box" style=" margin-top:20px;">
+        <div class="col-md-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading"> Advisory</div>
+                <div class="panel-body">
+                    <div class="form-gr
+<div class=" row firm_title">
+                        <div class="col-sm-6 col-xs-12 logo">
+                            <a href="~/home"><img src="~/Images/logo-all.png" /></a>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 firm_sidebar">
+                            <ul class="list-inline firm_sidebar_ul">
+                                <li><a href="#">ceo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row firm_title firm_content">
+                        <div class="col-sm-6 col-xs-12 firm_image">
+                            <h2 class="visible-xs ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
+                            <div class="visible-xs ceo_name_description">@Model.CEODetail.Title</div>
+                            <img src="~/Images/jim_Millstein.jpg" />
+
+                            <div class="image_desc image_desc_ceo">
+                                <p><i>@Model.CEODetail.pictureQuote</i></p>
+                                <span class="pull-right"> @Html.EditorFor(model => model.CEODetail.pictureQuoteSource, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } }), @String.Format("{0:MM/dd/yyyy}", @Model.CEODetail.PictureQuoteDate)</span>
+                            </div>
+                            <div class="ceo_company">
+                                @Html.TextAreaFor(model => model.CEODetail.Description, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
+                             
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12 ceo_content_descriprion">
+                            <h2 class="visible-lg visible-md visible-sm ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
+                            <div class="visible-lg visible-md visible-sm ceo_name_description">@Model.CEODetail.Title </div>
+                          
+                            @Html.TextAreaFor(model => model.CEODetail.Description, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
         </div>
-        <div class="ceo_company">
-            @Html.Raw(@Model.CEODetail.Description)
-        </div>
+
     </div>
-    <div class="col-sm-6 col-xs-12 ceo_content_descriprion">
-        <h2 class="visible-lg visible-md visible-sm ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
-        <div class="visible-lg visible-md visible-sm ceo_name_description">@Model.CEODetail.Title</div>
-        @Html.Raw(@Model.CEODetail.Content)
-    </div>
-</div>
+    
+    
+}
+
+@section scripts{
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+
+    <link href="~/Content/prettify.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.fr.js"></script>
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $(".advisory_button").click(function () {
+                    $(".mobile_left_bar_advisory").slideToggle("slow");
+                });
+
+                $('.form_datetime').datetimepicker({
+
+                });
+            });
+    </script>
+}
+

@@ -11,6 +11,7 @@ namespace MilllsteinG1.Areas.Admin.Models
     {
 
         public CEO CEODetail { get; set; }
+        public HttpPostedFileBase ImageUpload { get; set; }
 
         public CEOModel()
         {
