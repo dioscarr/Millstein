@@ -2,10 +2,6 @@
 
 
 
-<form action="UpdateAdvisorsOverview" method="post" enctype="multipart/form-data">
-
-
-
 
     @Html.HiddenFor(c => c.team.Id)
     @Html.HiddenFor(c => c.team.Created)
@@ -23,6 +19,7 @@
                 <div class="panel-heading"> Advisory</div>
                 <div class="panel-body">
                     <div class="form-group">
+                      
 
 
                         <div class="row firm_title">
@@ -45,6 +42,10 @@
 
                                             <li><a href="~/Admin/advisors/info/@member.Id">@member.FirstName @member.LastName</a></li>
                                         }
+                                        <li>
+                                            @Html.ActionLink("Add New Advisory", "InsertMembers", null, new { @class = "btn btn-primary btn-xs", style = "color:white;" })
+                                            <hr />
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="adv_info">
@@ -126,6 +127,10 @@
 
                                         <li><a class="members" id="@member.Id" href="">@member.FirstName @member.LastName</a></li>
                                     }
+                                    <li>
+                                        @Html.ActionLink("Add New Advisory", "InsertMembers", null, new { @class = "btn btn-primary btn-xs", style="color:white;" })
+                                    <hr />
+                                </li>
 
                                 </ul>
                             </div>
@@ -146,11 +151,17 @@
 
 
                                         <div class="form-group">
-                                            <div class="col-md-offset-2 col-md-4">
+                                           
+                                            <div class=" col-md-4">
+                                                <input type="submit" value="Update Advisory" class="btn btn-default" />
+                                            </div>
+                                            <div class=" col-md-4">
                                                 @Html.ActionLink("Cancel", "index", null, new { @class = "btn btn-default" })
                                             </div>
-                                            <div class="col-md-offset-2 col-md-4">
-                                                <input type="submit" value="Update Advisory" class="btn btn-default" />
+                                            <div class=" col-md-4">
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">
+                                                    Delete
+                                                </button>
                                             </div>
                                         </div>
 
@@ -173,5 +184,23 @@
 
     </div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Delete</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete @Model.team.FirstName @Model.team.LastName?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                @Html.ActionLink("Delete", "delete", null, new { @class = "btn btn-danger" })
+                
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-</form>
+

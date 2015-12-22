@@ -34,8 +34,20 @@ namespace MilllsteinG1.Areas.Admin.Models
             ManageAdvisory.UpdateAdvisory(model.advisory);
         }
 
-        
 
 
+
+
+        internal bool updateMembers(TeamModel model)
+        {
+            var result = ManageTeam.UpdateTeam(model.team);
+            return result;
         }
+
+        internal bool delete(int id)
+        {
+            Team T = ManageTeam.GetById(id);
+           return  ManageTeam.DeleteTeam(T);
+        }
+    }
     }

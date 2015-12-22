@@ -38,6 +38,13 @@ namespace MilllsteinG1.Areas.Admin
                new { controller = "AdminNews", action = "Index", id = UrlParameter.Optional }, new string[] { "MilllsteinG1.Areas.Admin.Controllers" }
            );
 
+
+            context.MapRoute(
+               "AdminFirmDefault",
+               "Admin/{controller}/{action}/{id}",
+               new { controller = "AdminFirm", action = "Ceo", id = UrlParameter.Optional }, new string[] { "MilllsteinG1.Areas.Admin.Controllers" }
+           );
+
            
         }
     }

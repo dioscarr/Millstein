@@ -51,9 +51,13 @@
                     </div>*@
                     <div class="news_detail pull-right">
                             @*<h3><a href="~/News/Article">sdgfsdf</a></h3>*@
-                            <span><a href="~/News/Article">Millstein & Co. Announces a Minority Investment From Stone Point Capital</a></span><br /><br />
-                        <span><a href="~/News/Article">Millstein & Co. Announces a Minority Investment From Stone Point Capital</a></span><br /><br />
-                        <span><a href="~/News/Article">Millstein & Co. Announces a Minority Investment From Stone Point Capital</a></span><br /><br />
+                            
+                        
+                        @foreach (var news in @Model.NewslIST)
+                        {
+                            <span><a href="~/News/Article/@news.NewsId">@news.NewsTitle</a></span><br /><br />
+                        }                     
+                        
                     </div>
                 </div>
             </div>

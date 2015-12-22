@@ -18,7 +18,7 @@ namespace MilllsteinG1.Models
         {
             Home = ManagePages.GetAllPages().FirstOrDefault();
             SliderList = ManageSlider.GetAllSlider().Where(p => p.HomeId == Home.Id).ToList();
-            NewslIST = ManageNews.GetAllNews().OrderBy(c => c.NewsDate).Take(2).ToList(); ;
+            NewslIST = ManageNews.GetAllNews().OrderBy(c => c.NewsDate).Take(3).ToList(); ;
         }
        
     }

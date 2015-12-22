@@ -34,6 +34,57 @@ namespace MilllsteinG1.Areas.Admin.Controllers
 
         }
 
+        [HttpGet]
+        public ActionResult InsertMembers()
+        {
+            return View(new TeamModel());
+        }
+
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult InsertMembers(TeamModel model)
+        {
+            try
+            {
+                model.team.Image = ImageUload(model, "~/Images/advisory");
+                var result = model.updateMembers(model);
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+        public ActionResult delete(int id)
+        {
+
+            TeamModel tm = new TeamModel();
+
+            var result = tm.delete(id);
+            return RedirectToAction("index");
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult UpdateMembers(TeamModel model)
+        {
+            try
+            {
+                model.team.Image = ImageUload(model, "~/Images/advisory");
+               var result = model.updateMembers(model);
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
         public ActionResult Info(int id)
         {
             TeamModel TM = new TeamModel();
