@@ -195,7 +195,7 @@ img {
     border-right: 1px solid grey;
 }
 .text_header_news .news_name, .text_header_news .news_detail {   
-    padding: 2.5% 1% 0%;
+    padding: 2.5% 1% 0%; 
 }
 .text_header_news .news_name h1 {
     font-size: 1.2em;
