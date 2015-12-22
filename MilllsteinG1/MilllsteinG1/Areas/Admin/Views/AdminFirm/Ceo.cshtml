@@ -41,8 +41,14 @@
                     </div>
                     <div class="row firm_title firm_content">
                         <div class="col-sm-6 col-xs-12 firm_image">
-                            <h2 class="visible-xs ceo_name">@Model.CEODetail.FirstName @Model.CEODetail.LastName</h2>
-                            <div class="visible-xs ceo_name_description">@Model.CEODetail.Title</div>
+                            <h2 class="visible-xs ceo_name">
+                                @Html.TextAreaFor(model => model.CEODetail.FirstName, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
+                            @Model.CEODetail.FirstName 
+                                @Html.TextAreaFor(model => model.CEODetail.LastName, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
+                            @Model.CEODetail.LastName</h2>
+                            <div class="visible-xs ceo_name_description">
+                                @Html.TextAreaFor(model => model.CEODetail.Description, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
+                            @Model.CEODetail.Title</div>
                             <img src="~/Images/jim_Millstein.jpg" />
 
                             <div class="image_desc image_desc_ceo">
