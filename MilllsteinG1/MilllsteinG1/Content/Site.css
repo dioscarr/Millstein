@@ -194,14 +194,14 @@ img {
 .right_border {
     border-right: 1px solid grey;
 }
-.text_header_news .news_name {   
-    padding: 2.5% 1% 5%;
+.text_header_news .news_name, .text_header_news .news_detail {   
+    padding: 2.5% 1% 0%;
 }
 .text_header_news .news_name h1 {
     font-size: 1.2em;
     font-weight: 700;
     color: #8d0013;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 .copyright {
     text-align: left;
@@ -430,6 +430,7 @@ margin-bottom:20px;
 .news_detail {
     padding: 1% 0%;
     font-weight: 600;
+    text-shadow: none;
 }
 .news_detail>h3>a { 
     font-size: 0.9em;
