@@ -220,6 +220,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminFirmController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdvisorsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
@@ -227,6 +228,8 @@
     <Compile Include="Areas\Admin\Controllers\AdminNewsController.cs" />
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\BaseModel.cs" />
+    <Compile Include="Areas\Admin\Models\CEOModel.cs" />
+    <Compile Include="Areas\Admin\Models\FirmModel.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
     <Compile Include="Areas\Admin\Models\Image.cs" />
     <Compile Include="Areas\Admin\Models\ImageViewModel.cs" />
@@ -351,6 +354,9 @@
     <Content Include="Areas\Admin\Views\Advisors\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Advisors\Info.cshtml" />
     <Content Include="Areas\Admin\Views\Advisors\LoadTeamMember.cshtml" />
+    <Content Include="Areas\Admin\Views\Advisors\InsertMembers.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFirm\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFirm\Ceo.cshtml" />
     <None Include="Properties\PublishProfiles\Millstein.pubxml" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />

@@ -37,7 +37,7 @@
         <div class="adv_content adv_info_content">
             <p class="inv_company_desc">
                 <i>
-                    @Model.team.Note
+                    @Html.Raw(@Model.team.Note.Replace("<p>","").Replace("</p>",""))
                 </i>
             </p>
          

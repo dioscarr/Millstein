@@ -31,7 +31,7 @@
             </ul>
         </div>
         <div class="adv_content">
-            <p class="inv_company_desc"><i> @Model.advisory.Quote </i></p>
+            <p class="inv_company_desc"><i> @Model.advisory.Quote.Replace("<p>","").Replace("</p>","") </i></p>
         </div>
         <div class="advisory_company ">
             <img src="~/Images/advisory.jpg" />

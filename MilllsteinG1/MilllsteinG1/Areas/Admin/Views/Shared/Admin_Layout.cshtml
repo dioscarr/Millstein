@@ -48,8 +48,8 @@
                         <li role="presentation" class="dropdown">
                             <a href="~/firm" class="@ViewBag.FirmActive dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">OUR FIRM<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="~/firm">OUR FIRM</a></li>
-                                <li><a href="~/firm/ceo">CEO</a></li>
+                                <li><a href="~/Admin/AdminFirm/index">OUR FIRM</a></li>
+                                <li><a href="~/Admin/AdminFirm/CEo" >CEO</a></li>
                             </ul>
                         </li>
                         <li role="presentation"><a class="@ViewBag.AdvisoryActive" href="~/Admin/Advisors/Index">ADVISORY</a></li>
@@ -67,9 +67,7 @@
 
     <div class="">
         @RenderBody()
-    </div>
-    <script src="~/Scripts/jquery-2.1.4.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
+   
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
