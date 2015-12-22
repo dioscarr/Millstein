@@ -15,7 +15,7 @@
               url('~fonts/2FFA86_2_0.ttf') format("truetype");
           font-weight:300;
           font-style:normal;}
-
+ 
 
 .nopadding {
 padding:0!important;
@@ -29,13 +29,13 @@ body,html {
     margin:0;
     padding:0;
     font-family: 'Leitura';
-}
-/*scroll*/
+}/*scroll*/
 body {
     background-color: white; 
     min-height: 100%; 
     height: auto;
     overflow-x: hidden;
+    line-height: 1.25;
 }
 body::-webkit-scrollbar {
     width:10px;
@@ -111,7 +111,7 @@ img {
 .navbar-collapse>.nav_link>li>a, .navbar-header>.navbar-brand {
     color: white;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 .navbar-collapse>.nav_link>li>a {
     margin: 10px 15px;
@@ -166,7 +166,7 @@ img {
     text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 30px, rgb(0, 0, 0) 0px 2px 30px, rgba(0, 0, 0, 0.80) 0px 2px 50px;
 }
 .text_header h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
     line-height: 1.6;
     font-weight: 700;
     color: white;
@@ -181,7 +181,7 @@ img {
     margin: 1% 0;
 }
 .text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
-    font-size: 1em;
+    font-size: 1.2em;
     padding: 2% 0%;
     margin: 0;
     text-align: left;
@@ -196,7 +196,7 @@ img {
     padding: 2.5% 1% 5%;
 }
 .text_header_news .news_name h1 {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 700;
     color: #8d0013;
     text-transform: uppercase;
@@ -213,7 +213,7 @@ img {
 }
 .icon_copyright, .icon_copyright>a {
     color: white;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 .copyright>.icon_secondary_copyright, .copyright>.icon_secondary_copyright>a {
     color: #8d0013;
@@ -259,7 +259,7 @@ img {
     border-bottom: 1px solid rgb(141, 0, 19);
 }
 .firm_sidebar>.firm_sidebar_ul a {
-    font-size: 2em;
+    font-size: 2.2em;
     text-transform: uppercase;
     color: #8d0013;
     font-weight: 600;
@@ -274,31 +274,31 @@ img {
 margin-bottom:20px;
 }
 .firm_content_descriprion {
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 .image_desc {
     background-color: #8d0013;
     padding: 4% 5%;
 }
 .image_desc>p {
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: white;
     text-align: center;
 }
 /*================== Ceo ======================*/
 .ceo_name {
-    font-size: 2em;
+    font-size: 2.2em;
     color: #8d0013;
     font-weight:600;
 }
 .ceo_name_description {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #3e3e3e;
     text-transform: uppercase;
     margin: 0 0 5%;
 }
 .ceo_content_descriprion {
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 .ceo_content_descriprion > P {
     margin-bottom:20px;
@@ -308,7 +308,7 @@ margin-bottom:20px;
     overflow: hidden;
 }
 .image_desc_ceo>p {
-    font-size: 1.4em;
+    font-size: 1.6em;
     text-align: left;
 }
 .image_desc_ceo>span {
@@ -316,7 +316,7 @@ margin-bottom:20px;
 }
 .ceo_company {
     padding: 5% 0;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 /*================== Investment ======================*/
 .inv_content {
@@ -334,14 +334,14 @@ margin-bottom:20px;
     font-weight:600;
 }
 .inv_content_descriprion {
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 .image_desc_inv>p {
-    font-size: 1.4em;
+    font-size: 1.6em;
     text-align: left;
 }
 .inv_company_desc {
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 /*================== Advisory ======================*/
 .adv_content {
@@ -386,7 +386,7 @@ margin-bottom:20px;
     right: 0;
 }
 .adv_info_title {
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 .adv_info_content {
     overflow: hidden;
@@ -412,7 +412,7 @@ margin-bottom:20px;
 }
 .contact_information>h3 {
     color: #9e0b0f;
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-transform: uppercase;
 }
 .contact_information>span {
@@ -421,7 +421,7 @@ margin-bottom:20px;
 /*================== News ======================*/
 .news_title>h2 {
     color: #9e0b0f;
-    font-size: 1.3em;
+    font-size: 1.5em;
     text-transform: uppercase;
     font-weight:600;
 }
@@ -430,12 +430,12 @@ margin-bottom:20px;
     font-weight: 600;
 }
 .news_detail>h3>a { 
-    font-size: 0.7em;
+    font-size: 0.9em;
     color: #9e0b0f;
     font-weight: 600;
 }
 .news_detail>h3 {
-    font-size: 1.3em;
+    font-size: 1.5em;
     color: #9e0b0f;
     font-weight: 600;
     /*text-transform: uppercase;*/
@@ -445,7 +445,7 @@ margin-bottom:20px;
 }
 .news_detail>.news_archive_span {
     color: #9e0b0f;
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 .news_detail > span > a {
     color:black !important; 
@@ -513,7 +513,7 @@ margin-bottom:20px;
         color: #8d0013;
     }
     .small_appeal h2 {
-        font-size: 1.5em;
+        font-size: 1.7em;
         line-height: 1.6;
         font-weight: 700;
     }
@@ -580,19 +580,19 @@ margin-bottom:20px;
         margin: 4% 0;
     }
     .firm_sidebar>.firm_sidebar_ul a {
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
     .firm_content_descriprion {
         padding: 5% 15px;
     }
     .firm_content_descriprion {
-        font-size: 1.15em;
+        font-size: 1.35em;
     }
     .firm_image>img, .advisory_img>img {
         width: 100%;
     }
     .image_desc>p {
-        font-size: 1.2em;
+        font-size: 1.4em;
         padding: 0 0 1em;
     }
     .image_desc_inv>p, .image_desc>p {
@@ -604,11 +604,11 @@ margin-bottom:20px;
         padding: 1.5em 1em 0;
     }
     .ceo_company { 
-        font-size: 1.3em;
+        font-size: 1.5em;
         padding: 5% 0;
     }
     .inv_company_desc {
-        font-size: 1.2em;
+        font-size: 1.4em;
         padding: 1em 0;
     } 
     .inv_content_descriprion>p {
@@ -625,20 +625,20 @@ margin-bottom:20px;
 }
 @media only screen and (max-width: 400px) {
     .small_appeal h2 {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }    
     .navbar-header>.navbar-brand {
         padding: 5% 2%;
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
     .text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
     
 }
 @media only screen and (max-width: 320px) {
     .small_appeal h2 {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }    
 }
 @media print,
