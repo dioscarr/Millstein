@@ -79,6 +79,18 @@
     <Compile Include="Models\Advisory.cs">
       <DependentUpon>MillsteinDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AspNetRoles.cs">
+      <DependentUpon>MillsteinDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaims.cs">
+      <DependentUpon>MillsteinDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogins.cs">
+      <DependentUpon>MillsteinDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUsers.cs">
+      <DependentUpon>MillsteinDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CEO.cs">
       <DependentUpon>MillsteinDB.tt</DependentUpon>
     </Compile>

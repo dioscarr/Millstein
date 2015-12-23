@@ -230,6 +230,7 @@
     <Compile Include="Areas\Admin\Models\BaseModel.cs" />
     <Compile Include="Areas\Admin\Models\CEOModel.cs" />
     <Compile Include="Areas\Admin\Models\FirmModel.cs" />
+    <Compile Include="Areas\Admin\Models\HomeModel.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
     <Compile Include="Areas\Admin\Models\Image.cs" />
     <Compile Include="Areas\Admin\Models\ImageViewModel.cs" />
@@ -324,6 +325,8 @@
     <Content Include="Images\home1.jpg" />
     <Content Include="Images\home2.jpg" />
     <Content Include="Images\home3.jpg" />
+    <Content Include="Images\home4.jpg" />
+    <Content Include="Images\home5.jpg" />
     <Content Include="Images\investment-mobile.jpg" />
     <Content Include="Images\investment.jpg" />
     <Content Include="Images\jim_millstein.jpg" />
@@ -356,8 +359,8 @@
     <Content Include="Areas\Admin\Views\Advisors\Info.cshtml" />
     <Content Include="Areas\Admin\Views\Advisors\LoadTeamMember.cshtml" />
     <Content Include="Areas\Admin\Views\Advisors\InsertMembers.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminFirm\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminFirm\Ceo.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\AdminFirm\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\AdminFirm\Ceo.cshtml" />
     <Content Include="fonts\2FFA86_0_0.eot" />
     <Content Include="fonts\2FFA86_0_0.ttf" />
     <Content Include="fonts\2FFA86_0_0.woff" />
