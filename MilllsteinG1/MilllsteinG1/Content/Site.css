@@ -120,7 +120,7 @@ img {
 .navbar-collapse>.nav_link>li>a, .navbar-header>.navbar-brand {
     color: white;
     font-weight: 700;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 .navbar-collapse>.nav_link>li>a {
     margin: 10px 15px;
@@ -172,13 +172,14 @@ img {
     color: #8d0013;
     z-index: 100;
     width: 100%;
-        text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+        /*text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);*/
         /*text-shadow: 10px 5px 5px rgb(0, 0, 0);*/
     /*text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 30px, rgb(0, 0, 0) 0px 2px 30px, rgba(0, 0, 0, 0.80) 0px 2px 50px;*/
+    text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 5px, rgb(0, 0, 0) 0px 2px 5px, rgba(0, 0, 0, 0.80) 0px 2px 5px;
 }
 .text_header h2 {
-    font-size: 1.7em;
-    line-height: 1.6;
+    font-size: 1.6em;
+    line-height: 1.4;
     font-weight: 700;
     color: white;
 }
@@ -254,8 +255,8 @@ img {
     width: 85%;
 }
 .text_header_news .news_detail_home > span > a {
-    font-size: 1.2em;
-    /*font-weight: 500;*/
+    font-size: 1em;
+    font-weight: 500;
 }
 .body-content {
     min-height: 100%;
@@ -297,7 +298,8 @@ img {
 margin-bottom:20px;
 }
 .firm_content_descriprion {
-    font-size: 1.7em;
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 .image_desc {
     background-color: #8d0013;
@@ -321,7 +323,8 @@ margin-bottom:20px;
     margin: 0 0 5%;
 }
 .ceo_content_descriprion {
-    font-size: 1.3em;
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 .ceo_content_descriprion > P {
     margin-bottom:20px;
@@ -349,6 +352,8 @@ margin-bottom:20px;
 .inv_content_descriprion > p {
     margin-bottom:20px!important;
     font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
 }
 .investment_title {
     color: #9e0b0f;
@@ -364,8 +369,8 @@ margin-bottom:20px;
     text-align: left;
 }
 .inv_company_desc {
-    font-size: 1.3em;
-    line-height: 1.4em;
+    font-size: 1.2em;
+    line-height: 1.5em;
 }
 /*================== Advisory ======================*/
 .adv_content {
@@ -382,6 +387,8 @@ margin-bottom:20px;
 .advisory_company > p {
     margin-bottom:20px;
     font-weight: 400;
+    font-size: 0.9em;
+    line-height: 1.5;
 }
 .left_bar_advisory {
     list-style: none;
@@ -481,7 +488,8 @@ margin-bottom:20px;
 }
 .news_detail > span > a {
     color:#333 !important;
-    font-size: 1.3em; 
+    font-size: 1.2em; 
+    font-weight: 500;
 }
 .news_detail > p {
     margin-bottom:20px !important;
@@ -515,6 +523,10 @@ margin-bottom:20px;
     }
     .navbar-collapse>.nav_link>li>a {
         margin: 10px 8px;
+    }
+    .navbar-collapse>.nav_link>li>a:hover, .navbar-collapse>.nav_link>li>.menu_top_border {
+        margin: 0 8px 10px;
+        padding: 5px 0 0;
     }
 }
 @media only screen and (max-width: 994px) {
@@ -624,7 +636,7 @@ margin-bottom:20px;
         padding: 5% 15px;
     }
     .firm_content_descriprion {
-        font-size: 1.15em;
+        font-size: 1.15em; 
     }
     .firm_image>img, .advisory_img>img {
         width: 100%;
@@ -646,7 +658,7 @@ margin-bottom:20px;
         padding: 5% 0;
     }
     .inv_company_desc {
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 1em 0;
     } 
     .inv_content_descriprion>p {
