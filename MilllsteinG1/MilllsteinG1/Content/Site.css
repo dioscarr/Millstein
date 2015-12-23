@@ -445,6 +445,9 @@ margin-bottom:20px;
     font-size: 1.3em;
 }
 /*================== News ======================*/
+.article_mews_page {
+    padding-bottom: 3%;
+}
 .news_title>h2 {
     color: #9e0b0f;
     font-size: 1.3em;
@@ -502,7 +505,9 @@ margin-bottom:20px;
 .website_link {
     color: #9e0b0f;
 }
-
+.news_company_main_block>.news_company_image, .contact_company_main_block>.contact_company_image {
+    padding: 0 0 3%;
+}
 
 @media only screen and (max-width: 1280px) {
     .text_header {

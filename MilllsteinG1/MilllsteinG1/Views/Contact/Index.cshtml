@@ -20,7 +20,8 @@
     </div>
 </div>
 <div class="visible-lg visible-md visible-sm row contact_content">
-    <div class="col-xs-9">
+    <div class="col-xs-9 contact_company_main_block">
+        <img class="contact_company_image" src="~/Images/contact.jpg" />
         <div class="contact_information">
             <h3>@Model.ContactDetail.ContentHeader</h3>
             <span>@Model.ContactDetail.FirstName @Model.ContactDetail.LastName Main</span><br />
@@ -48,7 +49,8 @@
             <li><a href="~/Contact/WashingtonDCCity/@Model.Locations[1].Id">@Model.Locations[1].LocationName</a></li>
         </ul>
     </div>
-    <div class="col-xs-12">
+    <div class="col-xs-12 contact_company_main_block">
+        <img class="contact_company_image" src="~/Images/contact.jpg" />
         <div class="contact_information">
             <h3>@Model.ContactDetail.ContentHeader</h3>
             <span>@Model.ContactDetail.FirstName @Model.ContactDetail.LastName Main</span><br />

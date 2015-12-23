@@ -319,6 +319,7 @@
     <Content Include="Images\advisory\jim_wigand.jpg" />
     <Content Include="Images\advisory\mark_hootnick.jpg" />
     <Content Include="Images\advisory\mark_walker.jpg" />
+    <Content Include="Images\contact.jpg" />
     <Content Include="Images\firm-1.jpg" />
     <Content Include="Images\firm-2.jpg" />
     <Content Include="Images\home1.jpg" />
@@ -329,6 +330,7 @@
     <Content Include="Images\jim_millstein.jpg" />
     <Content Include="Images\logo-all.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\news.jpg" />
     <Content Include="Images\sl-1.jpg" />
     <Content Include="Images\sl-2.jpg" />
     <Content Include="Scripts\bootstrap-datetimepicker.fr.js" />
