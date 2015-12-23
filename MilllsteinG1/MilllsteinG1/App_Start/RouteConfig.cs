@@ -24,7 +24,7 @@ namespace MilllsteinG1
 
             routes.MapRoute(
               name: "HomeNews",
-              url: "{controller}/{action}/{id}",
+              url: "News/{id}",
               defaults: new { controller = "News", action = "Index", id = UrlParameter.Optional }, namespaces: new string[] { "MillsteinG1.Controllers" });
 
            

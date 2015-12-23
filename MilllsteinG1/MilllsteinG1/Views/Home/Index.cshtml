@@ -21,7 +21,7 @@
                     <h2>
                        @Html.Raw(@Model.SliderList[0].Quote)<br>
                     </h2>
-                    <span class="pull-right">— <i>New York Times</i>, Dealbook</span>
+                    <span class="pull-right">— @Html.Raw(@Model.SliderList[0].QuoteLocation)</span>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                 <h2>
                     @Model.SliderList[0].Quote<br>
                 </h2>
-                <span class="pull-right">@Model.SliderList[0].QuoteLocation</span>
+                <span class="pull-right">— @Html.Raw(@Model.SliderList[0].QuoteLocation)</span>
             </div>
         </div>
         <div class="row text_header_news">

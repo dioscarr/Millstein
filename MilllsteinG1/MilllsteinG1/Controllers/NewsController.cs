@@ -10,6 +10,7 @@ namespace MilllsteinG1.Controllers
     public class NewsController : Controller
     {
         // GET: News
+        [Route("News")]
         public ActionResult Index(int? id)
         {
              NewsModel NM1 = new NewsModel();

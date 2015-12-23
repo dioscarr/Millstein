@@ -39,15 +39,15 @@
     </div>
     <div class="col-xs-3"> 
         <ul class="left_bar_advisory">
-            <li><a href="~/Admin/AdminNews">Recent News</a></li>
-            <li><a href="~/Admin/AdminNews/Archive">Press</a></li> 
+            <li><a href="~/news">Recent News</a></li>
+            <li><a href="~/news/Archive">Press</a></li> 
             <li>
-                <a href="~/Admin/AdminNews/Index?year=2015">
+                <a href="~/news/Index?year=2015">
                     Archive
                     <ul class="news_archive">
                         @foreach (var year in @Model.Years)
                         {
-                            <li><a href="~/Admin/AdminNews/Index/@year">@year</a></li>
+                            <li><a href="~/news/Index/@year">@year</a></li>
                         }
                     </ul> 
                 </a>
@@ -63,7 +63,7 @@
             <li><a href="~/Admin/AdminNews">Recent News</a></li>
             <li><a href="~/Admin/AdminNews/Archive">Press</a></li>
             <li>
-                <a href="~/Admin/AdminNews/Index?year=2015">
+                <a href="~/news/Index?year=2015">
                     Archive
                     <ul class="news_archive">
                         @foreach (var year in @Model.Years)
