@@ -138,7 +138,7 @@ img {
     color: white;
     background-color: inherit;
     background-image: none;
-}
+} 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color: white;
     background-color: rgb(141, 0, 19) !important;
