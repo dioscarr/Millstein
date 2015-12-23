@@ -163,7 +163,7 @@ img {
     /*-webkit-filter: grayscale(1);*/
 }
 .logo_home {
-    z-index: 99;
+    z-index: 99; 
     padding: 4% 15px 0;
 }
 .text_header{
