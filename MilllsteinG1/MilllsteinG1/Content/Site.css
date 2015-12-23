@@ -27,7 +27,7 @@
          font-style:normal;}
 
 .nopadding {
-padding:0!important; 
+padding:0!important;
 margin:0!important;
 }
 html{
@@ -120,7 +120,7 @@ img {
 .navbar-collapse>.nav_link>li>a, .navbar-header>.navbar-brand {
     color: white;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .navbar-collapse>.nav_link>li>a {
     margin: 10px 15px;
@@ -207,7 +207,7 @@ img {
     padding: 2.5% 1% 0%; 
 }
 .text_header_news .news_name h1 {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 700;
     color: #8d0013;
     /*text-transform: uppercase;*/
@@ -224,7 +224,7 @@ img {
 }
 .icon_copyright, .icon_copyright>a {
     color: white;
-    font-size: 1em;
+    font-size: 0.8em;
 }
 .copyright>.icon_secondary_copyright, .copyright>.icon_secondary_copyright>a {
     color: #8d0013;
@@ -270,7 +270,7 @@ img {
     border-bottom: 1px solid rgb(141, 0, 19);
 }
 .firm_sidebar>.firm_sidebar_ul a {
-    font-size: 2.2em;
+    font-size: 2em;
     text-transform: uppercase;
     color: #8d0013;
     font-weight: 600;
@@ -280,6 +280,7 @@ img {
 }
 .firm_content {
     padding-bottom: 2em;
+    padding-top: 0;
 }
 .firm_content_descriprion  p  {
 margin-bottom:20px;
@@ -292,18 +293,18 @@ margin-bottom:20px;
     padding: 4% 5%;
 }
 .image_desc>p {
-    font-size: 1.6em;
+    font-size: 1.4em;
     color: white;
     text-align: center;
 }
 /*================== Ceo ======================*/
 .ceo_name {
-    font-size: 2.2em;
+    font-size: 2em;
     color: #8d0013;
     font-weight:600;
 }
 .ceo_name_description {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #3e3e3e;
     text-transform: uppercase;
     margin: 0 0 5%;
@@ -319,7 +320,7 @@ margin-bottom:20px;
     overflow: hidden;
 }
 .image_desc_ceo>p {
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-align: left;
 }
 .image_desc_ceo>span {
@@ -348,11 +349,12 @@ margin-bottom:20px;
     font-size: 1.3em;
 }
 .image_desc_inv>p {
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-align: left;
 }
 .inv_company_desc {
-    font-size: 1.6em;
+    font-size: 1.5em;
+    line-height: 1.3em;
 }
 /*================== Advisory ======================*/
 .adv_content {
@@ -373,6 +375,7 @@ margin-bottom:20px;
 .left_bar_advisory {
     list-style: none;
     float: right;
+    font-size: 1.15em;
 }
 .left_bar_advisory>li>a {
     color: #707070;
@@ -397,7 +400,7 @@ margin-bottom:20px;
     right: 0;
 }
 .adv_info_title {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 .adv_info_content {
     overflow: hidden;
@@ -419,20 +422,21 @@ margin-bottom:20px;
 }
 /*================== Contact ======================*/
 .contact_content {
-    padding: 0 3% 3%;
+    padding: 0 0% 3%;
 }
 .contact_information>h3 {
     color: #9e0b0f;
-    font-size: 1.7em;
+    font-size: 1.5em;
     text-transform: uppercase;
 }
 .contact_information>span {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.3em;
 }
 /*================== News ======================*/
 .news_title>h2 {
     color: #9e0b0f;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-transform: uppercase;
     font-weight:600;
 }
@@ -440,31 +444,35 @@ margin-bottom:20px;
     padding: 1% 0%;
     font-weight: 600;
     text-shadow: none;
+    /*font-size: 1.3em;*/
 }
 .news_detail>h3>a { 
-    font-size: 0.9em;
+    font-size: 0.7em;
     color: #9e0b0f;
     font-weight: 600;
 }
 .news_detail>h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #9e0b0f;
     font-weight: 600;
     /*text-transform: uppercase;*/
 }
 .news_detail>h3 {
     margin: 0;
+    margin-bottom: 5px;
 }
 .news_detail>.news_archive_span {
     color: #9e0b0f;
-    font-size: 1.6em;
+    font-size: 1.4em;
 }
 .news_detail > span > a {
-    color:black !important; 
+    color:black !important;
+    font-size: 1.3em; 
 }
 .news_detail > p {
     margin-bottom:20px !important;
     font-weight: 400;
+    font-size: 1.3em;
 }
 .news_archive {
     list-style: none;
@@ -476,6 +484,9 @@ margin-bottom:20px;
 }
 .news_archive_link {
     color: rgb(51, 51, 51);
+}
+.news_archive_link:hover {
+    color: rgb(141, 0, 19);
 }
 .website_link {
     color: #9e0b0f;
@@ -524,7 +535,7 @@ margin-bottom:20px;
         color: #8d0013;
     }
     .small_appeal h2 {
-        font-size: 1.7em;
+        font-size: 1.5em;
         line-height: 1.6;
         font-weight: 700;
     }
@@ -591,19 +602,19 @@ margin-bottom:20px;
         margin: 4% 0;
     }
     .firm_sidebar>.firm_sidebar_ul a {
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
     .firm_content_descriprion {
         padding: 5% 15px;
     }
     .firm_content_descriprion {
-        font-size: 1.35em;
+        font-size: 1.15em;
     }
     .firm_image>img, .advisory_img>img {
         width: 100%;
     }
     .image_desc>p {
-        font-size: 1.4em;
+        font-size: 1.2em;
         padding: 0 0 1em;
     }
     .image_desc_inv>p, .image_desc>p {
@@ -615,11 +626,11 @@ margin-bottom:20px;
         padding: 1.5em 1em 0;
     }
     .ceo_company { 
-        font-size: 1.5em;
+        font-size: 1.3em;
         padding: 5% 0;
     }
     .inv_company_desc {
-        font-size: 1.4em;
+        font-size: 1.2em;
         padding: 1em 0;
     } 
     .inv_content_descriprion>p {
@@ -636,20 +647,20 @@ margin-bottom:20px;
 }
 @media only screen and (max-width: 400px) {
     .small_appeal h2 {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }    
     .navbar-header>.navbar-brand {
         padding: 5% 2%;
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
     .text_header_news .news_content, .text_header_news .news_name, .text_header_news .news_date {
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
     
 }
 @media only screen and (max-width: 320px) {
     .small_appeal h2 {
-        font-size: 1.1em;
+        font-size: 0.9em;
     }    
 }
 @media print,
