@@ -25,6 +25,7 @@ namespace MilllsteinG1.Areas.Admin.Controllers
           [ValidateInput(false)]
         public ActionResult UpdateFirm(FirmModel model)
         {
+              
             model.FirmDetail.picture = ImageUloadFirm(model, "~/Images/advisory");
             model.Update(model);
             return RedirectToAction("index");
@@ -32,6 +33,10 @@ namespace MilllsteinG1.Areas.Admin.Controllers
           [ValidateInput(false)]
         public ActionResult UpdateCeo(CEOModel model)
         {
+            if (model.isNewPicture)
+            {
+                model.CEODetail.Picture = ImageUloadCeo(model, "~/Images/advisory");
+            }
             model.Update(model);
             return RedirectToAction("Ceo");
         }

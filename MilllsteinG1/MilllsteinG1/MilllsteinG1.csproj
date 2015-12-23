@@ -361,8 +361,8 @@
     <Content Include="Areas\Admin\Views\Advisors\Info.cshtml" />
     <Content Include="Areas\Admin\Views\Advisors\LoadTeamMember.cshtml" />
     <Content Include="Areas\Admin\Views\Advisors\InsertMembers.cshtml" />
-    <Content Include="Areas\Admin\Views\Admin\AdminFirm\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Admin\AdminFirm\Ceo.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFirm\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminFirm\Ceo.cshtml" />
     <Content Include="fonts\2FFA86_0_0.eot" />
     <Content Include="fonts\2FFA86_0_0.ttf" />
     <Content Include="fonts\2FFA86_0_0.woff" />
@@ -399,8 +399,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Areas\Admin\Views\AdminFirm\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminFirm\Ceo.cshtml" />
     <None Include="Properties\PublishProfiles\Millstein.pubxml" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />

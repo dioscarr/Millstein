@@ -1,8 +1,8 @@
 ﻿@model MilllsteinG1.Areas.Admin.Models.FirmModel
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Areas/Admin/Views/Shared/_Secomdary_Layout.cshtml";
-}
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Areas/Admin/Views/Shared/_Secomdary_Layout.cshtml";
+    }
 
 
 @using (Html.BeginForm("UpdateFirm", "AdminFirm", FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -45,24 +45,24 @@
                                 @Html.TextAreaFor(model => model.FirmDetail.Content, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
 
 
-
+                              
                             </div>
                             <div class="col-xs-6 visible-lg visible-md visible-sm firm_image">
                                 <img src="~/Images/firm-1.jpg" />
                                 <div class="image_desc">
                                     <div>
-                                        @Html.LabelFor(m => m.ImageUpload, new { @style = "color:white;" })
-                                        @Html.TextBoxFor(m => m.ImageUpload, new { @type = "file", @style = "color:white;" })
+                                        @Html.LabelFor(m => m.ImageUpload, new {@style="color:white;" })
+                                        @Html.TextBoxFor(m => m.ImageUpload, new { @type = "file", @style = "color:white;"  })
                                     </div>
                                     <br />
 
-                                    <div class="news_title">
+                                    <div class="news_title" >
                                         <h2 style="color:white;">Quote</h2>
-                                    </div>
-
-
+                                    </div> 
+                                   
+                                      
                                     @Html.EditorFor(model => model.FirmDetail.FirmQuote, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
-
+                                   
                                 </div>
                             </div>
                             @* Mobile Devices  *@
@@ -73,9 +73,9 @@
                                         @Html.LabelFor(m => m.ImageUpload)
                                         @Html.TextBoxFor(m => m.ImageUpload, new { @type = "file" })
                                     </div>
-                                    <br />
+                                    <br/>
                                     @Html.EditorFor(model => model.FirmDetail.FirmQuote, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
-
+                                   
                                 </div>
                             </div>
                             <div class="col-xs-12 visible-xs firm_content_descriprion">
@@ -152,4 +152,4 @@
             });
     </script>
 }
-
+    
