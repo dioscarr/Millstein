@@ -9,10 +9,10 @@ namespace MilllsteinG1.Models
 {
     public class InvestmentModel:BaseModel
     {
-       // public List<Investment> UpdateAllInvestments { get; set;}
+      
         public Investment InvestmentDetail { get; set; }
-       // public IList<Investment> InvestmentList { get; set; }
-       // public IList<Investment> ExiteInvestmentList { get; set; }
+        public bool isNewPicture { get; set; }
+       
 
        
         public InvestmentModel() {
@@ -20,16 +20,7 @@ namespace MilllsteinG1.Models
           
         }
 
-        //public IList<Investment> getAllInvestmentOf(string type)
-        //{
-        //    return ManageInvestment.GetAllInvestmentOf(type);
-        //}
-
-        //public Investment getInvestmentDetail(int id)
-        //{
-        //    return ManageInvestment.GetById(id);
-        
-        //}
+       
 
     }
 }

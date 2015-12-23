@@ -7,7 +7,7 @@
 
 
 
-@using (Html.BeginForm("UpdateFirm", "AdminFirm", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("UpdateCeo", "AdminFirm", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 
     @Html.HiddenFor(c => c.CEODetail.Id)
@@ -57,18 +57,18 @@
                                 <div class="image_desc image_desc_ceo">
 
                                     <div class="news_title">
-                                        <h2 style="color:white;">News Date</h2>
+                                        <h2 style="color:white;">Quote</h2>
                                     </div>
 
                                     @Html.EditorFor(model => model.CEODetail.pictureQuote, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
 
                                     <div class="news_title">
-                                        <h2 style="color:white;">News Date</h2>
+                                        <h2 style="color:white;">Source</h2>
                                     </div>
                                     @Html.EditorFor(model => model.CEODetail.pictureQuoteSource, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
 
                                     <div class="news_title">
-                                        <h2 style="color:white;">News Date</h2>
+                                        <h2 style="color:white;">Quote Date</h2>
                                     </div>
                                     <span class="pull-right">
                                         @Html.EditorFor(model => model.CEODetail.PictureQuoteDate, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
@@ -80,7 +80,7 @@
 
                                 <div class="ceo_company">
                                     <div class="news_title">
-                                        <h2>News Date</h2>
+                                        <h2>Description</h2>
                                     </div>
                                     @Html.TextAreaFor(model => model.CEODetail.Description, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
 
@@ -88,26 +88,26 @@
                             </div>
                             <div class="col-sm-6 col-xs-12 ceo_content_descriprion">
                                 <div class="news_title">
-                                    <h2>News Date</h2>
+                                    <h2>First Name</h2>
                                 </div>
 
 
                                 @Html.EditorFor(model => model.CEODetail.FirstName, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
                                 <div class="news_title">
-                                    <h2>News Date</h2>
+                                    <h2>Last Name</h2>
                                 </div>
                                 @Html.EditorFor(model => model.CEODetail.LastName, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
 
 
                                 <div class="news_title">
-                                    <h2>News Date</h2>
+                                    <h2>Title</h2>
                                 </div>
                                 <div class="visible-lg visible-md visible-sm ceo_name_description">
                                     @Html.EditorFor(model => model.CEODetail.Title, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
 
                                 </div>
                                 <div class="news_title">
-                                    <h2>News Date</h2>
+                                    <h2>Content</h2>
                                 </div>
                                 @Html.TextAreaFor(model => model.CEODetail.Content, 80, 10, new { @class = "form-control ckeditor investment-detail-content", @name = "editor1" })
 
@@ -142,7 +142,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-4">
-                            @Html.ActionLink("Cancel", "index", null, new { @class = "btn btn-default" })
+                            @Html.ActionLink("Cancel", "Ceo", null, new { @class = "btn btn-default" })
                         </div>
                         <div class="col-md-offset-2 col-md-4">
                             <input type="submit" value="Update" class="btn btn-default" />

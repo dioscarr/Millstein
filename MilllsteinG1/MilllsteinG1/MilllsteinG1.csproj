@@ -221,6 +221,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminFirmController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminInvestmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdvisorsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
     <Compile Include="Areas\Admin\Models\Image.cs" />
     <Compile Include="Areas\Admin\Models\ImageViewModel.cs" />
+    <Compile Include="Areas\Admin\Models\InvestmentModel.cs" />
     <Compile Include="Areas\Admin\Models\ManageViewModels.cs" />
     <Compile Include="Areas\Admin\Models\NewsModel.cs" />
     <Compile Include="Areas\Admin\Models\TeamModel.cs" />
@@ -399,6 +401,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Areas\Admin\Views\AdminInvestment\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Millstein.pubxml" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
