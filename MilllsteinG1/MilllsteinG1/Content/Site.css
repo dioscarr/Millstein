@@ -269,6 +269,8 @@ img {
     height: 30px;
     border-top:1px solid #8d0013;
 }
+
+
 /*main styles end*/
 /*================== Our Firm Page ======================*/
 .firm_title {
@@ -597,6 +599,11 @@ margin-bottom:20px;
         display: none;
     } 
 }
+@media only screen and (min-width: 767px) {
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;    
+    }
+}
 @media only screen and (min-width: 767px) and (max-width: 991px) {
      .navbar-right { 
          display: none;
@@ -674,6 +681,7 @@ margin-bottom:20px;
         /*display: inline-block;*/
         padding: 0 0% 3%;
     }
+
 }
 @media only screen and (max-width: 400px) {
     .small_appeal h2 {
