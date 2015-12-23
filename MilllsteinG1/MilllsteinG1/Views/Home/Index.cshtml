@@ -39,7 +39,7 @@
                     </h2>
                 </div>
                 <div class="col-xs-6">
-                    <div class="news_name pull-left">
+                    <div class="news_name news_name_home pull-left">
                         <h1 class="pull-left">
                             NEWS
                         </h1>
@@ -49,15 +49,15 @@
                         <p>555 Madison Avenue New York, NY</p>
                         <p>(212) 416-5814</p>
                     </div>*@
-                    <div class="news_detail pull-right">
-                            @*<h3><a href="~/News/Article">sdgfsdf</a></h3>*@
-                            
-                        
+                    <div class="news_detail news_detail_home pull-right">
+                        @*<h3><a href="~/News/Article">sdgfsdf</a></h3>*@
+
+
                         @foreach (var news in @Model.NewslIST)
                         {
                             <span><a href="~/News/Article/@news.NewsId">@news.NewsTitle</a></span><br /><br />
-                        }                     
-                        
+                        }
+
                     </div>
                 </div>
             </div>
