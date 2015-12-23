@@ -204,7 +204,7 @@ img {
     border-right: 1px solid grey;
 }
 .text_header_news .news_name, .text_header_news .news_detail {   
-    padding: 2.5% 1% 0%; 
+    padding: 10px 1% 0%; 
 }
 .text_header_news .news_name h1 {
     font-size: 1em;
@@ -246,6 +246,17 @@ img {
     left: 0;
     right: 0;
  } 
+.news_name_home {
+    width: 10%;
+}
+.news_detail_home {
+    text-align: left;
+    width: 85%;
+}
+.text_header_news .news_detail_home > span > a {
+    font-size: 1.2em;
+    /*font-weight: 500;*/
+}
 .body-content {
     min-height: 100%;
     height: auto;
@@ -353,8 +364,8 @@ margin-bottom:20px;
     text-align: left;
 }
 .inv_company_desc {
-    font-size: 1.5em;
-    line-height: 1.3em;
+    font-size: 1.3em;
+    line-height: 1.4em;
 }
 /*================== Advisory ======================*/
 .adv_content {
@@ -466,7 +477,7 @@ margin-bottom:20px;
     font-size: 1.4em;
 }
 .news_detail > span > a {
-    color:black !important;
+    color:#333 !important;
     font-size: 1.3em; 
 }
 .news_detail > p {
