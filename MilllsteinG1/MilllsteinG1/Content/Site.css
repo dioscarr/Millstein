@@ -158,12 +158,12 @@ img {
     height: 100vh;
     -webkit-filter: grayscale(1);
     /*-webkit-filter: sepia(0.55);*/
-} 
+}  
 .backstretch {
     /*-webkit-filter: grayscale(1);*/
 }
 .logo_home {
-    z-index: 99;
+    z-index: 99; 
     padding: 4% 15px 0;
 }
 .text_header{
@@ -175,7 +175,8 @@ img {
         /*text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);*/
         /*text-shadow: 10px 5px 5px rgb(0, 0, 0);*/
     /*text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 30px, rgb(0, 0, 0) 0px 2px 30px, rgba(0, 0, 0, 0.80) 0px 2px 50px;*/
-    text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 5px, rgb(0, 0, 0) 0px 2px 5px, rgba(0, 0, 0, 0.80) 0px 2px 5px;
+    /*text-shadow: rgb(0, 0, 0) 0px 5px 0px, rgb(0, 0, 0) 0px 2px 5px, rgb(0, 0, 0) 0px 2px 5px, rgba(0, 0, 0, 0.80) 0px 2px 5px;*/
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 1);
 }
 .text_header h2 {
     font-size: 1.6em;
