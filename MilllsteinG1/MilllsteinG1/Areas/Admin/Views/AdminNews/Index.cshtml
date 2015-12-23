@@ -18,45 +18,80 @@
         <div class="panel panel-primary">
             <div class="panel-heading"> News</div>
             <div class="panel-body">
-                <div class="form-group">
-                 
+    <div class="form-group">
 
-                    <div class="row firm_title">
-                        <div class="col-sm-9 col-xs-12 logo">
-                            <a href="~/Admin/home/index"><img src="~/Images/logo-all.png" /></a>
-                        </div>
-                        <div class="col-sm-3 col-xs-12 firm_sidebar">
-                            <ul class="list-inline firm_sidebar_ul">
-                                <li><a href="~/Admin/AdminNews/">News</a></li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    @Html.ActionLink("Add News", "insert", null, new { @class = "btn btn-default btn-sm " })
-                    <hr />
+        <div class="row firm_title">
+            <div class="col-sm-9 col-xs-12 logo">
+                <a href="~/Admin/home/index"><img src="~/Images/logo-all.png" /></a>
+            </div>
+            <div class="col-sm-3 col-xs-12 firm_sidebar">
+                <ul class="list-inline firm_sidebar_ul">
+                    <li><a href="~/Admin/AdminNews/">News</a></li>
+                </ul>
+            </div>
+        </div>
 
-                    <div class="row visible-lg visible-md visible-sm">
-                        <div class="col-xs-9">
-                            <div class="news_title">
-                                <h2>Recent News</h2>
+        @Html.ActionLink("Add News", "insert", null, new { @class = "btn btn-default btn-sm " })
+        <hr />
+
+        <div class="row visible-lg visible-md visible-sm">
+            <div class="col-xs-9">
+                <div class="news_title">
+                    <h2>Recent News</h2>
+                </div>
+                @if (@Model.NewsList != null)
+                {
+                    <div class="news_detail">
+
+                        @foreach (var news in @Model.NewsList)
+                        {
+                            <h3><a href="~/Admin/AdminNews/Article/@news.NewsId">@String.Format("{0:MMMM dd, yyyy}", news.NewsDate)</a></h3>
+                            <span><a href="~/Admin/AdminNews/Article/@news.NewsId">@Html.Raw(@news.NewsTitle)</a></span>
+
+
+    <span class="pull-right">
+        @Html.ActionLink("Edit", "Article", new { id = news.NewsId }, new { @class = "btn btn-default btn-xs " })
+        @Html.ActionLink("Delete", "delete", new { id = @news.NewsId }, new { @class = "btn btn-default btn-xs " })
+                        
+                      @*// <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">*@
+            @*Delete
+        </button>*@
+
+       
+    </span><br /><br />
+
+
+
+
+
+                            @*<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title">Delete</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Are you sure you want to delete @news.NewsTitle?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                 
                             </div>
-                            @if (@Model.NewsList != null)
-                            {
-                                <div class="news_detail">
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->*@
 
-                                    @foreach (var news in @Model.NewsList)
-                                    {
-                                        <h3><a href="~/Admin/AdminNews/Article/@news.NewsId">@String.Format("{0:MMMM dd, yyyy}", news.NewsDate)</a></h3>
-                                        <span><a href="~/Admin/AdminNews/Article/@news.NewsId">@Html.Raw(@news.NewsTitle)</a></span>
 
-                                       
-                                    <span class="pull-right">@Html.ActionLink("Edit", "Article", new { id = news.NewsId }, new { @class = "btn btn-default btn-xs " })
-                                    @Html.ActionLink("Delete", "index", null, new { @class = "btn btn-default btn-xs " })</span><br /><br />
-    <hr />
 
-                                    }
-                                </div>
-                            }
+
+
+
+
+                        }
+                    </div>
+                }
                         </div>
                         <div class="col-xs-3">
                             @if (@Model.NewsList != null)
@@ -138,6 +173,10 @@
 
 
 </div>
+
+
+
+
 
 
 @section scripts{

@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-6">
                     <h2>
-                        “The Treasury Department’s restructuring   team, led by Jim Millstein, earns an A for its work on the American International Group”<br>
+                       @Html.Raw(@Model.SliderList[0].Quote)<br>
                     </h2>
                     <span class="pull-right">— <i>New York Times</i>, Dealbook</span>
                 </div>
@@ -35,8 +35,7 @@
             <div class="row">
                 <div class="col-xs-6 right_border">
                     <h2 class="news_content pull-left">
-                        Millstein & Co. develops solutions for complex corporate and public finance issues. Drawing upon the financial, economic and policy backgrounds of our professionals, we assess situations from multiple perspectives to develop artful solutions.
-                    </h2>
+                       @Html.Raw(@Model.Home.Content)  </h2>
                 </div>
                 <div class="col-xs-6">
                     <div class="news_name news_name_home pull-left">
@@ -187,16 +186,20 @@ backgroundResize();
 
 if (document.documentElement.clientWidth < 994) {
     $("#image_MillsteinG1").backstretch([
-    "../../Images/home1.jpg"
-    , "../../Images/home2.jpg"
-    , "../../Images/home3.jpg"
+    "/Images/home1.jpg"
+    , "/Images/home2.jpg"
+    , "/Images/home3.jpg"
+    , "/Images/home4.jpg"
+    , "/Images/home5.jpg"
     ], { duration: 3000, fade: 750 });
 }
 else {
     $.backstretch([
-    "../../Images/home1.jpg"
-    , "../../Images/home2.jpg"
-    , "../../Images/home3.jpg"
+    "/Images/home1.jpg"
+    , "/Images/home2.jpg"
+    , "/Images/home3.jpg"
+    , "/Images/home4.jpg"
+    , "/Images/home5.jpg"
     ], { duration: 3000, fade: 750 }); 
 }
 
@@ -211,9 +214,11 @@ if (document.documentElement.clientWidth < 994) {
     //$("#image_MillsteinG1").css('display', "clock");
     $('.backstretch').remove();
         $("#image_MillsteinG1").backstretch([
-        "../../Images/home1.jpg"
-        , "../../Images/home2.jpg"
-        , "../../Images/home3.jpg"
+        "/Images/home1.jpg"
+    , "/Images/home2.jpg"
+    , "/Images/home3.jpg"
+    , "/Images/home4.jpg"
+    , "/Images/home5.jpg"
         ], { duration: 3000, fade: 750 });
     }
 else {
@@ -222,9 +227,11 @@ else {
     //$("div.backstretch").css('display', "clock");
     $('.backstretch').remove();
         $.backstretch([
-        "../../Images/home1.jpg"
-        , "../../Images/home2.jpg"
-        , "../../Images/home3.jpg"
+        "/Images/home1.jpg"
+    , "/Images/home2.jpg"
+    , "/Images/home3.jpg"
+    , "/Images/home4.jpg"
+    , "/Images/home5.jpg"
         ], { duration: 3000, fade: 750 });
 }
     //}, 500);

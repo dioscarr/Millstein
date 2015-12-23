@@ -80,7 +80,7 @@ namespace MilllsteinG1.Areas.Admin.Controllers
            News n = ManageNews.GetById(id);
            NewsModel NM = new NewsModel();
            NM.delete(n);
-           return RedirectToAction("");
+           return RedirectToAction("index");
        }
         
     }
