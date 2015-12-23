@@ -149,6 +149,7 @@ img {
 }
 .dropdown-menu > li > a {
     color: white;
+    font-size: .9em;
 }
 .navbar-header>.navbar-brand>i {
     word-spacing: 5px;
