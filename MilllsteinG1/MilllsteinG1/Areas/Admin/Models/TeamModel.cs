@@ -15,6 +15,7 @@ namespace MilllsteinG1.Areas.Admin.Models
         public Team team { get; set;}
         public List<Team> teamList { get; set;}
         public Advisory advisory { get; set; }
+        public bool isNewPicture { get; set; } 
         [DataType(DataType.Upload)]
         public HttpPostedFileBase ImageUpload { get; set; }
         public TeamModel()

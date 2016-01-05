@@ -50,10 +50,15 @@
                             <div class="col-xs-6 visible-lg visible-md visible-sm firm_image">
                                 <img src="~/Images/firm-1.jpg" />
                                 <div class="image_desc">
-                                    <div>
-                                        @Html.LabelFor(m => m.ImageUpload, new {@style="color:white;" })
-                                        @Html.TextBoxFor(m => m.ImageUpload, new { @type = "file", @style = "color:white;"  })
+                                   
+                                    @Html.CheckBoxFor(c => c.isNewPicture, new { id = "checkIfNew", style="" })
+                                    <label>Check to select new Image</label>
+                                    <div id="newPicture" style="display:none;">
+                                        @Html.LabelFor(m => m.ImageUpload)
+                                        @Html.TextBoxFor(m => m.ImageUpload, new { @type = "file" })
+
                                     </div>
+                                    <br />
                                     <br />
 
                                     <div class="news_title" >
@@ -69,11 +74,17 @@
                             <div class="col-xs-12 visible-xs firm_image">
                                 <img src="~/Images/firm-1.jpg" />
                                 <div class="image_desc">
-                                    <div>
+                                    <br />
+                                    <br />
+                                    @Html.CheckBoxFor(c => c.isNewPicture, new { id = "checkIfNew" })
+                                    <label>Check to select new Image</label>
+                                    <div id="newPicture" style="display:none;">
                                         @Html.LabelFor(m => m.ImageUpload)
                                         @Html.TextBoxFor(m => m.ImageUpload, new { @type = "file" })
+
                                     </div>
-                                    <br/>
+                                    <br />
+                                    <br />
                                     @Html.EditorFor(model => model.FirmDetail.FirmQuote, new { htmlAttributes = new { @class = " input-group date form_datetime col-lg-4 form-control " } })
                                    
                                 </div>
@@ -146,9 +157,13 @@
                     $(".mobile_left_bar_advisory").slideToggle("slow");
                 });
 
-                $('.form_datetime').datetimepicker({
+                $('#checkIfNew').change(function () {
 
-                });
+
+
+                    $('#newPicture').slideToggle();
+                }
+                    );
             });
     </script>
 }

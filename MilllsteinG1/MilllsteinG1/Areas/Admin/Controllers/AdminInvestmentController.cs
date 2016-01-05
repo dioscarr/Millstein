@@ -9,6 +9,7 @@ using System.IO;
 
 namespace MilllsteinG1.Areas.Admin.Controllers
 {
+    [Authorize]
     public class AdminInvestmentController : Controller
     {
         // GET: Investment
