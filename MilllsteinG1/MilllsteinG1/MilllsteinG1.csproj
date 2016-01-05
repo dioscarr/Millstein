@@ -379,7 +379,6 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminNews\Article.cshtml" />
     <Content Include="Areas\Admin\Views\AdminNews\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Secomdary_Layout.cshtml" />
     <Content Include="Content\_bootstrap-datetimepicker.less" />
@@ -429,6 +428,9 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Areas\Admin\Views\AdminInvestment\Index.cshtml" />
     <Content Include="Images\favicons\manifest.json" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminNews\Article.cshtml" />
     <None Include="Properties\PublishProfiles\Millstein.pubxml" />
     <Content Include="Scripts\ckeditor\CHANGES.md" />
     <Content Include="Scripts\ckeditor\LICENSE.md" />
@@ -841,6 +843,7 @@
     <Content Include="Scripts\ie10-viewport-bug-workaround.js" />
     <Content Include="Scripts\jquery-2.0.0.min.map" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Properties\PublishProfiles\Millstein_Kate.pubxml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />

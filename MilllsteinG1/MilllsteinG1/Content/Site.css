@@ -346,7 +346,9 @@ margin-bottom:20px;
 }
 .ceo_company {
     padding: 5% 0;
-    font-size: 1.7em;
+    /*font-size: 1.7em;*/
+    font-size: 1.2em;
+    line-height: 1.5;
 }
 /*================== Investment ======================*/ 
 .inv_content {
@@ -633,7 +635,17 @@ margin-bottom:20px;
         text-align: center;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: grey;
+        background-color: rgb(221, 221, 221);
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:first-child {
+        border-bottom: 1px solid grey;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: white;
+        background-color: rgb(221, 221, 221);
     }
     .firm_sidebar>.firm_sidebar_ul {
         margin: 4% 0;

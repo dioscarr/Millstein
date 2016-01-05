@@ -12,8 +12,8 @@ namespace BLL
         where T : class
         where R : GenericRepository<T>
     {
-        private static readonly string _connectionString = "MillsteinPlesk_Entities"; // Set the connection string
-        private static readonly string _pwd = "tallDudt58"; // Set the password
+        private static readonly string _connectionString = "MillsteinDBEntities"; // Set the connection string
+        private static readonly string _pwd = "130w56"; // Set the password
 
         #region Select methods
 

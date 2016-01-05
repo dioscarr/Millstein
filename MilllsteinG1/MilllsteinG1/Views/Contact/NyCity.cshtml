@@ -39,7 +39,13 @@
 
 <div class="visible-xs row contact_content">
     <div class="col-xs-12">
-        <button class="btn btn-default advisory_button">View all News</button>
+        <ul class="left_bar_advisory">
+            <li><a href="~/Contact/NyCity/@Model.Locations[0].Id">@Model.Locations[0].LocationName</a></li>
+            <li><a href="~/Contact/WashingtonDCCity/@Model.Locations[1].Id">@Model.Locations[1].LocationName</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-12">
+        @*<button class="btn btn-default advisory_button">View all Contact</button>*@
         <ul class="left_bar_advisory mobile_left_bar_advisory">
             <li><a href="~/Contact">Contact</a></li>
             <li><a href="~/Contact/NyCity/@Model.Locations[0].Id">@Model.Locations[0].LocationName</a></li>

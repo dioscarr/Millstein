@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Clever Design\Desktop\Work\DisocarRodriguez\MVC-Project\MillsteinGithub\MilllsteinG1\DAL\Models\MillsteinDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\CWR\Desktop\WORK\kate\Developing\mvc-projects\Millstein_12.22.15\MilllsteinG1\DAL\Models\Millstein_Local_DB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

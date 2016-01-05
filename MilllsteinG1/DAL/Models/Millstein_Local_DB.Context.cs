@@ -13,10 +13,10 @@ namespace DAL.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MillsteinPlesk_Entities : DbContext
+    public partial class MillsteinDBEntities : DbContext
     {
-        public MillsteinPlesk_Entities()
-            : base("name=MillsteinPlesk_Entities")
+        public MillsteinDBEntities()
+            : base("name=MillsteinDBEntities")
         {
         }
     
@@ -26,10 +26,6 @@ namespace DAL.Models
         }
     
         public virtual DbSet<Advisory> Advisory { get; set; }
-        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
-        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<CEO> CEO { get; set; }
         public virtual DbSet<Contact> Contact { get; set; }
         public virtual DbSet<Investment> Investment { get; set; }

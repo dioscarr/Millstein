@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="MillsteinPlesk_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MillsteinDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Advisory">
           <Key>
             <PropertyRef Name="Id" />
@@ -21,57 +21,6 @@
           <Property Name="Created" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Modified" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="isDeleted" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetRoles">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetUserClaims">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="ClaimType" Type="nvarchar(max)" />
-          <Property Name="ClaimValue" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="AspNetUserLogins">
-          <Key>
-            <PropertyRef Name="LoginProvider" />
-            <PropertyRef Name="ProviderKey" />
-            <PropertyRef Name="UserId" />
-          </Key>
-          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetUserRoles">
-          <Key>
-            <PropertyRef Name="UserId" />
-            <PropertyRef Name="RoleId" />
-          </Key>
-          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetUsers">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="Email" Type="nvarchar" MaxLength="256" />
-          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
-          <Property Name="PasswordHash" Type="nvarchar(max)" />
-          <Property Name="SecurityStamp" Type="nvarchar(max)" />
-          <Property Name="PhoneNumber" Type="nvarchar(max)" />
-          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
-          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
-          <Property Name="LockoutEndDateUtc" Type="datetime" />
-          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
-          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
-          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
         </EntityType>
         <EntityType Name="CEO">
           <Key>
@@ -108,7 +57,7 @@
           <Property Name="Modified" Type="datetime2" Precision="7" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'MillsteinDB.dioscar.Firm' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Firm">
           <Key>
             <PropertyRef Name="id" />
@@ -234,62 +183,6 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           <Property Name="Modified" Type="datetime2" Precision="7" />
           <Property Name="isDeleted" Type="bit" />
         </EntityType>
-        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserClaims">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserLogins">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
-          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetRoles">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserRoles">
-              <PropertyRef Name="RoleId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
-          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserRoles">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Person__News">
           <End Role="News" Type="Self.News" Multiplicity="0..1" />
           <End Role="Person_" Type="Self.Person_" Multiplicity="*" />
@@ -314,23 +207,18 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MillsteinPlesk_ModelStoreContainer">
-          <EntitySet Name="Advisory" EntityType="Self.Advisory" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="CEO" EntityType="Self.CEO" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Investment" EntityType="Self.Investment" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Person_" EntityType="Self.Person_" Schema="dbo" Table="Person." store:Type="Tables" />
-          <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Firm" EntityType="Self.Firm" store:Type="Tables" store:Schema="dbo">
+        <EntityContainer Name="MillsteinDBModelStoreContainer">
+          <EntitySet Name="Advisory" EntityType="Self.Advisory" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="CEO" EntityType="Self.CEO" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Investment" EntityType="Self.Investment" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="News" EntityType="Self.News" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Person_" EntityType="Self.Person_" Schema="dioscar" Table="Person." store:Type="Tables" />
+          <EntitySet Name="Slider" EntityType="Self.Slider" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Team" EntityType="Self.Team" Schema="dioscar" store:Type="Tables" />
+          <EntitySet Name="Firm" EntityType="Self.Firm" store:Type="Tables" store:Schema="dioscar">
             <DefiningQuery>SELECT 
     [Firm].[id] AS [id], 
     [Firm].[Content] AS [Content], 
@@ -340,24 +228,8 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
     [Firm].[Created] AS [Created], 
     [Firm].[Modified] AS [Modified], 
     [Firm].[isDeleted] AS [isDeleted]
-    FROM [dbo].[Firm] AS [Firm]</DefiningQuery>
+    FROM [dioscar].[Firm] AS [Firm]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
-            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
-            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
-          </AssociationSet>
           <AssociationSet Name="FK_Person__News" Association="Self.FK_Person__News">
             <End Role="News" EntitySet="News" />
             <End Role="Person_" EntitySet="Person_" />
@@ -370,42 +242,26 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="MillsteinPlesk_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="MillsteinPlesk_Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Advisory" EntityType="MillsteinPlesk_Model.Advisory" />
-          <EntitySet Name="AspNetRoles" EntityType="MillsteinPlesk_Model.AspNetRoles" />
-          <EntitySet Name="AspNetUserClaims" EntityType="MillsteinPlesk_Model.AspNetUserClaims" />
-          <EntitySet Name="AspNetUserLogins" EntityType="MillsteinPlesk_Model.AspNetUserLogins" />
-          <EntitySet Name="AspNetUsers" EntityType="MillsteinPlesk_Model.AspNetUsers" />
-          <EntitySet Name="CEO" EntityType="MillsteinPlesk_Model.CEO" />
-          <EntitySet Name="Contact" EntityType="MillsteinPlesk_Model.Contact" />
-          <EntitySet Name="Investment" EntityType="MillsteinPlesk_Model.Investment" />
-          <EntitySet Name="Locations" EntityType="MillsteinPlesk_Model.Locations" />
-          <EntitySet Name="News" EntityType="MillsteinPlesk_Model.News" />
-          <EntitySet Name="Pages" EntityType="MillsteinPlesk_Model.Pages" />
-          <EntitySet Name="Person_" EntityType="MillsteinPlesk_Model.Person_" />
-          <EntitySet Name="Slider" EntityType="MillsteinPlesk_Model.Slider" />
-          <EntitySet Name="Team" EntityType="MillsteinPlesk_Model.Team" />
-          <EntitySet Name="Firm" EntityType="MillsteinPlesk_Model.Firm" />
-          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="MillsteinPlesk_Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="MillsteinPlesk_Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
-            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Person__News" Association="MillsteinPlesk_Model.FK_Person__News">
+      <Schema Namespace="MillsteinDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MillsteinDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Advisory" EntityType="MillsteinDBModel.Advisory" />
+          <EntitySet Name="CEO" EntityType="MillsteinDBModel.CEO" />
+          <EntitySet Name="Contact" EntityType="MillsteinDBModel.Contact" />
+          <EntitySet Name="Investment" EntityType="MillsteinDBModel.Investment" />
+          <EntitySet Name="Locations" EntityType="MillsteinDBModel.Locations" />
+          <EntitySet Name="News" EntityType="MillsteinDBModel.News" />
+          <EntitySet Name="Pages" EntityType="MillsteinDBModel.Pages" />
+          <EntitySet Name="Person_" EntityType="MillsteinDBModel.Person_" />
+          <EntitySet Name="Slider" EntityType="MillsteinDBModel.Slider" />
+          <EntitySet Name="Team" EntityType="MillsteinDBModel.Team" />
+          <EntitySet Name="Firm" EntityType="MillsteinDBModel.Firm" />
+          <AssociationSet Name="FK_Person__News" Association="MillsteinDBModel.FK_Person__News">
             <End Role="News" EntitySet="News" />
             <End Role="Person_" EntitySet="Person_" />
           </AssociationSet>
-          <AssociationSet Name="FK_Slider_Pages" Association="MillsteinPlesk_Model.FK_Slider_Pages">
+          <AssociationSet Name="FK_Slider_Pages" Association="MillsteinDBModel.FK_Slider_Pages">
             <End Role="Pages" EntitySet="Pages" />
             <End Role="Slider" EntitySet="Slider" />
-          </AssociationSet>
-          <AssociationSet Name="AspNetUserRoles" Association="MillsteinPlesk_Model.AspNetUserRoles">
-            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
-            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Advisory">
@@ -424,55 +280,6 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="isDeleted" Type="Boolean" Nullable="false" />
-        </EntityType>
-        <EntityType Name="AspNetRoles">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUsers" Relationship="MillsteinPlesk_Model.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
-        </EntityType>
-        <EntityType Name="AspNetUserClaims">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUsers" Relationship="MillsteinPlesk_Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
-        </EntityType>
-        <EntityType Name="AspNetUserLogins">
-          <Key>
-            <PropertyRef Name="LoginProvider" />
-            <PropertyRef Name="ProviderKey" />
-            <PropertyRef Name="UserId" />
-          </Key>
-          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUsers" Relationship="MillsteinPlesk_Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
-        </EntityType>
-        <EntityType Name="AspNetUsers">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
-          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
-          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
-          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
-          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
-          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
-          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
-          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AspNetUserClaims" Relationship="MillsteinPlesk_Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
-          <NavigationProperty Name="AspNetUserLogins" Relationship="MillsteinPlesk_Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
-          <NavigationProperty Name="AspNetRoles" Relationship="MillsteinPlesk_Model.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
         </EntityType>
         <EntityType Name="CEO">
           <Key>
@@ -552,7 +359,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           <Property Name="isDeleted" Type="Boolean" />
           <Property Name="Modified" Type="DateTime" Precision="7" />
           <Property Name="Created" Type="DateTime" Precision="7" />
-          <NavigationProperty Name="Person_" Relationship="MillsteinPlesk_Model.FK_Person__News" FromRole="News" ToRole="Person_" />
+          <NavigationProperty Name="Person_" Relationship="MillsteinDBModel.FK_Person__News" FromRole="News" ToRole="Person_" />
         </EntityType>
         <EntityType Name="Pages">
           <Key>
@@ -564,7 +371,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="Order" Type="Int32" />
           <Property Name="isDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Slider" Relationship="MillsteinPlesk_Model.FK_Slider_Pages" FromRole="Pages" ToRole="Slider" />
+          <NavigationProperty Name="Slider" Relationship="MillsteinDBModel.FK_Slider_Pages" FromRole="Pages" ToRole="Slider" />
         </EntityType>
         <EntityType Name="Person_">
           <Key>
@@ -585,7 +392,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           <Property Name="Created" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="isDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="News" Relationship="MillsteinPlesk_Model.FK_Person__News" FromRole="Person_" ToRole="News" />
+          <NavigationProperty Name="News" Relationship="MillsteinDBModel.FK_Person__News" FromRole="Person_" ToRole="News" />
         </EntityType>
         <EntityType Name="Slider">
           <Key>
@@ -600,7 +407,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           <Property Name="HomeId" Type="Int32" Nullable="false" />
           <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="isDeleted" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Pages" Relationship="MillsteinPlesk_Model.FK_Slider_Pages" FromRole="Slider" ToRole="Pages" />
+          <NavigationProperty Name="Pages" Relationship="MillsteinDBModel.FK_Slider_Pages" FromRole="Slider" ToRole="Pages" />
         </EntityType>
         <EntityType Name="Team">
           <Key>
@@ -637,37 +444,9 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           <Property Name="Modified" Type="DateTime" Nullable="false" Precision="7" />
           <Property Name="isDeleted" Type="Boolean" Nullable="false" />
         </EntityType>
-        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
-          <End Type="MillsteinPlesk_Model.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="MillsteinPlesk_Model.AspNetUserClaims" Role="AspNetUserClaims" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserClaims">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
-          <End Type="MillsteinPlesk_Model.AspNetUsers" Role="AspNetUsers" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="MillsteinPlesk_Model.AspNetUserLogins" Role="AspNetUserLogins" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="AspNetUsers">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="AspNetUserLogins">
-              <PropertyRef Name="UserId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Person__News">
-          <End Type="MillsteinPlesk_Model.News" Role="News" Multiplicity="0..1" />
-          <End Type="MillsteinPlesk_Model.Person_" Role="Person_" Multiplicity="*" />
+          <End Type="MillsteinDBModel.News" Role="News" Multiplicity="0..1" />
+          <End Type="MillsteinDBModel.Person_" Role="Person_" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="News">
               <PropertyRef Name="NewsId" />
@@ -678,8 +457,8 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Slider_Pages">
-          <End Type="MillsteinPlesk_Model.Pages" Role="Pages" Multiplicity="1" />
-          <End Type="MillsteinPlesk_Model.Slider" Role="Slider" Multiplicity="*" />
+          <End Type="MillsteinDBModel.Pages" Role="Pages" Multiplicity="1" />
+          <End Type="MillsteinDBModel.Slider" Role="Slider" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Pages">
               <PropertyRef Name="Id" />
@@ -689,18 +468,14 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="AspNetUserRoles">
-          <End Type="MillsteinPlesk_Model.AspNetRoles" Role="AspNetRoles" Multiplicity="*" />
-          <End Type="MillsteinPlesk_Model.AspNetUsers" Role="AspNetUsers" Multiplicity="*" />
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MillsteinPlesk_ModelStoreContainer" CdmEntityContainer="MillsteinPlesk_Entities">
+        <EntityContainerMapping StorageEntityContainer="MillsteinDBModelStoreContainer" CdmEntityContainer="MillsteinDBEntities">
           <EntitySetMapping Name="Advisory">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Advisory">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Advisory">
               <MappingFragment StoreEntitySet="Advisory">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -717,53 +492,8 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="AspNetRoles">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.AspNetRoles">
-              <MappingFragment StoreEntitySet="AspNetRoles">
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AspNetUserClaims">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.AspNetUserClaims">
-              <MappingFragment StoreEntitySet="AspNetUserClaims">
-                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
-                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AspNetUserLogins">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.AspNetUserLogins">
-              <MappingFragment StoreEntitySet="AspNetUserLogins">
-                <ScalarProperty Name="UserId" ColumnName="UserId" />
-                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
-                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AspNetUsers">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.AspNetUsers">
-              <MappingFragment StoreEntitySet="AspNetUsers">
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
-                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
-                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
-                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
-                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
-                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
-                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
-                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CEO">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.CEO">
+            <EntityTypeMapping TypeName="MillsteinDBModel.CEO">
               <MappingFragment StoreEntitySet="CEO">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -782,7 +512,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Contact">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Contact">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Contact">
               <MappingFragment StoreEntitySet="Contact">
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
                 <ScalarProperty Name="Created" ColumnName="Created" />
@@ -799,7 +529,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Investment">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Investment">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Investment">
               <MappingFragment StoreEntitySet="Investment">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -816,7 +546,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Locations">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Locations">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Locations">
               <MappingFragment StoreEntitySet="Locations">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -833,7 +563,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="News">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.News">
+            <EntityTypeMapping TypeName="MillsteinDBModel.News">
               <MappingFragment StoreEntitySet="News">
                 <ScalarProperty Name="Created" ColumnName="Created" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -847,7 +577,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pages">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Pages">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Pages">
               <MappingFragment StoreEntitySet="Pages">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Order" ColumnName="Order" />
@@ -859,7 +589,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Person_">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Person_">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Person_">
               <MappingFragment StoreEntitySet="Person_">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -880,7 +610,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Slider">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Slider">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Slider">
               <MappingFragment StoreEntitySet="Slider">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -895,7 +625,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Team">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Team">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Team">
               <MappingFragment StoreEntitySet="Team">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -915,7 +645,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Firm">
-            <EntityTypeMapping TypeName="MillsteinPlesk_Model.Firm">
+            <EntityTypeMapping TypeName="MillsteinDBModel.Firm">
               <MappingFragment StoreEntitySet="Firm">
                 <ScalarProperty Name="isDeleted" ColumnName="isDeleted" />
                 <ScalarProperty Name="Modified" ColumnName="Modified" />
@@ -928,14 +658,6 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="AspNetUserRoles" TypeName="MillsteinPlesk_Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
-            <EndProperty Name="AspNetUsers">
-              <ScalarProperty Name="Id" ColumnName="UserId" />
-            </EndProperty>
-            <EndProperty Name="AspNetRoles">
-              <ScalarProperty Name="Id" ColumnName="RoleId" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -950,7 +672,7 @@ warning 6002: The table/view 'MillsteinPlesk_.dbo.Firm' does not have a primary 
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

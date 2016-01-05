@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8cd8838567a0413fb02d087d07c82788" Name="Diagram1">
+        <EntityTypeShape EntityType="MillsteinDBModel.Advisory" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MillsteinDBModel.CEO" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Contact" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Investment" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Locations" Width="1.5" PointX="7.75" PointY="8.75" />
+        <EntityTypeShape EntityType="MillsteinDBModel.News" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Pages" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Person_" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Slider" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Team" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Firm" Width="1.5" PointX="9.75" PointY="5.75" />
+        <AssociationConnector Association="MillsteinDBModel.FK_Person__News" />
+        <AssociationConnector Association="MillsteinDBModel.FK_Slider_Pages" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
