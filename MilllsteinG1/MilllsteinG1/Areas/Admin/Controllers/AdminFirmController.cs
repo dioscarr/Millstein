@@ -8,6 +8,8 @@ using System.IO;
 
 namespace MilllsteinG1.Areas.Admin.Controllers
 {
+
+[Authorize]
     public class AdminFirmController : Controller
     {
         public ActionResult Index()
@@ -25,8 +27,11 @@ namespace MilllsteinG1.Areas.Admin.Controllers
           [ValidateInput(false)]
         public ActionResult UpdateFirm(FirmModel model)
         {
-              
-            model.FirmDetail.picture = ImageUloadFirm(model, "~/Images/advisory");
+            if (model.isNewPicture)
+            {
+                model.FirmDetail.picture = ImageUloadFirm(model, "~/Images/advisory");
+            }
+          
             model.Update(model);
             return RedirectToAction("index");
         }

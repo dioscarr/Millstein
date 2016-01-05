@@ -11,6 +11,8 @@ namespace MilllsteinG1.Areas.Admin.Models
     {
 
         public Firm FirmDetail { get; set; }
+        public bool isNewPicture { get; set; }
+       
         public HttpPostedFileBase ImageUpload { get; set; }
 
         public FirmModel()

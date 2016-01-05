@@ -27,8 +27,8 @@
                             <img src="~/Images/jim_Millstein.jpg" />
 
                             <div class="image_desc image_desc_ceo">
-                                <p><i>@Model.CEODetail.pictureQuote</i></p>
-                                <span class="pull-right">@Model.CEODetail.pictureQuoteSource, @String.Format("{0:MM/dd/yyyy}", @Model.CEODetail.PictureQuoteDate)</span>
+                                <p>@Html.Raw(@Model.CEODetail.pictureQuote)</p>
+                                <span class="pull-right">@Html.Raw(@Model.CEODetail.pictureQuoteSource), @String.Format("{0:MM/dd/yyyy}", @Model.CEODetail.PictureQuoteDate)</span>
                             </div>
                             <div class="ceo_company">
                                 @Html.Raw(@Model.CEODetail.Description)

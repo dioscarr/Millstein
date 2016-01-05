@@ -65,10 +65,16 @@
                                         <h2>Advisory Image</h2>
                                     </div>
                                     <img src="~/Images/@Model.advisory.Picture" />
-                                    <div>
+                                    <br />
+                                    <br />
+                                    @Html.CheckBoxFor(c => c.isNewPicture, new { id = "checkIfNew" })
+                                    <label>Check to select new Image</label>
+                                    <div id="newPicture" style="display:none;">
                                         @Html.LabelFor(m => m.ImageUpload)
                                         @Html.TextBoxFor(m => m.ImageUpload, new { @type = "file" })
+
                                     </div>
+                                    <br />
                                     <br />
 
                                     <div class="news_title">
@@ -199,9 +205,17 @@
                     $(".mobile_left_bar_advisory").slideToggle("slow");
                 });
 
-                $('.form_datetime').datetimepicker({
 
-                });
+
+
+                $('#checkIfNew').change(function () {
+
+
+
+                    $('#newPicture').slideToggle();
+                }
+                 );
+
             });
         </script>
     }

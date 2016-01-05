@@ -8,6 +8,7 @@ using System.IO;
 
 namespace MilllsteinG1.Areas.Admin.Controllers
 {
+    [Authorize]
     [ValidateInput(false)]
     public class AdvisorsController : Controller
     {
@@ -22,7 +23,11 @@ namespace MilllsteinG1.Areas.Admin.Controllers
         {
             try
             {
-                model.advisory.Picture = ImageUload(model, "~/Images");
+                if (model.isNewPicture)
+                {
+                    model.advisory.Picture = ImageUload(model, "~/Images");
+                }
+               
                 model.updateAdvisoryOverview(model);
                 return RedirectToAction("Index");
             }
