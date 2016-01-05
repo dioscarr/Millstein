@@ -18,5 +18,10 @@ namespace MilllsteinG1.Controllers
 
             return View(IM);
         }
+
+        public ActionResult MenegInfo()
+        {
+            return View();
+        }
     }
 }

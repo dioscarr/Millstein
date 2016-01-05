@@ -13,7 +13,7 @@
     </div>
     <div class="col-md-3 col-sm-4 col-xs-12 firm_sidebar">
         <ul class="list-inline firm_sidebar_ul">
-            <li><a href="#">Investment</a></li>
+            <li><a href="#">Asset Management</a></li>
         </ul>
     </div>
 </div>
@@ -26,25 +26,40 @@
             </i>
         </div>
         <br />
+        <img src="~/Images/asset-mgmt.jpg" />
         <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle1</h4>
         @Html.Raw(@Model.InvestmentDetail.Content1) 
         <h4 class="investment_title">@Model.InvestmentDetail.ContentTitle2</h4>
         @Html.Raw(@Model.InvestmentDetail.Content2)
     </div>
     <div class="col-md-3 col-sm-4 firm_image">
-        <img src="~/Images/investment.jpg" />
-        <div class="image_desc image_desc_inv">
+        @*<img src="~/Images/investment.jpg" />*@
+        @*<div class="image_desc image_desc_inv">
             <p><i>@Model.InvestmentDetail.PictureContent</i></p>
-        </div>
+        </div>*@
+        <ul class="left_bar_advisory">
+            <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
+
+            <li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
+            <li><a href="~/advisory/info">Adam LaVier, Partner</a></li>
+            <li><a href="~/advisory/info">William Nix, Partner</a></li>
+            <hr />
+            <li><b>Recent Disclosed Investments</b></li>
+            <br />
+            <li><a href="https://www.atlantixglobal.com">Atlantix Global Systems</a></li>
+            <li><a href="https://www.dlt.com">DLT Solutions</a></li>
+            <li><a href="https://www.ridewithvia.com">Via Transportation</a></li>
+            <li><a href="https://www.friendmts.com">Friend Media Technology Systems</a></li>
+        </ul>
     </div>
 </div> 
 @* Mobile Devices  *@
 <div class="visible-xs row firm_content inv_content">
     <div class="col-sm-3 col-xs-12 firm_image">
         <img src="~/Images/investment-mobile.jpg" />
-        <div class="image_desc image_desc_inv">
+        @*<div class="image_desc image_desc_inv">
             <p><i>@Model.InvestmentDetail.PictureContent</i></p>
-        </div>
+        </div>*@
     </div>
     <div class="col-sm-9 col-xs-12 inv_content_descriprion">
         <div class="inv_company_desc adv_content">

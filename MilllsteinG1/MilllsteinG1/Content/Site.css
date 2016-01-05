@@ -361,6 +361,9 @@ margin-bottom:20px;
     font-size: 0.9em;
     line-height: 1.5;
 }
+.inv_content_descriprion>img {
+    padding-bottom: 2%;
+}
 .investment_title {
     color: #9e0b0f;
     text-transform: uppercase;

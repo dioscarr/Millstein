@@ -322,6 +322,7 @@
     <Content Include="Images\advisory\jim_wigand.jpg" />
     <Content Include="Images\advisory\mark_hootnick.jpg" />
     <Content Include="Images\advisory\mark_walker.jpg" />
+    <Content Include="Images\asset-mgmt.jpg" />
     <Content Include="Images\contact.jpg" />
     <Content Include="Images\favicons\android-icon-144x144.png" />
     <Content Include="Images\favicons\android-icon-192x192.png" />
@@ -993,6 +994,7 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Views\Investment\MenegInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
