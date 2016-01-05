@@ -17,6 +17,7 @@
         <div class="show_buttom_advisory visible-xs visible-sm">
             <button class="btn btn-default advisory_button">View all Advisers</button>
             <ul class="left_bar_advisory mobile_left_bar_advisory">
+                <li><a href="~/advisory/firm/ceo">Jim Millstein</a></li> </br>
                 @foreach (var member in @Model.teamList.OrderBy(c=>c.LastName))
                 {
 
@@ -64,6 +65,7 @@
     </div>
     <div class="col-xs-3 visible-lg visible-md">
         <ul class="left_bar_advisory">
+            <li><a href="~/advisory/firm/ceo">Jim Millstein</a></li> </br>
             @foreach (var member in @Model.teamList.OrderBy(c => c.LastName))
             {
 
