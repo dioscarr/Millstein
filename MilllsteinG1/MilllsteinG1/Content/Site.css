@@ -136,7 +136,7 @@ img {
     margin: 0 15px 10px; 
     padding: 5px 0 0;
     color: white;
-    background-color: inherit;
+    background-color: inherit; 
     background-image: none;
 } 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
