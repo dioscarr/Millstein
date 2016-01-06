@@ -37,6 +37,7 @@
         @*<div class="image_desc image_desc_inv">
             <p><i>@Model.InvestmentDetail.PictureContent</i></p>
         </div>*@
+        
         <ul class="left_bar_advisory">
             <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
 
@@ -61,6 +62,28 @@
 @* Mobile Devices  *@
 <div class="visible-xs row firm_content inv_content">
     <div class="col-sm-3 col-xs-12 firm_image">
+        <div class="show_buttom_advisory visible-xs visible-sm">
+            <button class="btn btn-default advisory_button">View all Managers</button>
+            <ul class="left_bar_advisory mobile_left_bar_advisory">
+                <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
+
+                @foreach (var management in @Model.teamList)
+                {
+                    <li><a href="~/investment/MenegInfo/@management.Id">@management.FirstName @management.LastName</a></li>
+                }
+
+                @*<li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
+                <li><a href="~/investment/MenegInfo">Adam LaVier, Partner</a></li>
+                <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>*@
+                <hr />
+                <li><b>Recent Disclosed Investments</b></li>
+                <br />
+                <li><a href="https://www.atlantixglobal.com">Atlantix Global Systems</a></li>
+                <li><a href="https://www.dlt.com">DLT Solutions</a></li>
+                <li><a href="https://www.ridewithvia.com">Via Transportation</a></li>
+                <li><a href="https://www.friendmts.com">Friend Media Technology Systems</a></li>
+            </ul>
+        </div>
         <img src="~/Images/investment-mobile.jpg" />
         @*<div class="image_desc image_desc_inv">
             <p><i>@Model.InvestmentDetail.PictureContent</i></p>
@@ -78,3 +101,17 @@
         @Html.Raw(@Model.InvestmentDetail.Content2)
     </div>
 </div>
+
+
+@section scripts{
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".advisory_button").click(function () {
+                $(".mobile_left_bar_advisory").slideToggle("slow");
+            });
+        });
+    </script>
+}
+
+
