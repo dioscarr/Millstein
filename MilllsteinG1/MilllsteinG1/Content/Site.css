@@ -409,6 +409,10 @@ margin-bottom:20px;
     font-style: italic;
     font-weight: 600;
     line-height: 2;
+    font-size: .8em;
+}
+.left_bar_advisory>li>b {
+    font-size: .8em;
 }
 .left_bar_advisory>li>a:hover {
     color: rgb(141, 0, 19);

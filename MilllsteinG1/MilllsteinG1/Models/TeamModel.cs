@@ -20,6 +20,11 @@ namespace MilllsteinG1.Models
             advisory = ManageAdvisory.GetAllAdvisory().FirstOrDefault();
             team = null;
         }
+        public void LoadAllManagement()
+        {
+            teamList = ManageTeam.GetAllTeam().Where(u => u.Type == "manage").ToList();
+        }
+
         public void Load(int id)
         {
             team = ManageTeam.GetById(id);

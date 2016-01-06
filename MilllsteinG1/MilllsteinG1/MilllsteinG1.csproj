@@ -362,9 +362,9 @@
     <Content Include="Images\jim_millstein.jpg" />
     <Content Include="Images\logo-all.png" />
     <Content Include="Images\logo.png" />
-    <Content Include="Images\management\adam_lavier.jpg" />
-    <Content Include="Images\management\michael_duran.jpg" />
-    <Content Include="Images\management\william_nix.jpg" />
+    <Content Include="Images\advisory\adam_lavier.jpg" />
+    <Content Include="Images\advisory\michael_duran.jpg" />
+    <Content Include="Images\advisory\william_nix.jpg" />
     <Content Include="Images\news.jpg" />
     <Content Include="Images\sl-1.jpg" />
     <Content Include="Images\sl-2.jpg" />
@@ -985,7 +985,6 @@
     <Content Include="Views\Investment\Index.cshtml" />
     <Content Include="Views\Contact\NyCity.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\Advisory\LoadTeamMember.cshtml" />
     <Content Include="Views\News\Article.cshtml" />
     <Content Include="Views\Contact\WashingtonDCCity.cshtml" />
     <Content Include="Views\About\TermsAndConditions.cshtml" />
@@ -998,6 +997,7 @@
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
     <Content Include="Views\Investment\MenegInfo.cshtml" />
+    <Content Include="Views\Advisory\LoadTeamMember.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

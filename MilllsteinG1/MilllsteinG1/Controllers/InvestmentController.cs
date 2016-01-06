@@ -15,13 +15,20 @@ namespace MilllsteinG1.Controllers
         {
 
             InvestmentModel IM = new InvestmentModel();
-
+            IM.LoadAllManagement();
             return View(IM);
         }
-
-        public ActionResult MenegInfo()
+        [HttpGet]
+        public ActionResult MenegInfo(int id)
         {
-            return View();
+
+            TeamModel TM = new TeamModel();
+            TM.Load(id);
+            TM.LoadAllManagement();
+            return View(TM);
         }
+
+       
+
     }
 }

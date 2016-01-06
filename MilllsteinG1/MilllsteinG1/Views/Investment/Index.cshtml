@@ -40,9 +40,14 @@
         <ul class="left_bar_advisory">
             <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
 
-            <li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
+
+            @foreach (var management in @Model.teamList)
+            {
+                <li><a href="~/investment/MenegInfo/@management.Id">@management.FirstName @management.LastName</a></li>
+            }
+            @*<li><a href="~/investment/MenegInfo/5">Michael Duran, Partner</a></li>
             <li><a href="~/investment/MenegInfo">Adam LaVier, Partner</a></li>
-            <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>
+            <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>*@
             <hr />
             <li><b>Recent Disclosed Investments</b></li>
             <br />

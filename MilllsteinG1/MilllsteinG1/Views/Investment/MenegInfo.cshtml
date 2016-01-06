@@ -20,12 +20,17 @@
     <div class="col-md-9 col-xs-12 inv_content_descriprion">
         <div class="show_buttom_advisory visible-xs visible-sm">
             <button class="btn btn-default advisory_button">View all Advisers</button>
-            <ul class="left_bar_advisory">
+            <ul class="left_bar_advisory mobile_left_bar_advisory">
                 <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
 
-                <li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
+                @foreach (var management in @Model.teamList)
+                {
+                    <li><a href="~/investment/MenegInfo/@management.Id">@management.FirstName @management.LastName</a></li>
+                }
+
+                @*<li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
                 <li><a href="~/investment/MenegInfo">Adam LaVier, Partner</a></li>
-                <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>
+                <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>*@
                 <hr />
                 <li><b>Recent Disclosed Investments</b></li>
                 <br />
@@ -37,15 +42,15 @@
         </div>
         <div class="adv_info">
             <div class="col-sm-6 col-xs-12 advisory_img">
-                <img src="~/Images/management/michael_duran.jpg" />
+                <img src="~/Images/advisory/@Model.team.Image" />
             </div>
             <div class="col-sm-6 col-xs-12 advisory_info">
-                <h2 class="ceo_name">Michael Duran</h2>
-                <p class="ceo_name_description">Partner</p>
-                @*<p class="adv_info_title">@Model.team.Description</p>*@
+                <h2 class="ceo_name">@Model.team.FirstName @Model.team.LastName</h2>
+                <p class="ceo_name_description">@Model.team.Title</p>
+                <p class="adv_info_title">@Model.team.Description</p>
             </div>
         </div>
-        @*<div class="adv_content adv_info_content">
+        <div class="adv_content adv_info_content">
             <p class="inv_company_desc">
                 <i>
                     @Html.Raw(@Model.team.Note.Replace("<p>", "").Replace("</p>", ""))
@@ -59,8 +64,6 @@
 
                     @Model.team.NoteWriter
 
-
-
                     <br>@Model.team.NoteWriterTitle
 
 
@@ -71,15 +74,18 @@
         <div class="advisory_company">
 
             @Html.Raw(@Model.team.Content)
-        </div>*@
+        </div>
     </div>
     <div class="col-xs-3 visible-lg visible-md">
         <ul class="left_bar_advisory">
             <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
-
-            <li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
-            <li><a href="~/investment/MenegInfo">Adam LaVier, Partner</a></li>
-            <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>
+            @foreach (var management in @Model.teamList)
+            {
+                <li><a href="~/investment/MenegInfo/@management.Id">@management.FirstName @management.LastName</a></li>
+            }
+            @*<li><a href="~/investment/MenegInfo/@Model.advisory.Id">Michael Duran, Partner</a></li>
+            <li><a href="~/investment/MenegInfo/@Model.advisory.Id">Adam LaVier, Partner</a></li>
+            <li><a href="~/investment/MenegInfo/@Model.advisory.Id">William Nix, Partner</a></li>*@
             <hr />
             <li><b>Recent Disclosed Investments</b></li>
             <br />
@@ -90,6 +96,7 @@
         </ul>
     </div>
 </div>
+
 
 
 @section scripts{

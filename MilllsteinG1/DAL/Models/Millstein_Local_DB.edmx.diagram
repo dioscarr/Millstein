@@ -14,10 +14,10 @@
         <EntityTypeShape EntityType="MillsteinDBModel.Pages" Width="1.5" PointX="0.75" PointY="1.25" />
         <EntityTypeShape EntityType="MillsteinDBModel.Person_" Width="1.5" PointX="3" PointY="5" />
         <EntityTypeShape EntityType="MillsteinDBModel.Slider" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="MillsteinDBModel.Team" Width="1.5" PointX="9.75" PointY="0.75" />
         <EntityTypeShape EntityType="MillsteinDBModel.Firm" Width="1.5" PointX="9.75" PointY="5.75" />
         <AssociationConnector Association="MillsteinDBModel.FK_Person__News" />
         <AssociationConnector Association="MillsteinDBModel.FK_Slider_Pages" />
+        <EntityTypeShape EntityType="MillsteinDBModel.Team" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
