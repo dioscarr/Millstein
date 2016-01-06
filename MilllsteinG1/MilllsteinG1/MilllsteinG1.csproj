@@ -362,6 +362,9 @@
     <Content Include="Images\jim_millstein.jpg" />
     <Content Include="Images\logo-all.png" />
     <Content Include="Images\logo.png" />
+    <Content Include="Images\management\adam_lavier.jpg" />
+    <Content Include="Images\management\michael_duran.jpg" />
+    <Content Include="Images\management\william_nix.jpg" />
     <Content Include="Images\news.jpg" />
     <Content Include="Images\sl-1.jpg" />
     <Content Include="Images\sl-2.jpg" />

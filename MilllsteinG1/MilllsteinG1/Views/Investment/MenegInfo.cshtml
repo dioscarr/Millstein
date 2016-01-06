@@ -1,7 +1,9 @@
-﻿
+﻿@model MilllsteinG1.Models.TeamModel
 @{
     ViewBag.Title = "MenegInfo";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Secomdary_Layout.cshtml";
+
+    ViewBag.InvestmentActive = "menu_top_border";
 }
 
 <div class="row firm_title">
@@ -10,7 +12,7 @@
     </div>
     <div class="col-xs-3 firm_sidebar advisory_leftbar_title">
         <ul class="list-inline firm_sidebar_ul">
-            <li><a href="#">Advisory</a></li>
+            <li><a href="#">Asset Management</a></li>
         </ul>
     </div>
 </div>
@@ -19,11 +21,11 @@
         <div class="show_buttom_advisory visible-xs visible-sm">
             <button class="btn btn-default advisory_button">View all Advisers</button>
             <ul class="left_bar_advisory">
-                <li><a href="~/investment/MenegInfo">Jim Millstein</a></li> </br>
+                <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
 
-                <li><a href="~/advisory/info">Michael Duran, Partner</a></li>
-                <li><a href="~/advisory/info">Adam LaVier, Partner</a></li>
-                <li><a href="~/advisory/info">William Nix, Partner</a></li>
+                <li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
+                <li><a href="~/investment/MenegInfo">Adam LaVier, Partner</a></li>
+                <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>
                 <hr />
                 <li><b>Recent Disclosed Investments</b></li>
                 <br />
@@ -33,16 +35,16 @@
                 <li><a href="https://www.friendmts.com">Friend Media Technology Systems</a></li>
             </ul>
         </div>
-        @*<div class="adv_info">
+        <div class="adv_info">
             <div class="col-sm-6 col-xs-12 advisory_img">
-                <img src="~/Images/advisory/@Model.team.Image" />
+                <img src="~/Images/management/michael_duran.jpg" />
             </div>
             <div class="col-sm-6 col-xs-12 advisory_info">
-                <h2 class="ceo_name">@Model.team.FirstName @Model.team.LastName</h2>
-                <p class="ceo_name_description">@Model.team.Title</p>
-                <p class="adv_info_title">@Model.team.Description</p>
+                <h2 class="ceo_name">Michael Duran</h2>
+                <p class="ceo_name_description">Partner</p>
+                @*<p class="adv_info_title">@Model.team.Description</p>*@
             </div>
-        </div>*@
+        </div>
         @*<div class="adv_content adv_info_content">
             <p class="inv_company_desc">
                 <i>
@@ -75,9 +77,9 @@
         <ul class="left_bar_advisory">
             <li><a href="~/firm/ceo">Jim Millstein</a></li> </br>
 
-            <li><a href="~/advisory/info">Michael Duran, Partner</a></li>
-            <li><a href="~/advisory/info">Adam LaVier, Partner</a></li>
-            <li><a href="~/advisory/info">William Nix, Partner</a></li>
+            <li><a href="~/investment/MenegInfo">Michael Duran, Partner</a></li>
+            <li><a href="~/investment/MenegInfo">Adam LaVier, Partner</a></li>
+            <li><a href="~/investment/MenegInfo">William Nix, Partner</a></li>
             <hr />
             <li><b>Recent Disclosed Investments</b></li>
             <br />
@@ -88,5 +90,17 @@
         </ul>
     </div>
 </div>
+
+
+@section scripts{
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".advisory_button").click(function () {
+                $(".mobile_left_bar_advisory").slideToggle("slow");
+            });
+        });
+    </script>
+}
 
 
