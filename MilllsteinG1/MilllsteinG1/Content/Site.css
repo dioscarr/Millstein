@@ -464,6 +464,9 @@ margin-bottom:20px;
     font-weight: 500;
     font-size: 1.3em;
 }
+.cont_content {
+    padding-bottom: 2em;
+}
 /*================== News ======================*/
 .article_mews_page {
     padding-bottom: 3%;
@@ -548,9 +551,9 @@ margin-bottom:20px;
         background-color: rgb(141, 0, 19);
     }
     .copyright {
-        position: absolute;
+        /*position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%);*/
         padding-left:15px;
     }
     .copyright>.icon_copyright,.copyright>.icon_copyright>a {
