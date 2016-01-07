@@ -12,7 +12,7 @@ namespace MilllsteinG1.Models
     public class TeamModel : BaseModel
     {
         public Team team { get; set; }
-        public List<Team> teamList { get; set; }
+        public List<Team> teamList { get; set; } 
         public Advisory advisory { get; set; }
         public TeamModel()
         {

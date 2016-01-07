@@ -817,7 +817,7 @@ margin-bottom:20px;
     padding-bottom:20px;
 }
 .panel-primary {  
-    border-color: #8d0013 !important;
+    border-color: #8d0013 !important; 
 } 
 .panel-primary > .panel-heading {
   color: #fff;
