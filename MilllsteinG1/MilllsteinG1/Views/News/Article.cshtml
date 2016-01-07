@@ -9,10 +9,10 @@
 
 
 <div class="row firm_title">
-    <div class="col-sm-9 col-xs-12 logo">
+    <div class="col-sm-9 logo">
         <a href="~/home"><img src="~/Images/logo-all.png" /></a>
     </div>
-    <div class="ol-sm-3 col-xs-12 firm_sidebar">
+    <div class="col-sm-3 col-xs-12 firm_sidebar">
         <ul class="list-inline firm_sidebar_ul">
             <li><a href="#">News</a></li>
         </ul>
@@ -21,7 +21,7 @@
 <div class="row visible-lg visible-md visible-sm article_mews_page">
     <div class="col-xs-9">
         <div class="news_title">
-            <h2>Archive</h2>
+            <h2>News</h2>
         </div>
         <div class="news_detail">
             <h3><a href="#">@String.Format("{0:MMMM dd, yyyy}", @Model.Article.NewsDate)</a></h3>
@@ -36,11 +36,11 @@
                 <span><a class="news_archive_link" href="#">@person.Phone</a></span><br /><br />
             }
         </div>
-    </div>
+    </div> 
     <div class="col-xs-3"> 
         <ul class="left_bar_advisory">
-            <li><a href="~/news">Recent News</a></li>
-            <li><a href="~/news/Archive">Press</a></li> 
+            <li><a href="~/news">News</a></li>
+            @*<li><a href="~/news/Archive">Press</a></li>*@ 
             <li>
                 <a href="~/news/Index?year=2015">
                     Archive
