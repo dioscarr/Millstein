@@ -21,7 +21,7 @@
     <div class="col-xs-9 news_company_main_block">
         <img class="news_company_image" src="~/Images/news.jpg" />
         <div class="news_title">
-            <h2>Recent News</h2>
+            <h2>News</h2>
         </div>
         @if (@Model.NewsList != null)
         {
@@ -40,8 +40,8 @@
         @if (@Model.NewsList != null)
         {
             <ul class="left_bar_advisory">
-                <li><a class="adv_active" href="~/News/">Recent News</a></li>
-                <li><a href="~/News/">Press</a></li>
+                <li><a class="adv_active" href="~/News/">News</a></li>
+                @*<li><a href="~/News/">Press</a></li>*@
                 <li>
 
                     <a href="~/News/Index?year=2015">

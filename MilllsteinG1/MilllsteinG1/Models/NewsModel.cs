@@ -20,7 +20,7 @@ namespace MilllsteinG1.Models
 
         public NewsModel()
         {
-            NewsList = ManageNews.GetAllNews().OrderByDescending(n => n.NewsDate).ToList();
+            NewsList = ManageNews.GetAllNews().OrderByDescending(n => n.NewsDate).Take(5).ToList();
             Years = SetYears(NewsList);
             Article = null;
             PersontContacts = null;
