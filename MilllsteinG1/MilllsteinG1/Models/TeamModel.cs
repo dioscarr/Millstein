@@ -9,14 +9,14 @@ using BLL;
 
 namespace MilllsteinG1.Models
 {
-    public class TeamModel : BaseModel
+    public class TeamModel:BaseModel
     {
-        public Team team { get; set; }
-        public List<Team> teamList { get; set; } 
+        public Team team { get; set;}
+        public List<Team> teamList { get; set;}
         public Advisory advisory { get; set; }
         public TeamModel()
         {
-            teamList = ManageTeam.GetAllTeam().Where(c => c.Type == "advisor").OrderBy(c => c.Order).ToList();
+            teamList = ManageTeam.GetAllTeam().Where(u => u.Type != "manage").ToList();
             advisory = ManageAdvisory.GetAllAdvisory().FirstOrDefault();
             team = null;
         }
@@ -29,6 +29,6 @@ namespace MilllsteinG1.Models
         {
             team = ManageTeam.GetById(id);
         }
-
+        
     }
 }
