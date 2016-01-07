@@ -16,7 +16,7 @@ namespace MilllsteinG1.Models
         public Advisory advisory { get; set; }
         public TeamModel()
         {
-            teamList = ManageTeam.GetAllTeam().Where(c => c.Type == "advisor").ToList();
+            teamList = ManageTeam.GetAllTeam().Where(c => c.Type == "advisor").OrderBy(c=>c.Order).ToList();
             advisory = ManageAdvisory.GetAllAdvisory().FirstOrDefault();
             team = null;
         }
