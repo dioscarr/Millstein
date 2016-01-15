@@ -404,7 +404,7 @@ margin-bottom:20px;
     float: right;
     font-size: 1.15em;
 }
-.left_bar_advisory>li>a {
+.left_bar_advisory>li>a, .left_bar_advisory>.left_bar_advisory_li {
     color: #707070;
     font-style: italic;
     font-weight: 600;
@@ -816,8 +816,8 @@ margin-bottom:20px;
     margin-bottom:30px;
     padding-bottom:20px;
 }
-.panel-primary {   
-    border-color: #8d0013 !important; 
+.panel-primary { 
+    border-color: #8d0013 !important;
 } 
 .panel-primary > .panel-heading {
   color: #fff;
